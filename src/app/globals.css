@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.logo {
+    transition: 200ms;
+    animation: heartBeat 2s ease-in-out infinite alternate;
+}
+
+@keyframes heartBeat {
+    from {
+        filter: drop-shadow(0 0 0.1rem blue);
+    }
+
+    to {
+        filter: drop-shadow(0 0 0.95rem blue);
+    }
+}
+
+.landingText {
+    animation: glowBeat 900ms ease-in-out infinite alternate;
+}
+
+@keyframes glowBeat {
+    from {
+        filter: drop-shadow(150 150 0.01rem white);
+    }
+
+    to {
+        filter: drop-shadow(0 0 0.3rem white);
+    }
+}
