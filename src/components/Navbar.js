@@ -7,7 +7,7 @@ import { backDropText } from "@/utils/contants"
 const Navbar = () => {
     return (
         <div>
-            <div className="flex justify-between items-center h-[9vh] px-7 bg-slate-900" style={{ "opacity": "0.8" }} >
+            <div className="flex shadow-inner shadow-cyan-500/50 justify-between items-center h-[9vh] px-7 bg-slate-900 select-none" style={{ "opacity": "0.8" }} >
                 <button className="inline lg:hidden" style={{ "color": "white" }}>
                     <Image src="/menu.svg" width={30} height={30} alt="menu" style={{ "filter": "invert(100%)" }} />
                 </button>
