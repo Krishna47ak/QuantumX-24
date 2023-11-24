@@ -7,7 +7,8 @@ import robowarImg from '../../public/robowar.jpg'
 
 const Events = () => {
     return (
-        <div className="bg-slate-950 p-10" >
+        <div className="relative bg-slate-950 p-10" >
+            <div id="events" className='absolute -top-[9vh] left-0' />
             <p className="text-3xl text-white text-center font-bold select-none" style={{ ...backDropText, fontSize: '2.5rem' }} >Events</p>
             <div>
                 <EventCard img={hackathonImg} title='Codathon' type='hackathon' description='Hexathon is a callout to all budding and passionate designers. If you have an eye for detail or want to express your creativity then this is the event for you!' fee={400} />

@@ -1,5 +1,12 @@
 @tailwind base;
 @tailwind components;
+
+@layer components {
+    .navBtn {
+        @apply bg-gradient-to-r from-white to-black text-center rounded-lg py-1 px-3 mt-8 duration-500 active:bg-slate-500
+    }
+}
+
 @tailwind utilities;
 
 
@@ -30,4 +37,8 @@
     to {
         filter: drop-shadow(0 0 0.3rem white);
     }
+}
+
+.cardDropshadow {
+    filter: drop-shadow(0 0 0.3rem cyan);
 }

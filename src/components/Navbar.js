@@ -1,29 +1,72 @@
 "use client"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from 'framer-motion'
 import { backDropText } from "@/utils/contants"
 
 
 const Navbar = () => {
+    const [sideBarClicked, setSidebarClicked] = useState(false)
+
+    let menuRef = useRef();
+
+    useEffect(() => {
+        let handler = (e) => {
+            setSidebarClicked(false);
+        };
+        document.addEventListener("mousedown", handler);
+        return () => {
+            document.removeEventListener("mousedown", handler);
+        }
+
+    });
+
     return (
         <div>
-            <div className="flex shadow-inner shadow-cyan-500/50 justify-between items-center h-[9vh] px-7 bg-slate-900 select-none" style={{ "opacity": "0.8" }} >
-                <button className="inline lg:hidden" style={{ "color": "white" }}>
+            <div className="flex fixed z-50 shadow-inner shadow-cyan-500/50 justify-between items-center h-[9vh] w-full px-7 bg-slate-900 bg-opacity-80  select-none overflow-hidden"  >
+                <div onClick={() => setSidebarClicked(true)} className="inline lg:hidden active:scale-95" >
                     <Image src="/menu.svg" width={30} height={30} alt="menu" style={{ "filter": "invert(100%)" }} />
-                </button>
+                </div>
+                <div ref={menuRef} className={`fixed lg:hidden top-0 ${sideBarClicked ? 'left-0' : '-left-3/4'} duration-500 bg-black w-3/5 h-screen p-5 pt-14 z-50`} >
+                    <div onClick={() => setSidebarClicked(false)} className='absolute top-4 left-5' >
+                        <Image className="cardDropshadow" src="/close.svg" width={20} height={20} alt="close" />
+                    </div>
+                    <Link href="#home" >
+                        <p className='navBtn cardDropshadow' >HOME</p>
+                    </Link>
+                    <Link href="#events" >
+                        <p className='navBtn cardDropshadow' >EVENTS</p>
+                    </Link>
+                    <Link href="/about" >
+                        <p className='navBtn cardDropshadow' >ABOUT</p>
+                    </Link>
+                    <Link href="/contact" >
+                        <p className='navBtn cardDropshadow' >CONTACT</p>
+                    </Link>
+                    <Link href="/contact" >
+                        <p className='navBtn cardDropshadow' >SPONSORS</p>
+                    </Link>
+                    <Link href="/contact" >
+                        <p className='navBtn cardDropshadow' >GALLERY</p>
+                    </Link>
+                    <Link href="/contact" >
+                        <p className='navBtn cardDropshadow' >BOOKING</p>
+                    </Link>
+                </div>
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >
-                    <li >
+                    <Link href="#home" >
                         <button className="hover:scale-105" style={backDropText}>HOME</button>
-                    </li>
-                    <li>
+                    </Link>
+                    <Link href="#events" >
                         <button className="hover:scale-105" style={backDropText}>EVENTS</button>
-                    </li>
-                    <li>
+                    </Link>
+                    <Link href="#about" >
                         <button className="hover:scale-105" style={backDropText}>ABOUT</button>
-                    </li>
-                    <li>
+                    </Link>
+                    <Link href="#contact" >
                         <button className="hover:scale-105" style={backDropText}>CONTACT</button>
-                    </li>
+                    </Link>
 
                 </ul>
                 <motion.div
