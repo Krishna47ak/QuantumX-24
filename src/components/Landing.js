@@ -11,7 +11,7 @@ const Landing = () => {
                 <motion.div
                     animate={{ y: [50, 0, 50] }}
                     transition={{ repeat: Infinity, duration: 2 }}
-                    className='w-[500px] logo'
+                    className='w-[300px] md:w-[500px] logo'
                 >
                     <Image src="/logo-black.png" width={500} height={500} alt='logo' />
                 </motion.div>

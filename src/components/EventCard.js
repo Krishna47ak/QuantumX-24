@@ -2,9 +2,9 @@ import Image from 'next/image'
 
 const EventCard = ({ img, title, type, description, fee }) => {
     return (
-        <div className='flex bg-gradient-to-t p-5 mt-10 rounded-xl from-[#2f165a] to-[#1e0e34] ' style={{ "filter": "drop-shadow(0 0 0.3rem cyan)" }} >
-            <Image className='rounded-xl shadow-md shadow-indigo-600' src={img} width={250} height={250} alt='logo' />
-            <div className='pl-10' >
+        <div className='flex justify-center sm:justify-normal bg-gradient-to-t p-5 mt-10 rounded-xl from-[#2f165a] to-[#1e0e34] ' style={{ "filter": "drop-shadow(0 0 0.3rem cyan)" }} >
+            <Image className='rounded-xl min-w-[250px] shadow-md shadow-indigo-600' src={img} width={250} height={250} alt='logo' />
+            <div className='hidden sm:block pl-10' >
                 <p className='text-white text-5xl' >{title}</p>
                 <p className='text-gray-600 text-2xl mt-2' >{type}</p>
                 <p className='text-white mt-5 xl:w-[50rem]' >{description}</p>
