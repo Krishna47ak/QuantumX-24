@@ -24,7 +24,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="flex fixed z-50 shadow-inner shadow-cyan-500/50 justify-between items-center h-[9vh] w-full px-7 bg-slate-900 bg-opacity-80 backdrop-blur-xl select-none overflow-hidden"  >
+            <div className="flex fixed z-50 shadow-inner shadow-cyan-500/50 justify-between items-center h-[9vh] w-full px-7 bg-slate-900 bg-opacity-80 backdrop-blur-md select-none overflow-hidden"  >
                 <div onClick={() => setSidebarClicked(true)} className="inline lg:hidden active:scale-95" >
                     <Image src="/menu.svg" width={30} height={30} alt="menu" style={{ "filter": "invert(100%)" }} />
                 </div>

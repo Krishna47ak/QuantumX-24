@@ -6,7 +6,7 @@ import { backDropText } from '@/utils/contants'
 
 const Landing = () => {
     return (
-        <div id="home" className='p-10 bg-gradient-to-r from-indigo-950 to-indigo-600 flex items-center justify-center min-h-[91vh] pt-[11vh] overflow-hidden' >
+        <div id="home" className='p-10 flex items-center justify-center min-h-screen overflow-hidden' >
             <div className='flex flex-col justify-center items-center' >
                 <motion.div
                     animate={{ y: [50, 0, 50] }}

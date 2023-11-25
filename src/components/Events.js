@@ -1,5 +1,4 @@
 import { backDropText } from '@/utils/contants'
-import Image from 'next/image'
 import EventCard from './EventCard'
 import hackathonImg from '../../public/hackathon.jpg'
 import forthisImg from '../../public/forthis.png'
@@ -7,7 +6,7 @@ import robowarImg from '../../public/robowar.jpg'
 
 const Events = () => {
     return (
-        <div className="relative bg-slate-950 p-10" >
+        <div className="relative bg-gradient-to-b from-[#0c0a0f] to-slate-900 p-10" >
             <div id="events" className='absolute -top-[9vh] left-0' />
             <p className="text-3xl text-white text-center font-bold select-none" style={{ ...backDropText, fontSize: '2.5rem' }} >Events</p>
             <div>

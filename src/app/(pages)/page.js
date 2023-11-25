@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar'
 const Home = () => {
 
     return (
-        <div className="bg-black min-h-screen bg-center bg-cover overflow-hidden" >
+        <div className="bg-[url('/BG6.gif')] min-h-screen bg-center overflow-hidden" >
             <Navbar />
             <Landing />
             <Events />
