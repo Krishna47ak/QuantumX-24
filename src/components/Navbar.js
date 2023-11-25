@@ -28,32 +28,7 @@ const Navbar = () => {
                 <div onClick={() => setSidebarClicked(true)} className="inline lg:hidden active:scale-95" >
                     <Image src="/menu.svg" width={30} height={30} alt="menu" style={{ "filter": "invert(100%)" }} />
                 </div>
-                <div ref={menuRef} className={`fixed lg:hidden top-0 ${sideBarClicked ? 'left-0' : '-left-3/4'} duration-500 bg-black w-3/5 h-screen p-5 pt-14 z-50`} >
-                    <div onClick={() => setSidebarClicked(false)} className='absolute top-4 left-5' >
-                        <Image className="cardDropshadow" src="/close.svg" width={20} height={20} alt="close" />
-                    </div>
-                    <Link href="#home" >
-                        <p className='navBtn cardDropshadow' >HOME</p>
-                    </Link>
-                    <Link href="#events" >
-                        <p className='navBtn cardDropshadow' >EVENTS</p>
-                    </Link>
-                    <Link href="/about" >
-                        <p className='navBtn cardDropshadow' >ABOUT</p>
-                    </Link>
-                    <Link href="/contact" >
-                        <p className='navBtn cardDropshadow' >CONTACT</p>
-                    </Link>
-                    <Link href="/contact" >
-                        <p className='navBtn cardDropshadow' >SPONSORS</p>
-                    </Link>
-                    <Link href="/contact" >
-                        <p className='navBtn cardDropshadow' >GALLERY</p>
-                    </Link>
-                    <Link href="/contact" >
-                        <p className='navBtn cardDropshadow' >BOOKING</p>
-                    </Link>
-                </div>
+
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >
                     <Link href="#home" >
                         <button className="hover:scale-105" style={backDropText}>HOME</button>
@@ -92,6 +67,32 @@ const Navbar = () => {
                     </li>
 
                 </ul>
+            </div>
+            <div ref={menuRef} className={`fixed lg:hidden top-0 ${sideBarClicked ? 'left-0' : '-left-3/4'} duration-500 bg-black w-3/5 h-screen p-5 pt-14 z-50`} >
+                <div onClick={() => setSidebarClicked(false)} className='absolute top-4 left-5' >
+                    <Image className="cardDropshadow" src="/close.svg" width={20} height={20} alt="close" />
+                </div>
+                <Link href="#home" >
+                    <p className='navBtn cardDropshadow' >HOME</p>
+                </Link>
+                <Link href="#events" >
+                    <p className='navBtn cardDropshadow' >EVENTS</p>
+                </Link>
+                <Link href="/about" >
+                    <p className='navBtn cardDropshadow' >ABOUT</p>
+                </Link>
+                <Link href="/contact" >
+                    <p className='navBtn cardDropshadow' >CONTACT</p>
+                </Link>
+                <Link href="/contact" >
+                    <p className='navBtn cardDropshadow' >SPONSORS</p>
+                </Link>
+                <Link href="/contact" >
+                    <p className='navBtn cardDropshadow' >GALLERY</p>
+                </Link>
+                <Link href="/contact" >
+                    <p className='navBtn cardDropshadow' >BOOKING</p>
+                </Link>
             </div>
         </div>
     )
