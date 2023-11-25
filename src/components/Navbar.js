@@ -24,7 +24,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="flex fixed z-50 shadow-inner shadow-cyan-500/50 justify-between items-center h-[9vh] w-full px-7 bg-slate-900 bg-opacity-80  select-none overflow-hidden"  >
+            <div className="flex fixed z-50 shadow-inner shadow-cyan-500/50 justify-between items-center h-[9vh] w-full px-7 bg-slate-900 bg-opacity-80 backdrop-blur-xl select-none overflow-hidden"  >
                 <div onClick={() => setSidebarClicked(true)} className="inline lg:hidden active:scale-95" >
                     <Image src="/menu.svg" width={30} height={30} alt="menu" style={{ "filter": "invert(100%)" }} />
                 </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
                     transition={{ repeat: Infinity, duration: 2, delay: 0.5 }}
                     className="mx-auto lg:mx-2"
                 >
-                    <Image src="/logo.png" width={60} height={60} alt="logo" style={{ "paddingRight": "1%", "filter": "drop-shadow(0 0 0.05rem white)" }} />
+                    <Image src="/logo-white.png" width={60} height={60} alt="logo" style={{ "paddingRight": "1%", "filter": "drop-shadow(0 0 0.05rem white)" }} />
                 </motion.div>
 
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >
