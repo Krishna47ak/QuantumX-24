@@ -11,11 +11,11 @@ const About = () => {
             <p className="text-3xl text-white text-center font-bold select-none mb-10" style={{ ...backDropText, fontSize: '2.5rem' }} >About</p>
             <div className="text-justify" >
                 <p>
-                    Welcome to QuantumX-24, where creativity is sparked by curiosity and innovation meets inspiration! This is the highly anticipated return and second edition of the official tech event of New Horizon College of Engineering, Bengaluru. Our annual tech fair was founded with the goal of providing a platform that honours technology's spirit and encourages curiosity. Today, it serves as a guide for innovators, enthusiasts, and students alike.
+                    Welcome to QuantumX-24, where inspiration meets innovation and curiosity ignites creativity! This is the much awaited return and second iteration of New Horizon College of Engineering, Bengaluru's official tech event. The purpose behind founding our annual tech expo was to offer a forum that celebrates the spirit of technology and fosters curiosity. It now acts as a manual for students, enthusiasts, and inventors alike.
                 </p>
                 <br />
                 <p className="hidden md:block" >
-                    At QuantumX, we think that technology has the ability to change the world and influence its course. Our festival serves as a hub for networking, knowledge exchange, and hands-on experiences that extend beyond academia's traditional boundaries. It's a place where ideas are born, prototypes are created, and lifelong connections are forged. Join us in this unique experience as we make the quantum leap into the future!
+                    At QuantumX, we believe that technology has the power to alter and shape the course of the planet. Our event acts as a center for information sharing, networking, and practical experiences that go beyond the conventional confines of academics. It's a location where concepts emerge, prototypes are made, and enduring relationships are established. Come along for the ride as we take a quantum leap into the future!
                 </p>
             </div>
 
