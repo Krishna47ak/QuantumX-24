@@ -17,11 +17,11 @@
 
 @keyframes heartBeat {
     from {
-        filter: drop-shadow(0 0 0.1rem blue);
+        filter: drop-shadow(0 0 0.1rem cyan);
     }
 
     to {
-        filter: drop-shadow(0 0 0.95rem blue);
+        filter: drop-shadow(0 0 0.95rem cyan);
     }
 }
 
