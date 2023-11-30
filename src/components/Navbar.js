@@ -30,19 +30,19 @@ const Navbar = () => {
                 </div>
 
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >
-                    <Link href="#home" >
+                    <Link href="/" >
                         <button className="hover:scale-105" style={backDropText}>HOME</button>
                     </Link>
-                    <Link href="#events" >
+                    <Link href="/events" >
                         <button className="hover:scale-105" style={backDropText}>EVENTS</button>
                     </Link>
-                    <Link href="#about" >
-                        <button className="hover:scale-105" style={backDropText}>ABOUT</button>
+                    <Link href="/workshops">
+                        <button className="hover:scale-105" style={backDropText}>WORKSHOPS</button>
                     </Link>
+
                     <Link href="#contact" >
                         <button className="hover:scale-105" style={backDropText}>CONTACT</button>
                     </Link>
-
                 </ul>
                 <motion.div
                     animate={{ scale: [1, 1.3, 1] }}
@@ -53,14 +53,14 @@ const Navbar = () => {
                 </motion.div>
 
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >
-                    <li >
-                        <button className="hover:scale-105" style={backDropText}>SPONSORS</button>
-                    </li>
-                    <li>
-                        <button className="hover:scale-105" style={backDropText}>FAQ</button>
-                    </li>
+                    <Link href="/#about" >
+                        <button className="hover:scale-105" style={backDropText}>ABOUT</button>
+                    </Link>
                     <li>
                         <button className="hover:scale-105" style={backDropText}>GALLERY</button>
+                    </li>
+                    <li >
+                        <button className="hover:scale-105" style={backDropText}>SPONSORS</button>
                     </li>
                     <li>
                         <button className="hover:scale-105" style={backDropText}>BOOKING</button>
@@ -72,13 +72,16 @@ const Navbar = () => {
                 <div onClick={() => setSidebarClicked(false)} className='absolute top-4 left-5' >
                     <Image className="cardDropshadow" src="/close.svg" width={20} height={20} alt="close" />
                 </div>
-                <Link href="#home" >
+                <Link href="/" >
                     <p className='navBtn cardDropshadow' >HOME</p>
                 </Link>
-                <Link href="#events" >
+                <Link href="/events" >
                     <p className='navBtn cardDropshadow' >EVENTS</p>
                 </Link>
-                <Link href="/about" >
+                <Link href="/workshops" >
+                    <p className='navBtn cardDropshadow' >WORKSHOPS</p>
+                </Link>
+                <Link href="/#about" >
                     <p className='navBtn cardDropshadow' >ABOUT</p>
                 </Link>
                 <Link href="/contact" >
@@ -89,9 +92,6 @@ const Navbar = () => {
                 </Link>
                 <Link href="/contact" >
                     <p className='navBtn cardDropshadow' >GALLERY</p>
-                </Link>
-                <Link href="/contact" >
-                    <p className='navBtn cardDropshadow' >BOOKING</p>
                 </Link>
             </div>
         </div>
