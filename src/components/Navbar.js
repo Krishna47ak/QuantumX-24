@@ -9,7 +9,26 @@ import { backDropText } from "@/utils/contants"
 const Navbar = () => {
     const [sideBarClicked, setSidebarClicked] = useState(false)
 
+    const [scrolling, setScrolling] = useState(false);
+    const [scrollTop, setScrollTop] = useState(0);
+
     let menuRef = useRef();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentPosition = window.scrollY;
+
+            setScrolling(currentPosition > scrollTop);
+            setScrollTop(currentPosition);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [scrollTop]);
+
 
     useEffect(() => {
         let handler = (e) => {
@@ -24,7 +43,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="flex fixed z-50 shadow-inner shadow-cyan-500/50 justify-between items-center h-[9vh] w-full px-7 bg-slate-900 bg-opacity-80 backdrop-blur-md select-none overflow-hidden"  >
+            <div className={`${scrolling ? '-translate-y-full' : 'translate-y-0'} duration-500 flex fixed z-50 shadow-inner shadow-cyan-500/50 justify-between items-center h-[9vh] w-full px-7 bg-slate-900 bg-opacity-80 backdrop-blur-md select-none overflow-hidden`}  >
                 <div onClick={() => setSidebarClicked(true)} className="inline lg:hidden active:scale-95" >
                     <Image src="/menu.svg" width={30} height={30} alt="menu" style={{ "filter": "invert(100%)" }} />
                 </div>
