@@ -40,5 +40,5 @@
 }
 
 .cardDropshadow {
-    filter: drop-shadow(0 0 0.3rem cyan);
+    filter: drop-shadow(0 0 0.5rem #e0f);
 }

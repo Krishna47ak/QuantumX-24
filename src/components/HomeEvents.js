@@ -16,7 +16,7 @@ const HomeEvents = () => {
                 <EventCard data={{ img: forumDescImg }} from="home" />
             </div>
             <Link href="/events" className='flex justify-center mt-12 mb-20 scale-90 md:scale-100' >
-                <div className="bg-[url('/btn-cyan.svg')] active:scale-95 bg-cover w-60 h-[3.1rem] bg-no-repeat flex items-center justify-center text-white text-lg font-mono font-semibold duration-200 z-10 cursor-pointer select-none" >
+                <div className="bg-[url('/btn-neon.png')] active:scale-95 bg-cover w-[19rem] h-[3.2rem] bg-no-repeat flex items-center justify-center text-white text-lg font-mono font-semibold duration-200 z-10 cursor-pointer select-none" >
                     Explore more
                 </div>
             </Link>
@@ -27,11 +27,11 @@ const HomeEvents = () => {
                 <EventCard data={{ img: forumDescImg }} from="home" />
             </div>
             <Link href="/workshops" className='flex justify-center mt-12 mb-20 scale-90 md:scale-100' >
-                <div className="bg-[url('/btn-cyan.svg')] active:scale-95 bg-cover w-60 h-[3.1rem] bg-no-repeat flex items-center justify-center text-white text-lg font-mono font-semibold duration-200 z-10 cursor-pointer select-none" >
+                <div className="bg-[url('/btn-neon.png')] active:scale-95 bg-cover w-[19rem] h-[3.2rem] bg-no-repeat flex items-center justify-center text-white text-lg font-mono font-semibold duration-200 z-10 cursor-pointer select-none" >
                     Explore more
                 </div>
             </Link>
-        </div>
+        </div >
     )
 }
 

@@ -1,4 +1,5 @@
 import { aquaRushImg, bestManagerDescImg, bestManagerImg, botsRoyaleImg, byteBrawlDescImg, byteBrawlImg, chaiPeCharchaImg, circuitPremierLeagueImg, conclaveImg, cybercodeImg, debateImg, droneRaceImg, forumDescImg, forumImg, innovatorsImg, lineRoboChallengeImg, olympiadImg, pitchersImg, quantumHacksImg, questJrImg, roboFootballImg, speedSprintImg, streetImg } from '@/utils/event-images'
+import { androidDevelopmentImg } from './workshop-images'
 
 export const backDropText = { "filter": "drop-shadow(0 0 0.3rem white)", "textDecoration": "none", "color": "white", "fontFamily": "'Source Code Pro', monospace", "fontSize": "1.3rem" }
 
@@ -123,4 +124,43 @@ export const eventsData = [
         desc: "Navigate through a labyrinth of booths showcasing cutting-edge products, services, and solutions from a diverse range of startups. Engage in thought-provoking conversations with passionate founders and industry experts as they delve into the intricacies of their ventures.",
 
     }
+]
+
+export const workshopsdata = [
+    {
+        img: androidDevelopmentImg,
+        imgDesc: byteBrawlDescImg,
+        desc: "Navigate through a labyrinth of booths showcasing cutting-edge products, services, and solutions from a diverse range of startups. Engage in thought-provoking conversations with passionate founders and industry experts as they delve into the intricacies of their ventures.",
+
+    },
+    {
+        img: androidDevelopmentImg,
+        imgDesc: byteBrawlDescImg,
+        desc: "Navigate through a labyrinth of booths showcasing cutting-edge products, services, and solutions from a diverse range of startups. Engage in thought-provoking conversations with passionate founders and industry experts as they delve into the intricacies of their ventures.",
+
+    },
+    {
+        img: androidDevelopmentImg,
+        imgDesc: byteBrawlDescImg,
+        desc: "Navigate through a labyrinth of booths showcasing cutting-edge products, services, and solutions from a diverse range of startups. Engage in thought-provoking conversations with passionate founders and industry experts as they delve into the intricacies of their ventures.",
+
+    },
+    {
+        img: androidDevelopmentImg,
+        imgDesc: byteBrawlDescImg,
+        desc: "Navigate through a labyrinth of booths showcasing cutting-edge products, services, and solutions from a diverse range of startups. Engage in thought-provoking conversations with passionate founders and industry experts as they delve into the intricacies of their ventures.",
+
+    },
+    {
+        img: androidDevelopmentImg,
+        imgDesc: byteBrawlDescImg,
+        desc: "Navigate through a labyrinth of booths showcasing cutting-edge products, services, and solutions from a diverse range of startups. Engage in thought-provoking conversations with passionate founders and industry experts as they delve into the intricacies of their ventures.",
+
+    },
+    {
+        img: androidDevelopmentImg,
+        imgDesc: byteBrawlDescImg,
+        desc: "Navigate through a labyrinth of booths showcasing cutting-edge products, services, and solutions from a diverse range of startups. Engage in thought-provoking conversations with passionate founders and industry experts as they delve into the intricacies of their ventures.",
+
+    },
 ]

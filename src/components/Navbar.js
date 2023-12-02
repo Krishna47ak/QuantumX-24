@@ -50,17 +50,17 @@ const Navbar = () => {
 
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >
                     <Link href="/" >
-                        <button className="hover:scale-105" style={backDropText}>HOME</button>
+                        <button className="hover:scale-105 outline-none" style={backDropText}>HOME</button>
                     </Link>
                     <Link href="/events" >
-                        <button className="hover:scale-105" style={backDropText}>EVENTS</button>
+                        <button className="hover:scale-105 outline-none" style={backDropText}>EVENTS</button>
                     </Link>
                     <Link href="/workshops">
-                        <button className="hover:scale-105" style={backDropText}>WORKSHOPS</button>
+                        <button className="hover:scale-105 outline-none" style={backDropText}>WORKSHOPS</button>
                     </Link>
 
                     <Link href="#contact" >
-                        <button className="hover:scale-105" style={backDropText}>CONTACT</button>
+                        <button className="hover:scale-105 outline-none" style={backDropText}>CONTACT</button>
                     </Link>
                 </ul>
                 <motion.div
@@ -73,16 +73,16 @@ const Navbar = () => {
 
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >
                     <Link href="/#about" >
-                        <button className="hover:scale-105" style={backDropText}>ABOUT</button>
+                        <button className="hover:scale-105 outline-none" style={backDropText}>ABOUT</button>
                     </Link>
                     <li>
-                        <button className="hover:scale-105" style={backDropText}>GALLERY</button>
+                        <button className="hover:scale-105 outline-none" style={backDropText}>GALLERY</button>
                     </li>
                     <li >
-                        <button className="hover:scale-105" style={backDropText}>SPONSORS</button>
+                        <button className="hover:scale-105 outline-none" style={backDropText}>SPONSORS</button>
                     </li>
                     <li>
-                        <button className="hover:scale-105" style={backDropText}>BOOKING</button>
+                        <button className="hover:scale-105 outline-none" style={backDropText}>BOOKING</button>
                     </li>
 
                 </ul>
