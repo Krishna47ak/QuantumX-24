@@ -16,14 +16,14 @@ const EventCard = ({ data, from }) => {
             allowScroll()
         }
     }, [onCard])
-    
+
     return (
         <div >
-            <div onClick={() => setOnCard(true)} className={`flex justify-center ${from != "home" ? "w-[68vw]" : "scale-90 md:scale-100"} md:w-[30vw] lg:w-[18.5vw] h-[460px] hover:scale-105 duration-700 bg-gradient-to-t rounded-xl from-[#2f165a] to-[#1e0e34] mb-10 cursor-pointer`} style={{ "filter": "drop-shadow(0 0 0.3rem #ff10f0)" }} >
+            <div onClick={() => (from != "home" && setOnCard(true))} className={`flex justify-center ${from != "home" ? "w-[68vw]" : "scale-90 md:scale-100"} md:w-[30vw] lg:w-[18.5vw] h-[460px] hover:scale-105 duration-700 bg-gradient-to-t rounded-xl from-[#2f165a] to-[#1e0e34] mb-10 cursor-pointer`} style={{ "filter": "drop-shadow(0 0 0.3rem #ff10f0)" }} >
                 <Image className='rounded-xl w-full object-fill shadow-md shadow-indigo-600' src={data?.img} width={250} height={250} alt='logo' />
             </div>
             {onCard && from != "home" && (
-                <div className='fixed flex justify-center items-center py-32 z-20 bg-[#0000001a] backdrop-blur-sm top-0 bottom-0 left-0 right-0' >
+                <div className='fixed flex justify-center items-center py-32 z-20 bg-[#0000004d] top-0 bottom-0 left-0 right-0' >
 
                     <div onMouseLeave={() => setOnCard(false)} className='relative flex min-[1293px]:space-x-5 bg-[#0f172ad9] backdrop-blur-md w-[85vw] h-[30rem] md:h-[35rem] mt-16 rounded-3xl md:px-10 py-7 md:py-12 lg:py-16' >
                         <Image onClick={() => setOnCard(false)} className='absolute right-5 md:right-9 top-2 md:top-5 cursor-pointer' src="/close.svg" width={24} height={24} alt='close' />
@@ -33,7 +33,7 @@ const EventCard = ({ data, from }) => {
                         <div className='flex flex-col justify-between py-1 overflow-x-auto px-7 md:px-0' >
                             <div>
                                 <div className='text-white sm:text-lg text-justify' >{data?.desc}</div>
-                                <div className='bg-[#fafafa33] min-[853px]:flex justify-between items-end text-white p-5 mt-10 rounded-xl' >
+                                <div className='bg-[#fafafa33] min-[853px]:flex justify-between items-end text-white p-5 mt-5 md:mt-10 rounded-xl' >
                                     <div >
                                         <p className='sm:text-lg font-medium text-slate-400 font-mono' >Start Date: 22.9.23</p>
                                         <div className='sm:text-lg font-medium text-slate-400 mt-2 font-mono' >Team size : 1 - 4</div>

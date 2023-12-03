@@ -66,7 +66,7 @@ const Navbar = () => {
                 <motion.div
                     animate={{ scale: [1, 1.3, 1] }}
                     transition={{ repeat: Infinity, duration: 2, delay: 0.5 }}
-                    className="mx-auto lg:mx-2"
+                    className="mx-auto pr-3 lg:mx-2"
                 >
                     <Image src="/logo-white.png" width={60} height={60} alt="logo" style={{ "paddingRight": "1%", "filter": "drop-shadow(0 0 0.05rem white)" }} />
                 </motion.div>
@@ -81,9 +81,9 @@ const Navbar = () => {
                     <li >
                         <button className="hover:scale-105 outline-none" style={backDropText}>SPONSORS</button>
                     </li>
-                    <li>
-                        <button className="hover:scale-105 outline-none" style={backDropText}>BOOKING</button>
-                    </li>
+                    <Link href="/#faq">
+                        <button className="hover:scale-105 outline-none" style={backDropText}>FAQ</button>
+                    </Link>
 
                 </ul>
             </div>
@@ -100,17 +100,20 @@ const Navbar = () => {
                 <Link href="/workshops" >
                     <p className='navBtn cardDropshadow' >WORKSHOPS</p>
                 </Link>
+                <Link href="/" >
+                    <p className='navBtn cardDropshadow' >GALLERY</p>
+                </Link>
+                <Link href="/" >
+                    <p className='navBtn cardDropshadow' >CONTACT</p>
+                </Link>
+                <Link href="/" >
+                    <p className='navBtn cardDropshadow' >SPONSORS</p>
+                </Link>
                 <Link href="/#about" >
                     <p className='navBtn cardDropshadow' >ABOUT</p>
                 </Link>
-                <Link href="/contact" >
-                    <p className='navBtn cardDropshadow' >CONTACT</p>
-                </Link>
-                <Link href="/contact" >
-                    <p className='navBtn cardDropshadow' >SPONSORS</p>
-                </Link>
-                <Link href="/contact" >
-                    <p className='navBtn cardDropshadow' >GALLERY</p>
+                <Link href="/#faq" >
+                    <p className='navBtn cardDropshadow' >FAQ</p>
                 </Link>
             </div>
         </div>
