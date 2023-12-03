@@ -25,7 +25,7 @@ const EventCard = ({ data, from }) => {
             {onCard && from != "home" && (
                 <div className='fixed flex justify-center items-center py-32 z-20 bg-[#0000004d] top-0 bottom-0 left-0 right-0' >
 
-                    <div onMouseLeave={() => setOnCard(false)} className='relative flex min-[1293px]:space-x-5 bg-[#0f172ad9] backdrop-blur-md w-[85vw] h-[30rem] md:h-[35rem] mt-16 rounded-3xl md:px-10 py-7 md:py-12 lg:py-16' >
+                    <div onMouseLeave={() => setOnCard(false)} className='relative flex min-[1293px]:space-x-5 bg-[#0f172ad9] backdrop-blur-md w-[85vw] h-[30rem] md:h-[35rem] mt-16 rounded-3xl md:px-10 py-7 pt-10 md:py-12 lg:py-16' >
                         <Image onClick={() => setOnCard(false)} className='absolute right-5 md:right-9 top-2 md:top-5 cursor-pointer' src="/close.svg" width={24} height={24} alt='close' />
                         <div className='hidden min-[1293px]:block w-[18rem] min-w-[18rem] h-full' >
                             <Image className='w-full h-full rounded-2xl' src={data?.imgDesc} width={250} height={250} alt="Event" />

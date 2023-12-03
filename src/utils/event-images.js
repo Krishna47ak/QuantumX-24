@@ -23,5 +23,8 @@ import streetImg from '../images/events/street.png'
 import byteBrawlDescImg from '../images/events/byte-brawl-desc.png'
 import bestManagerDescImg from '../images/events/best-manager-desc.png'
 import forumDescImg from '../images/events/forum-desc.png'
+import botsRoyaleDescImg from '../images/events/bots-royale-desc.png'
+import circuitPremierLeagueDescImg from '../images/events/circuit-premier-league-desc.png'
+import quantumHacksDescImg from '../images/events/quantum-hacks-desc.png'
 
-export { bestManagerImg, aquaRushImg, botsRoyaleImg, byteBrawlImg, conclaveImg, droneRaceImg, chaiPeCharchaImg, circuitPremierLeagueImg, cybercodeImg, debateImg, forumImg, goKartRaceImg, innovatorsImg, lineRoboChallengeImg, olympiadImg, pitchersImg, quantumHacksImg, questJrImg, roboFootballImg, speedSprintImg, streetImg, byteBrawlDescImg, bestManagerDescImg, forumDescImg }
+export { bestManagerImg, aquaRushImg, botsRoyaleImg, byteBrawlImg, conclaveImg, droneRaceImg, chaiPeCharchaImg, circuitPremierLeagueImg, cybercodeImg, debateImg, forumImg, goKartRaceImg, innovatorsImg, lineRoboChallengeImg, olympiadImg, pitchersImg, quantumHacksImg, questJrImg, roboFootballImg, speedSprintImg, streetImg, byteBrawlDescImg, bestManagerDescImg, forumDescImg, botsRoyaleDescImg, circuitPremierLeagueDescImg, quantumHacksDescImg }

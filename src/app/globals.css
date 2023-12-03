@@ -43,19 +43,22 @@
     filter: drop-shadow(0 0 0.5rem #e0f);
 }
 
-::-webkit-scrollbar {
-    width: 6px;
-}
+@media only screen and (min-width: 800px) {
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
 
-::-webkit-scrollbar-track {
-    background: #ff10efe2;
-}
+    ::-webkit-scrollbar-track {
+        background: #ff10efe2;
+        border-radius: 20px;
+    }
 
-::-webkit-scrollbar-thumb {
-    background: #061536;
-    border-radius: 20px;
-}
+    ::-webkit-scrollbar-thumb {
+        background: #061536;
+        border-radius: 20px;
+    }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #000;
+    ::-webkit-scrollbar-thumb:hover {
+        background: #000;
+    }
 }
