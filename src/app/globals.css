@@ -43,13 +43,13 @@
     filter: drop-shadow(0 0 0.5rem #e0f);
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
     ::-webkit-scrollbar {
         width: 6px;
     }
 
     ::-webkit-scrollbar-track {
-        background: #ff10efe2;
+        background: #fab600e6;
         border-radius: 20px;
     }
 

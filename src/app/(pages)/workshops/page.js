@@ -1,15 +1,15 @@
 import EventCard from '@/components/EventCard'
-import { workshopsdata } from '@/utils/contants'
+import { workshopsdata } from '@/utils/workshop-details'
 
 
 const Workshops = () => {
     return (
-        <div className='bg-black'>
-            <div className="bg-[url('/mobile-workshops-bg.png')] md:bg-[url('/workshops-bg.png')] bg-cover bg-fixed bg-center min-h-screen" >
+        <div className="bg-[url('/workshops-bg.png')]">
+            <div className="bg-[url('/mobile-workshops-bg.png')] md:bg-[url('/workshops-bg.png')] bg-center bg-cover bg-fixed min-h-screen p-5 pt-20" >
 
             </div>
-            <div className="bg-[url('/events-bg(2).jpg')] bg-cover bg-fixed pt-[9vh] bg-no-repeat max-w-10 min-h-[150vh] overflow-hidden" >
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:gap-y-5 md:px-16 lg:px-28 mt-10 md:mt-20' >
+            <div className="bg-[url('/events-bg.jpg')] bg-center bg-cover bg-fixed pt-[9vh] bg-no-repeat max-w-10 min-h-[150vh] overflow-hidden" >
+                <div className='grid sm:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:gap-y-5 md:px-16 lg:px-28 mt-10 md:mt-20' >
                     {workshopsdata?.map((event) => (
                         <EventCard key={event?.desc} data={event} />
                     ))}

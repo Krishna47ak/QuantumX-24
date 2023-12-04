@@ -59,7 +59,7 @@ const Navbar = () => {
                         <button className="hover:scale-105 outline-none" style={backDropText}>WORKSHOPS</button>
                     </Link>
 
-                    <Link href="#contact" >
+                    <Link href="/" >
                         <button className="hover:scale-105 outline-none" style={backDropText}>CONTACT</button>
                     </Link>
                 </ul>
