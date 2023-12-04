@@ -66,7 +66,7 @@ const Navbar = () => {
                 <motion.div
                     animate={{ scale: [1, 1.3, 1] }}
                     transition={{ repeat: Infinity, duration: 2, delay: 0.5 }}
-                    className="mx-auto pr-3 lg:mx-2"
+                    className="mx-auto pr-12 lg:mx-2"
                 >
                     <Image src="/logo-white.png" width={60} height={60} alt="logo" style={{ "paddingRight": "1%", "filter": "drop-shadow(0 0 0.05rem white)" }} />
                 </motion.div>
