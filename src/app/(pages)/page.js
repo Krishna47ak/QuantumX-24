@@ -6,7 +6,7 @@ import Landing from '@/components/Landing'
 const Home = () => {
 
     return (
-        <div className="bg-[url('/BG.gif')] min-h-screen bg-center overflow-hidden" >
+        <div className="min-h-screen bg-center overflow-hidden" >
             <Landing />
             <About />
             <HomeEvents />

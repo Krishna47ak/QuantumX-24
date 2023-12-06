@@ -59,28 +59,28 @@ const Navbar = () => {
                         <button className="hover:scale-105 outline-none" style={backDropText}>WORKSHOPS</button>
                     </Link>
 
-                    <Link href="/" >
-                        <button className="hover:scale-105 outline-none" style={backDropText}>CONTACT</button>
-                    </Link>
                 </ul>
                 <motion.div
                     animate={{ scale: [1, 1.3, 1] }}
                     transition={{ repeat: Infinity, duration: 2, delay: 0.5 }}
-                    className="mx-auto pr-12 lg:mx-2"
+                    className="mx-auto pr-8 lg:pr-16"
                 >
                     <Image src="/logo-white.png" width={60} height={60} alt="logo" style={{ "paddingRight": "1%", "filter": "drop-shadow(0 0 0.05rem white)" }} />
                 </motion.div>
 
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >
+                    <Link href="/" >
+                        <button className="hover:scale-105 outline-none" style={backDropText}>CONTACT</button>
+                    </Link>
                     <Link href="/#about" >
                         <button className="hover:scale-105 outline-none" style={backDropText}>ABOUT</button>
                     </Link>
-                    <li>
+                    {/* <li>
                         <button className="hover:scale-105 outline-none" style={backDropText}>GALLERY</button>
                     </li>
                     <li >
                         <button className="hover:scale-105 outline-none" style={backDropText}>SPONSORS</button>
-                    </li>
+                    </li> */}
                     <Link href="/#faq">
                         <button className="hover:scale-105 outline-none" style={backDropText}>FAQ</button>
                     </Link>

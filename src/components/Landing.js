@@ -23,7 +23,7 @@ const Landing = () => {
             </div> */}
             {onVideo && (
                 <div className="fixed flex justify-center items-center pt-[7vh] md:pt-[9vh] z-20 bg-[#0000004d] backdrop-blur-sm top-0 bottom-0 left-0 right-0" >
-                    <Image onClick={() => setOnVideo(false)} className='absolute right-5 md:right-9 top-20 cursor-pointer' src="/close.svg" width={24} height={24} alt='close' />
+                    <Image onClick={() => setOnVideo(false)} className='absolute lg:hidden right-5 md:right-9 top-20 cursor-pointer' src="/close.svg" width={24} height={24} alt='close' />
                     <div onMouseLeave={() => setOnVideo(false)}  >
                         <iframe className='w-[22rem] h-[15rem] sm:w-[35rem] sm:h-[20rem] md:w-[43rem] md:h-[24rem] lg:w-[55rem] lg:h-[31rem] xl:w-[65rem] xl:h-[36rem] rounded-xl' src="https://www.youtube.com/embed/TGf3dkrQLXE?si=P6YQ1xPP-cDh7UoO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>

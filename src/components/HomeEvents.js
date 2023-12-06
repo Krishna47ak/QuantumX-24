@@ -8,7 +8,7 @@ import { dataScienceDescImg, guidedRoboticsDescImg, humanoidRoboticsDescImg } fr
 
 const HomeEvents = () => {
     return (
-        <div className="relative bg-gradient-to-b from-[#fab600e6] to-black p-10" >
+        <div className="relative bg-gradient-to-b from-[#fab600] to-black p-10" >
             <div id="events" className='absolute -top-[9vh] left-0' />
             <p className="text-3xl text-white text-center font-bold select-none" style={{ ...backDropText, fontSize: '2.5rem' }} >Events</p>
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:px-28 mt-14' >

@@ -6,7 +6,7 @@ const About = () => {
     // }
 
     return (
-        <div className='relative text-white bg-[#fab600e6] p-7 md:p-10 lg:px-20 pb-20' >
+        <div className='relative text-white bg-[#fab600] p-7 md:p-10 lg:px-20 pb-20' >
             <div id="about" className='absolute -top-[9.5vh] left-0' />
             <p className="text-3xl text-white text-center font-bold select-none mb-10" style={{ ...backDropText, fontSize: '2.5rem' }} >About</p>
             <div className="text-justify" >
