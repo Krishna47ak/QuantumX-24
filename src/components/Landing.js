@@ -31,7 +31,7 @@ const Landing = () => {
             )}
             <div onClick={() => setOnVideo(true)} className='relative bg-black rounded-full mb-14 lg:mb-5 cursor-pointer' >
                 <Image src="/play.png" width={70} height={70} alt='play' />
-                <div className='absolute top-[16%] left-[16%] bg-[#fab600e6] rounded-full w-12 h-12 animate-ping' />
+                <div className='absolute top-[18%] left-[18%] bg-[#fab600e6] rounded-full w-11 h-11 animate-ping' />
             </div>
         </div>
     )

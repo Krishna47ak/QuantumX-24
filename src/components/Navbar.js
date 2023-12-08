@@ -69,18 +69,18 @@ const Navbar = () => {
                 </motion.div>
 
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >
-                    <Link href="/" >
+                    {/* <Link href="/" >
                         <button className="hover:scale-105 outline-none" style={backDropText}>CONTACT</button>
-                    </Link>
+                    </Link> */}
                     <Link href="/#about" >
                         <button className="hover:scale-105 outline-none" style={backDropText}>ABOUT</button>
                     </Link>
                     {/* <li>
                         <button className="hover:scale-105 outline-none" style={backDropText}>GALLERY</button>
-                    </li>
-                    <li >
-                        <button className="hover:scale-105 outline-none" style={backDropText}>SPONSORS</button>
                     </li> */}
+                    <Link href="/sponsors" >
+                        <button className="hover:scale-105 outline-none" style={backDropText}>SPONSORS</button>
+                    </Link>
                     <Link href="/#faq">
                         <button className="hover:scale-105 outline-none" style={backDropText}>FAQ</button>
                     </Link>
