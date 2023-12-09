@@ -60,21 +60,21 @@ const EventsRegister = ({ params }) => {
 
 
     return (
-        <div className='bg-black text-white min-h-screen p-7 md:p-20 md:px-28' >
+        <div className='bg-black text-white min-h-screen p-7 pt-20 md:p-20 md:px-28' >
             <div>
-                <p className="text-4xl text-center font-semibold mb-14" >Register for <span className="font-bold text-violet-300" >{event?.name}</span></p>
+                <p className="text-4xl text-center font-semibold mb-5 md:mb-14" >Register for <span className="font-bold text-violet-300" >{event?.name}</span></p>
                 <div className="min-[1293px]:flex 2xl:justify-center" >
                     <div className="bg-gray-800 p-5 rounded-xl h-full" >
                         <div className='hidden min-[1293px]:block w-[18rem] min-w-[18rem] h-full mb-6' >
                             <Image className='w-full h-full rounded-2xl' src={event?.imgDesc} width={250} height={250} alt="Event" />
                         </div>
                         <div>
-                            <p className="text-lg font-medium" >Amount : {event?.fee} (per team)</p>
+                            <p className="text-lg font-medium" >Amount : &#8377; {event?.fee} (per team)</p>
                             <p className="text-lg font-medium" >Team size : {event?.fixedSize ? event?.fixedSize : `${event?.minSize} - ${event?.maxSize}`}</p>
                             <p className="text-lg font-medium" >Start Date: {event?.date}</p>
                         </div>
                     </div>
-                    <div className="flex flex-col sm:items-center min-[1293px]:justify-between min-[1293px]:ml-20 mt-16 min-[1293px]:mt-0" >
+                    <div className="flex flex-col sm:items-center min-[1293px]:justify-between min-[1293px]:ml-20 mt-5 md:mt-16 min-[1293px]:mt-0" >
                         <div>
                             <FilterDropdown data={teamSizeData} name="Team size :" setFilterData={handleTeamSizeChange} filterData={teamSize} />
                             <div className="mt-5" >

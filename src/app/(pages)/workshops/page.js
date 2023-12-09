@@ -4,7 +4,7 @@ import { workshopsdata } from '@/utils/workshop-details'
 
 const Workshops = () => {
     return (
-        <div className="bg-[url('/workshops-bg.png')]">
+        <div className="bg-black">
             <div className="bg-[url('/mobile-workshops-bg.png')] md:bg-[url('/workshops-bg.png')] bg-center bg-cover bg-fixed min-h-screen p-5 pt-20" >
 
             </div>

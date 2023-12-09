@@ -4,7 +4,7 @@ import { eventsData } from '@/utils/event-details'
 
 const Events = () => {
     return (
-        <div className="bg-[url('/events-bg(1).png')]">
+        <div className="bg-black">
             <div className="bg-[url('/mobile-events-bg.png')] md:bg-[url('/events-bg(1).png')] bg-[center_top_0px] bg-cover bg-fixed min-h-screen" >
 
             </div>

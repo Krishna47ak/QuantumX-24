@@ -6,7 +6,7 @@ import Landing from '@/components/Landing'
 const Home = () => {
 
     return (
-        <div className="min-h-screen bg-center overflow-hidden" >
+        <div className="bg-black min-h-screen bg-center overflow-hidden" >
             <Landing />
             <About />
             <HomeEvents />
