@@ -1,13 +1,15 @@
 "use client"
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import useScrollBlock from '@/hooks/useScrollBlock'
+import Link from 'next/link'
 
 const EventCard = ({ data, from }) => {
+    const pathname = usePathname()
+    const [blockScroll, allowScroll] = useScrollBlock()
 
     const [onCard, setOnCard] = useState(false)
-
-    const [blockScroll, allowScroll] = useScrollBlock()
 
     useEffect(() => {
         if (onCard) {
@@ -15,6 +17,11 @@ const EventCard = ({ data, from }) => {
         } else {
             allowScroll()
         }
+
+        return () => {
+            allowScroll()
+        }
+
     }, [onCard])
 
     return (
@@ -52,9 +59,9 @@ const EventCard = ({ data, from }) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
+                            <Link href={`${pathname}/register/${data?.id}`} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
                                 <p className='text-white text-lg font-mono' >Register</p>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
