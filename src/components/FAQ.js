@@ -5,7 +5,7 @@ const FAQ = () => {
 
     return (
         <div id="faq" className='px-10 py-5 md:p-10 bg-black' >
-            <p className="font-bold text-2xl md:text-3xl text-yellow-300 text-center" >FREQUENTLY ASKED QUESTIONS</p>
+            <p className="font-bold text-2xl md:text-3xl text-[#fc45ff] text-center" >FREQUENTLY ASKED QUESTIONS</p>
             <div className='md:px-24 py-10 md:mt-10 duration-500' >
                 <Dropdown ques="What is QuantumX-24 all about?" ans="QuantumX-24 is an annual technology festival that brings together enthusiasts, innovators, and tech experts to celebrate and explore the latest advancements in technology. It features a diverse range of events, workshops, and competitions." />
                 <Dropdown ques="When and where is QuantumX-24 happening?" ans="QuantumX-24 is scheduled to take place on the 23rd, 24th and the 25th of January, 2024 at New Horizon College of Engineering, Bengaluru. Check our official website [site] for the most up-to-date information on timings and location." />
@@ -17,6 +17,7 @@ const FAQ = () => {
                 <Dropdown ques="How can I become a sponsor or exhibitor at QuantumX-24?" ans="If you're interested in sponsoring or exhibiting at QuantumX-24, please contact our sponsorship team at [email id] for more information on available opportunities." />
                 <Dropdown ques="Is there accommodation provided for out-of-town participants?" ans="Will be answered soon......." />
                 <Dropdown ques="How can I stay updated on the latest news and announcements about QuantumX-24?" ans="Follow us on social media platforms such as Twitter, Facebook, and Instagram. You can also check our website for regular updates." />
+                <Dropdown ques="Do participants of a team have to be from the same college?" ans="No, participants of multiple colleges can be in the same team." />
             </div>
         </div>
     )

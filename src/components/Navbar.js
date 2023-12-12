@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from 'framer-motion'
 import { backDropText } from "@/utils/contants"
 
 
@@ -60,34 +59,30 @@ const Navbar = () => {
                     </Link>
 
                 </ul>
-                <motion.div
-                    animate={{ scale: [1, 1.3, 1] }}
-                    transition={{ repeat: Infinity, duration: 2, delay: 0.5 }}
-                    className="mx-auto pr-8 lg:pr-16"
-                >
+                <div className="mx-auto pr-8 lg:pr-16" >
                     <Image src="/logo-white.png" width={60} height={60} alt="logo" style={{ "paddingRight": "1%", "filter": "drop-shadow(0 0 0.05rem white)" }} />
-                </motion.div>
+                </div>
 
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >
-                    {/* <Link href="/" >
+                    <Link href="/contact" >
                         <button className="hover:scale-105 outline-none" style={backDropText}>CONTACT</button>
-                    </Link> */}
+                    </Link>
                     <Link href="/#about" >
                         <button className="hover:scale-105 outline-none" style={backDropText}>ABOUT</button>
                     </Link>
                     {/* <li>
                         <button className="hover:scale-105 outline-none" style={backDropText}>GALLERY</button>
                     </li> */}
-                    <Link href="/sponsors" >
+                    {/* <Link href="/sponsors" >
                         <button className="hover:scale-105 outline-none" style={backDropText}>SPONSORS</button>
-                    </Link>
+                    </Link> */}
                     <Link href="/#faq">
                         <button className="hover:scale-105 outline-none" style={backDropText}>FAQ</button>
                     </Link>
 
                 </ul>
             </div>
-            <div ref={menuRef} className={`fixed lg:hidden top-0 ${sideBarClicked ? 'left-0' : '-left-3/4'} duration-500 bg-black w-3/5 h-screen p-5 pt-14 z-50`} >
+            <div ref={menuRef} className={`fixed lg:hidden top-0 ${sideBarClicked ? 'left-0' : '-left-3/4'} duration-500 bg-black bg-[url('/sidebar-bg.png')] bg-center w-3/5 h-screen p-5 pt-14 z-50`} >
                 <div onClick={() => setSidebarClicked(false)} className='absolute top-4 left-5' >
                     <Image className="cardDropshadow" src="/close.svg" width={20} height={20} alt="close" />
                 </div>
@@ -100,15 +95,15 @@ const Navbar = () => {
                 <Link href="/workshops" >
                     <p className='navBtn cardDropshadow' >WORKSHOPS</p>
                 </Link>
-                <Link href="/" >
+                {/* <Link href="/" >
                     <p className='navBtn cardDropshadow' >GALLERY</p>
-                </Link>
+                </Link> */}
                 <Link href="/" >
                     <p className='navBtn cardDropshadow' >CONTACT</p>
                 </Link>
-                <Link href="/" >
+                {/* <Link href="/" >
                     <p className='navBtn cardDropshadow' >SPONSORS</p>
-                </Link>
+                </Link> */}
                 <Link href="/#about" >
                     <p className='navBtn cardDropshadow' >ABOUT</p>
                 </Link>

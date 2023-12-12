@@ -6,7 +6,7 @@ import conclaveImg from '../images/events/conclave.png'
 import droneRaceImg from '../images/events/drone-race.png'
 import chaiPeCharchaImg from '../images/events/chai-pe-charcha.png'
 import circuitPremierLeagueImg from '../images/events/circuit-premier-league.png'
-import cybercodeImg from '../images/events/cybercode.png'
+import questSrImg from '../images/events/quest-sr.png'
 import debateImg from '../images/events/debate.png'
 import forumImg from '../images/events/forum.png'
 import innovatorsImg from '../images/events/innovators.png'
@@ -27,7 +27,7 @@ import conclaveDescImg from '../images/events/conclave-desc.png'
 import droneRaceDescImg from '../images/events/drone-race-desc.png'
 import chaiPeCharchaDescImg from '../images/events/chai-pe-charcha-desc.png'
 import circuitPremierLeagueDescImg from '../images/events/circuit-premier-league-desc.png'
-import cybercodeDescImg from '../images/events/cybercode-desc.png'
+import questSrDescImg from '../images/events/quest-sr-desc.png'
 import debateDescImg from '../images/events/debate-desc.png'
 import forumDescImg from '../images/events/forum-desc.png'
 import innovatorsDescImg from '../images/events/innovators-desc.png'
@@ -41,4 +41,4 @@ import speedSprintDescImg from '../images/events/speed-sprint-desc.png'
 import streetDescImg from '../images/events/street-desc.png'
 
 
-export { bestManagerImg, aquaRushImg, botsRoyaleImg, byteBrawlImg, conclaveImg, droneRaceImg, chaiPeCharchaImg, circuitPremierLeagueImg, cybercodeImg, debateImg, forumImg, innovatorsImg, lineRoboChallengeImg, olympiadImg, pitchersImg, quantumHacksImg, questJrImg, roboFootballImg, speedSprintImg, streetImg, byteBrawlDescImg, bestManagerDescImg, forumDescImg, botsRoyaleDescImg, circuitPremierLeagueDescImg, quantumHacksDescImg, aquaRushDescImg, conclaveDescImg, droneRaceDescImg, chaiPeCharchaDescImg, cybercodeDescImg, debateDescImg, innovatorsDescImg, olympiadDescImg, pitchersDescImg, lineRoboChallengeDescImg, questJrDescImg, roboFootballDescImg, speedSprintDescImg, streetDescImg }
+export { bestManagerImg, aquaRushImg, botsRoyaleImg, byteBrawlImg, conclaveImg, droneRaceImg, chaiPeCharchaImg, circuitPremierLeagueImg, questSrImg, questSrDescImg, debateImg, forumImg, innovatorsImg, lineRoboChallengeImg, olympiadImg, pitchersImg, quantumHacksImg, questJrImg, roboFootballImg, speedSprintImg, streetImg, byteBrawlDescImg, bestManagerDescImg, forumDescImg, botsRoyaleDescImg, circuitPremierLeagueDescImg, quantumHacksDescImg, aquaRushDescImg, conclaveDescImg, droneRaceDescImg, chaiPeCharchaDescImg, debateDescImg, innovatorsDescImg, olympiadDescImg, pitchersDescImg, lineRoboChallengeDescImg, questJrDescImg, roboFootballDescImg, speedSprintDescImg, streetDescImg }

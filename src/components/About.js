@@ -6,17 +6,23 @@ const About = () => {
     // }
 
     return (
-        <div className='relative text-white bg-[#fab600] p-7 md:p-10 lg:px-20 pb-20' >
+        <div className='relative grid md:grid-cols-2 gap-x-16 text-white bg-[#831c84] p-7 md:p-10 lg:px-20 pb-20' >
             <div id="about" className='absolute -top-[9.5vh] left-0' />
-            <p className="text-3xl text-white text-center font-bold select-none mb-10" style={{ ...backDropText, fontSize: '2.5rem' }} >About</p>
-            <div className="text-justify" >
-                <p>
-                    Welcome to QuantumX-24, where creativity is sparked by curiosity and innovation meets inspiration! This is the highly anticipated return and second edition of the official tech event of New Horizon College of Engineering, Bengaluru. Our annual tech fair was founded with the goal of providing a platform that honours technology&apos;s spirit and encourages curiosity. Today, it serves as a guide for innovators, enthusiasts, and students alike.
-                </p>
-                <br />
-                <p className="hidden md:block" >
-                    At QuantumX, we think that technology has the ability to change the world and influence its course. Our festival serves as a hub for networking, knowledge exchange, and hands-on experiences that extend beyond academia&apos;s traditional boundaries. It&apos;s a place where ideas are born, prototypes are created, and lifelong connections are forged. Join us in this unique experience as we make the quantum leap into the future!
-                </p>
+            <div>
+                <p className="text-3xl text-white text-center font-bold select-none mb-10" style={{ ...backDropText, fontSize: '2.5rem' }} >About Fest</p>
+                <div className="text-justify" >
+                    <p>
+                        Welcome to QuantumX-24, where creativity is sparked by curiosity and innovation meets inspiration! This is the highly anticipated return and second edition of the official tech event of New Horizon College of Engineering, Bengaluru. Our annual tech fair was founded with the goal of providing a platform that honours technology&apos;s spirit and encourages curiosity. Today, it serves as a guide for innovators, enthusiasts, and students alike.
+                    </p>
+                </div>
+            </div>
+            <div className="mt-10 md:mt-0" >
+                <p className="text-3xl text-white text-center font-bold select-none mb-10" style={{ ...backDropText, fontSize: '2.5rem' }} >About Theme</p>
+                <div className="text-justify" >
+                    <p>
+                        Welcome to QuantumX-24, where creativity is sparked by curiosity and innovation meets inspiration! This is the highly anticipated return and second edition of the official tech event of New Horizon College of Engineering, Bengaluru. Our annual tech fair was founded with the goal of providing a platform that honours technology&apos;s spirit and encourages curiosity. Today, it serves as a guide for innovators, enthusiasts, and students alike.
+                    </p>
+                </div>
             </div>
 
         </div>

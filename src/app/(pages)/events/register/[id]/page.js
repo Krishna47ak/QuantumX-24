@@ -77,7 +77,7 @@ const EventsRegister = ({ params }) => {
                     <div className="flex flex-col sm:items-center min-[1293px]:justify-between min-[1293px]:ml-20 mt-5 md:mt-16 min-[1293px]:mt-0" >
                         <div>
                             <FilterDropdown data={teamSizeData} name="Team size :" setFilterData={handleTeamSizeChange} filterData={teamSize} />
-                            <div className="mt-5" >
+                            <div className="mt-5 md:mt-10" >
                                 <FormInput inputName="leader" name="Team leader name" data={leader} setdata={onChange} placeholder="Full name" />
                                 <FormInput inputName="college" name="College name" data={college} setdata={onChange} placeholder="College name" />
                                 <FormInput inputName="phone" name="Phone number" data={phone} setdata={onChange} placeholder="Phone number" type="tel" />

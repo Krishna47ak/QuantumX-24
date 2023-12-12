@@ -45,16 +45,21 @@ const EventCard = ({ data, from }) => {
                                         <p className='sm:text-lg font-medium text-slate-400 font-mono' >Start Date: {data?.date}</p>
                                         <div className='sm:text-lg font-medium text-slate-400 mt-2 font-mono' >Team size : {data?.fixedSize ? data?.fixedSize : `${data?.minSize} - ${data?.maxSize}`}</div>
                                         <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Fee: &#8377; {data?.fee}</p>
-                                        <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Prize pool: &#8377; {data?.prizePool}</p>
+                                        {data?.prizePool && <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Prize pool: &#8377; {data?.prizePool}</p>}
+
                                     </div>
                                     <div>
+                                        {data?.contact && <div className='flex items-start sm:items-center mt-2' >
+                                            <Image className='mt-1' src="/contact.svg" width={20} height={20} alt='location' />
+                                            <p className='ml-2 text-lg sm:text-xl font-medium text-slate-400 font-mono' >Contact: {data?.contact}</p>
+                                        </div>}
+                                        {data?.location && <div className='flex items-start sm:items-center mt-2' >
+                                            <Image className='mt-1' src="/location.svg" width={20} height={20} alt='location' />
+                                            <p className='ml-2 text-lg sm:text-xl font-medium text-slate-400 font-mono' >Location: {data?.location}</p>
+                                        </div>}
                                         <div className='flex items-center mt-2' >
                                             <Image src="/rule-book.svg" width={20} height={20} alt='location' />
                                             <a href={data?.ruleBook} target='_blank' className='ml-2 text-blue-600 text-lg sm:text-xl font-medium font-mono underline cursor-pointer select-none' >Rule book</a>
-                                        </div>
-                                        <div className='flex items-start sm:items-center mt-2' >
-                                            <Image className='mt-1' src="/location.svg" width={20} height={20} alt='location' />
-                                            <p className='ml-2 text-lg sm:text-xl font-medium text-slate-400 font-mono' >Location: {data?.location}</p>
                                         </div>
                                     </div>
                                 </div>
