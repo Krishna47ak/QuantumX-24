@@ -10,7 +10,7 @@ const HomeEvents = () => {
     return (
         <div className="relative bg-gradient-to-b from-[#831c84] to-black p-10" >
             <div id="events" className='absolute -top-[9vh] left-0' />
-            <Image className='mx-auto' src="/events-heading.png" width={270} height={270} alt='events' />
+            <Image className='mx-auto scale-75 md:scale-100' src="/events-heading.png" width={270} height={270} alt='events' />
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:px-28 mt-14' >
                 <EventCard data={{ img: circuitPremierLeagueDescImg }} from="home" />
                 <EventCard data={{ img: quantumHacksDescImg }} from="home" />
@@ -23,7 +23,7 @@ const HomeEvents = () => {
                     Explore more
                 </div>
             </Link>
-            <Image className='mx-auto' src="/workshops-heading.png" width={400} height={400} alt='events' />
+            <Image className='mx-auto scale-75 md:scale-100' src="/workshops-heading.png" width={400} height={400} alt='events' />
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:px-28 mt-16' >
                 <EventCard data={{ img: humanoidRoboticsDescImg }} from="home" />
                 <EventCard data={{ img: dataScienceDescImg }} from="home" />

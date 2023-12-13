@@ -22,7 +22,7 @@ const Workshops = () => {
     return (
         <div className="bg-black">
             <div className="bg-[url('/events-bg.jpg')] bg-center bg-cover bg-fixed py-[9vh] bg-no-repeat flex flex-col justify-center items-center min-h-screen overflow-hidden" >
-                <Image className='scale-110' src="/workshops-heading.png" width={600} height={600} alt='events' />
+                <Image className='scale-90 md:scale-110' src="/workshops-heading.png" width={600} height={600} alt='events' />
             </div>
             <div className="bg-[url('/events-bg(2).png')] bg-bottom bg-cover bg-fixed min-h-screen" >
                 <div className='flex justify-center' >
