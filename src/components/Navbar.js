@@ -60,7 +60,7 @@ const Navbar = () => {
 
                 </ul>
                 <div className="mx-auto pr-8 lg:pr-16" >
-                    <Image src="/logo-white.png" width={60} height={60} alt="logo" style={{ "paddingRight": "1%", "filter": "drop-shadow(0 0 0.05rem white)" }} />
+                    <Image src="/logo-white.png" width={60} height={60} alt="logo" style={{ "filter": "drop-shadow(0 0 0.05rem white)" }} />
                 </div>
 
                 <ul className="hidden lg:flex justify-center items-center lg:space-x-10 xl:space-x-16 2xl:space-x-20" >

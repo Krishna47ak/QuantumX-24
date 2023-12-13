@@ -41,7 +41,7 @@ export const eventsData = [
         imgDesc: byteBrawlDescImg,
         desc: "Immerse yourselves in the world of Battlegrounds Mobile India (BGMI) in a Team DeathMatch to be the final survivor.",
         date: "18/01/24",
-        minSize: 4,
+        minSize: 5,
         maxSize: 6,
         fixedSize: null,
         fee: 500,
@@ -100,7 +100,7 @@ export const eventsData = [
     },
     {
         id: "QX_EV_07",
-        name: "HUSTLER’S STREET",
+        name: "HUSTLER'S STREET",
         img: streetImg,
         imgDesc: streetDescImg,
         desc: "Navigate through a labyrinth of booths showcasing cutting-edge products, services, and solutions from a diverse range of startups. Engage in thought-provoking conversations with passionate founders and industry experts as they delve into the intricacies of their ventures.",
@@ -339,21 +339,3 @@ export const eventsData = [
         ruleBook: "https://docs.google.com/document/d/1LCPIK_pEYlipq52cjDbp4Hnyuh4YfLrM/edit?usp=sharing&ouid=103811776576971983524&rtpof=true&sd=true"
     },
 ]
-
-
-// {
-//     id: "QX_EV_20",
-//     name: "Hustler's Street",
-//     img: streetImg,
-//     imgDesc: streetDescImg,
-//     desc: "Navigate through a labyrinth of booths showcasing cutting-edge products, services, and solutions from a diverse range of startups. Engage in thought-provoking conversations with passionate founders and industry experts as they delve into the intricacies of their ventures.",
-//     date: "16/01/2024",
-//     minSize: null,
-//     maxSize: null,
-//     fixedSize: "",
-//     fee: "",
-//     prizePool: "",
-//     location: "SVM Hostel Corridor",
-//     contact: "Anish B - +91 84318 75412",
-//     ruleBook: ""
-// }

@@ -43,9 +43,13 @@ const EventCard = ({ data, from }) => {
                                 <div className='bg-[#fafafa33] min-[853px]:flex justify-between items-end text-white p-5 mt-5 md:mt-10 rounded-xl' >
                                     <div >
                                         <p className='sm:text-lg font-medium text-slate-400 font-mono' >Start Date: {data?.date}</p>
-                                        <div className='sm:text-lg font-medium text-slate-400 mt-2 font-mono' >Team size : {data?.fixedSize ? data?.fixedSize : `${data?.minSize} - ${data?.maxSize}`}</div>
-                                        <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Fee: &#8377; {data?.fee}</p>
-                                        {data?.prizePool && <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Prize pool: &#8377; {data?.prizePool}</p>}
+                                        {((data?.id != "QX_EV_05") && (data?.id != "QX_EV_06") && (data?.id != "QX_EV_07")) && (
+                                            <>
+                                                <div className='sm:text-lg font-medium text-slate-400 mt-2 font-mono' >Team size : {data?.fixedSize ? data?.fixedSize : `${data?.minSize} - ${data?.maxSize}`}</div>
+                                                <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Fee: &#8377; {data?.fee}</p>
+                                                {data?.prizePool && <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Prize pool: &#8377; {data?.prizePool}</p>}
+                                            </>
+                                        )}
 
                                     </div>
                                     <div>

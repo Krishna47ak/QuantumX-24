@@ -11,6 +11,8 @@ const EventsRegister = ({ params }) => {
     const [teamSize, setTeamSize] = useState(null)
     const [memberNames, setMemberNames] = useState(Array(teamSize).fill(""));
 
+    const [teamName, setTeamName] = useState("")
+    const [discord, setDiscord] = useState("")
     const [formData, setFormData] = useState({
         transacImg: '',
         transacId: '',
@@ -78,6 +80,12 @@ const EventsRegister = ({ params }) => {
                         <div>
                             <FilterDropdown data={teamSizeData} name="Team size :" setFilterData={handleTeamSizeChange} filterData={teamSize} />
                             <div className="mt-5 md:mt-10" >
+                                {event?.id === "QX_EV_12" && (
+                                    <FormInput name="Team name" data={teamName} setdata={e => setTeamName(e.target.value)} placeholder="Team name" />
+                                )}
+                                {(event?.id === "QX_EV_02" || event?.id === "QX_EV_03") && (
+                                    <FormInput name="Discord id" data={discord} setdata={e => setDiscord(e.target.value)} placeholder="Discord id" />
+                                )}
                                 <FormInput inputName="leader" name="Team leader name" data={leader} setdata={onChange} placeholder="Full name" />
                                 <FormInput inputName="college" name="College name" data={college} setdata={onChange} placeholder="College name" />
                                 <FormInput inputName="phone" name="Phone number" data={phone} setdata={onChange} placeholder="Phone number" type="tel" />

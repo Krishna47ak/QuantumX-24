@@ -9,17 +9,24 @@ const Footer = () => {
                     <Image src="/logo-white.png" width={90} height={90} alt='logo' />
                     <p className='text-white mt-4' >The second Techno - Management fest of New Horizon College of Engineering</p>
                     <div className='inline-flex mt-3 p-2 px-3 rounded-xl space-x-5 bg-gray-800' >
-                        <Image className='hover:scale-105 cursor-pointer' src="/insta-icon.svg" width={24} height={24} alt='instagram' />
-                        <Image className='hover:scale-105 cursor-pointer' src="/twitter-icon.svg" width={24} height={24} alt='instagram' />
-                        <Image className='hover:scale-105 cursor-pointer' src="/linkedin-icon.svg" width={24} height={24} alt='instagram' />
-                        <Image className='hover:scale-105 cursor-pointer' src="/youtube-icon.svg" width={24} height={24} alt='instagram' />
+                        <a href='https://instagram.com/quantumx.nhce?igshid=OGQ5ZDc2ODk2ZA==' target='_blank' >
+                            <Image className='hover:scale-105 cursor-pointer' src="/insta-icon.svg" width={24} height={24} alt='instagram' />
+                        </a>
+                        <a href='https://instagram.com/quantumx.nhce?igshid=OGQ5ZDc2ODk2ZA==' target='_blank' >
+                            <Image className='hover:scale-105 cursor-pointer' src="/twitter-icon.svg" width={24} height={24} alt='instagram' />
+                        </a>
+                        <a href='https://instagram.com/quantumx.nhce?igshid=OGQ5ZDc2ODk2ZA==' target='_blank' >
+                            <Image className='hover:scale-105 cursor-pointer' src="/linkedin-icon.svg" width={24} height={24} alt='instagram' />
+                        </a>
+                        <a href='https://youtube.com/@quantumx-nhce?si=dLrjAznRY12xBH0D' target='_blank' >
+                            <Image className='hover:scale-105 cursor-pointer' src="/youtube-icon.svg" width={24} height={24} alt='instagram' />
+                        </a>
                     </div>
                 </div>
                 <div className='md:pl-7 mt-5 md:mt-0' >
                     <p className='text-white text-3xl mb-4' >Contact US</p>
-                    <p className='text-slate-500 text-lg' >Ananda krishna</p>
                     <p className='text-slate-500 text-lg' >Support, QuantumX 2024</p>
-                    <p className='text-slate-500 text-lg' >support.quantumx@nhce.in</p>
+                    <p className='text-slate-500 text-lg' >quantumx-24@newhorizonindia.edu</p>
                 </div>
             </div>
         </div>
