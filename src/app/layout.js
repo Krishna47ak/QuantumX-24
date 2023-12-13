@@ -10,12 +10,12 @@ export const metadata = {
     siteName: 'QuantumX',
     images: [
       {
-        url: '/logo.png',
+        url: 'https://www.quantumxfest.com/_next/image?url=%2Flogo.png&w=750&q=75',
         width: 800,
         height: 600,
       },
       {
-        url: '/logo.png',
+        url: 'https://www.quantumxfest.com/_next/image?url=%2Flogo.png&w=750&q=75',
         width: 1800,
         height: 1600,
         alt: 'QX',
