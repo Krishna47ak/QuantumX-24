@@ -98,7 +98,7 @@ const Navbar = () => {
                 {/* <Link href="/" >
                     <p className='navBtn cardDropshadow' >GALLERY</p>
                 </Link> */}
-                <Link href="/" >
+                <Link href="/contact" >
                     <p className='navBtn cardDropshadow' >CONTACT</p>
                 </Link>
                 {/* <Link href="/" >

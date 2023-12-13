@@ -1,4 +1,4 @@
-import { aquaRushDescImg, aquaRushImg, bestManagerDescImg, bestManagerImg, botsRoyaleDescImg, botsRoyaleImg, byteBrawlDescImg, byteBrawlImg, chaiPeCharchaDescImg, chaiPeCharchaImg, circuitPremierLeagueDescImg, circuitPremierLeagueImg, conclaveDescImg, conclaveImg, debateDescImg, debateImg, droneRaceDescImg, droneRaceImg, forumDescImg, forumImg, innovatorsDescImg, innovatorsImg, lineRoboChallengeDescImg, lineRoboChallengeImg, olympiadDescImg, olympiadImg, pitchersDescImg, pitchersImg, quantumHacksDescImg, quantumHacksImg, questJrDescImg, questJrImg, questSrDescImg, questSrImg, roboFootballDescImg, roboFootballImg, speedSprintDescImg, speedSprintImg, streetDescImg, streetImg } from '@/utils/event-images'
+import { aquaRushDescImg, aquaRushImg, bestManagerDescImg, bestManagerImg, botsRoyaleDescImg, botsRoyaleImg, byteBrawlBgmiImg, byteBrawlCodImg, byteBrawlDescImg, chaiPeCharchaDescImg, chaiPeCharchaImg, circuitPremierLeagueDescImg, circuitPremierLeagueImg, conclaveDescImg, conclaveImg, debateDescImg, debateImg, droneRaceDescImg, droneRaceImg, forumDescImg, forumImg, innovatorsDescImg, innovatorsImg, lineRoboChallengeDescImg, lineRoboChallengeImg, olympiadDescImg, olympiadImg, pitchersDescImg, pitchersImg, quantumHacksDescImg, quantumHacksImg, questJrDescImg, questJrImg, questSrDescImg, questSrImg, roboFootballDescImg, roboFootballImg, speedSprintDescImg, speedSprintImg, streetDescImg, streetImg } from '@/utils/event-images'
 
 
 export const eventsData = [
@@ -21,7 +21,7 @@ export const eventsData = [
     {
         id: "QX_EV_02",
         name: "BYTE BRAWL-BGMI",
-        img: byteBrawlImg,
+        img: byteBrawlBgmiImg,
         imgDesc: byteBrawlDescImg,
         desc: "Immerse yourselves in the world of Battlegrounds Mobile India (BGMI) in a Team DeathMatch to be the final survivor.",
         date: "16/01/24",
@@ -37,7 +37,7 @@ export const eventsData = [
     {
         id: "QX_EV_03",
         name: "BYTE BRAWL-COD",
-        img: byteBrawlImg,
+        img: byteBrawlCodImg,
         imgDesc: byteBrawlDescImg,
         desc: "Immerse yourselves in the world of Battlegrounds Mobile India (BGMI) in a Team DeathMatch to be the final survivor.",
         date: "18/01/24",

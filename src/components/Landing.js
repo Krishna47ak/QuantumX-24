@@ -18,15 +18,15 @@ const Landing = () => {
     }, [onVideo])
 
     return (
-        <div className="bg-[url('/home-bg.jpg')] bg-[center_top_0px] bg-cover bg-fixed flex justify-center items-end p-10 min-h-screen overflow-hidden" >
+        <div className="bg-[url('/home-bg.jpg')] bg-center bg-cover bg-fixed flex justify-center items-end p-10 min-h-screen overflow-hidden" >
             {/* <div className='hidden lg:block relative scale-75 mr-16 md:scale-100' >
                 <div className="absolute text-center h-9 w-36 bg-[url('/BG6.gif')] rounded-2xl right-[1rem] bottom-[1.3rem] z-40" />
             </div> */}
-            <div className='absolute  top-[35vh] sm:top-auto px-2 flex flex-col justify-center items-center' >
+            <div className='absolute  top-[33vh] sm:top-auto px-2 flex flex-col justify-center items-center' >
                 <motion.div
                     initial={{ opacity: 0, scale: 0, width: 0, y: -1000 }}
                     animate={{ opacity: 1, scale: 1, width: '100%', y: 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 1, delay: 0.4 }}
                     className='max-w-fit'
                 >
                     <Image src="/logo.png" width={700} height={700} alt='logo' />

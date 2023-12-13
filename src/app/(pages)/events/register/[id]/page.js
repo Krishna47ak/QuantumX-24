@@ -6,10 +6,17 @@ import { dropDownData } from "@/utils/contants"
 import { eventsData } from "@/utils/event-details"
 import FormInput from "@/components/FormInput"
 
+const memberStruct = {
+    name: '',
+    email: '',
+    phone: '',
+    college: ''
+}
+
 const EventsRegister = ({ params }) => {
     const event = eventsData.find((event) => event.id === params.id)
     const [teamSize, setTeamSize] = useState(null)
-    const [memberNames, setMemberNames] = useState(Array(teamSize).fill(""));
+    const [members, setMembers] = useState(Array(teamSize).fill(memberStruct));
 
     const [teamName, setTeamName] = useState("")
     const [discord, setDiscord] = useState("")
@@ -34,23 +41,24 @@ const EventsRegister = ({ params }) => {
         setTeamSize(size);
         const newSize = parseInt(size) - 1
 
-        setMemberNames((prevNames) => {
-            const newNames = [...prevNames];
-            if (newSize > prevNames.length) {
-                newNames.push(...Array(newSize - prevNames.length).fill(''));
-            } else if (newSize < prevNames.length) {
-                newNames.splice(newSize);
+        setMembers((prevMembers) => {
+            const newMembers = [...prevMembers];
+            if (newSize > prevMembers.length) {
+                newMembers.push(...Array(newSize - prevMembers.length).fill(memberStruct));
+            } else if (newSize < prevMembers.length) {
+                newMembers.splice(newSize);
             }
-            return newNames;
+            return newMembers;
         });
     };
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
-    const onMemberChange = (index, value) => {
-        setMemberNames((prevNames) => {
-            const newNames = [...prevNames];
-            newNames[index] = value;
-            return newNames;
+
+    const onMemberChange = (index, name, value) => {
+        setMembers((prevMembers) => {
+            const newMembers = JSON.parse(JSON.stringify(prevMembers));;
+            newMembers[index][name] = value;
+            return newMembers;
         })
     };
 
@@ -87,15 +95,22 @@ const EventsRegister = ({ params }) => {
                                     <FormInput name="Discord id" data={discord} setdata={e => setDiscord(e.target.value)} placeholder="Discord id" />
                                 )}
                                 <FormInput inputName="leader" name="Team leader name" data={leader} setdata={onChange} placeholder="Full name" />
-                                <FormInput inputName="college" name="College name" data={college} setdata={onChange} placeholder="College name" />
-                                <FormInput inputName="phone" name="Phone number" data={phone} setdata={onChange} placeholder="Phone number" type="tel" />
                                 <FormInput inputName="email" name="Email" data={email} setdata={onChange} placeholder="Email ID" type="email" />
+                                <FormInput inputName="phone" name="Phone number" data={phone} setdata={onChange} placeholder="Phone number" type="tel" />
+                                <FormInput inputName="college" name="College name" data={college} setdata={onChange} placeholder="College name" />
                                 <FormInput inputName="usn" name="USN" data={usn} setdata={onChange} placeholder="USN" />
                             </div>
-                            {teamSize && teamSize != 1 && <div className="h-1 w-full my-5 rounded-full bg-gray-700" />}
+                            {/* {teamSize && teamSize != 1 && <div className="h-1 w-full my-5 rounded-full bg-gray-700" />} */}
                             <div>
-                                {teamSize > 1 && [...Array(teamSize - 1)].map((e, i) => <FormInput key={i} name={`Team member ${i + 1}`} data={memberNames[i]} setdata={onMemberChange} placeholder="Full name" inputIndex={i} />
-                                )}
+                                {teamSize > 1 && [...Array(teamSize - 1)].map((e, i) => (
+                                    <div key={i} >
+                                        <div className="h-1 w-full my-5 rounded-full bg-gray-700" />
+                                        <FormInput inputName="name" name={`Team member ${i + 1}`} data={members[i].name} setdata={onMemberChange} placeholder="Full name" inputIndex={i} />
+                                        <FormInput inputName="email" name="Email" data={members[i].email} setdata={onMemberChange} placeholder="Email" inputIndex={i} />
+                                        <FormInput inputName="phone" name="Phone number" data={members[i].phone} setdata={onMemberChange} placeholder="Phone number" inputIndex={i} />
+                                        <FormInput inputName="college" name="College name" data={members[i].college} setdata={onMemberChange} placeholder="College name" inputIndex={i} />
+                                    </div>
+                                ))}
                             </div>
                         </div>
                         <div className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
