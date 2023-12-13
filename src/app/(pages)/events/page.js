@@ -23,10 +23,12 @@ const Events = () => {
 
     return (
         <div className="bg-black">
-            <div className="bg-[url('/events-bg.jpg')] bg-center bg-cover bg-fixed py-[9vh] bg-no-repeat max-w-10 overflow-hidden" >
-                <div className='flex flex-col justify-center items-center scale-75 md:scale-100 pb-44 min-h-screen' >
-                    <Image src="/events-heading.png" width={600} height={600} alt='events' />
-                    <div className='flex mt-10 bg-[#ed00e9b3] backdrop-blur-sm border-2 border-gray-400 p-3 w-[27rem] md:w-[30rem] rounded-xl' >
+            <div className="bg-[url('/events-bg.jpg')] bg-center bg-cover bg-fixed py-[9vh] bg-no-repeat flex flex-col justify-center items-center min-h-screen overflow-hidden" >
+                <Image className='scale-75 md:scale-100' src="/events-heading.png" width={600} height={600} alt='events' />
+            </div>
+            <div className="bg-[url('/events-bg(2).png')] bg-bottom bg-cover bg-fixed min-h-screen" >
+                <div className='flex justify-center' >
+                    <div className='flex mt-10 md:mt-20 bg-[#ed00e9b3] backdrop-blur-sm border-2 border-gray-400 p-3 w-[27rem] md:w-[40rem] rounded-xl' >
                         <Image src="/search.svg" width={20} height={20} alt='search' />
                         <div className='w-[0.05rem] mx-2 bg-gray-400' />
                         <input value={searchText} onChange={(e) => setSearchText(e.target.value)} className='w-full bg-transparent text-white outline-none' placeholder='Search...' />

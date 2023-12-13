@@ -3,16 +3,6 @@ import React from 'react'
 const Contact = () => {
     return (
         <div className='bg-black p-20 text-white md:text-xl text-center pt-32 min-h-screen' >
-            Email: quantumx-24@newhorizonindia.edu
-            <br />
-            Insta: quantumx.nhce
-            <br />
-            <br />
-
-
-            Contact:
-            <br />
-            <br />
             <br />
             <br />
 
@@ -66,9 +56,14 @@ const Contact = () => {
                     +91 86601 23179
                     <br />
                     <br />
-
                 </div>
             </div>
+
+            <br />
+            <br />
+            <a href='mailto: quantumx-24@newhorizonindia.edu' target='_blank' >quantumx-24@newhorizonindia.edu</a>
+            <br />
+            <a href='https://instagram.com/quantumx.nhce?igshid=OGQ5ZDc2ODk2ZA==' target='_blank' >quantumx.nhce</a>
 
 
         </div>

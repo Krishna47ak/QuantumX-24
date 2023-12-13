@@ -1,4 +1,4 @@
-import { backDropText } from '@/utils/contants'
+import Image from 'next/image'
 import Link from 'next/link'
 import EventCard from './EventCard'
 import { circuitPremierLeagueDescImg, quantumHacksDescImg, botsRoyaleDescImg } from '@/utils/event-images'
@@ -10,7 +10,7 @@ const HomeEvents = () => {
     return (
         <div className="relative bg-gradient-to-b from-[#831c84] to-black p-10" >
             <div id="events" className='absolute -top-[9vh] left-0' />
-            <p className="text-3xl text-white text-center font-bold select-none" style={{ ...backDropText, fontSize: '2.5rem' }} >Events</p>
+            <Image className='mx-auto' src="/events-heading.png" width={270} height={270} alt='events' />
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:px-28 mt-14' >
                 <EventCard data={{ img: circuitPremierLeagueDescImg }} from="home" />
                 <EventCard data={{ img: quantumHacksDescImg }} from="home" />
@@ -23,7 +23,7 @@ const HomeEvents = () => {
                     Explore more
                 </div>
             </Link>
-            <p className="text-3xl text-white text-center font-bold select-none mt-6" style={{ ...backDropText, fontSize: '2.5rem' }} >Workshops</p>
+            <Image className='mx-auto' src="/workshops-heading.png" width={400} height={400} alt='events' />
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:px-28 mt-16' >
                 <EventCard data={{ img: humanoidRoboticsDescImg }} from="home" />
                 <EventCard data={{ img: dataScienceDescImg }} from="home" />
