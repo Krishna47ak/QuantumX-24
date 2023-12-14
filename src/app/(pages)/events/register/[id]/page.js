@@ -17,12 +17,13 @@ const EventsRegister = ({ params }) => {
     const event = eventsData.find((event) => event.id === params.id)
     const [teamSize, setTeamSize] = useState(null)
     const [members, setMembers] = useState(Array(teamSize).fill(memberStruct));
+    const [page, setPage] = useState(1)
 
     const [teamName, setTeamName] = useState("")
     const [discord, setDiscord] = useState("")
     const [formData, setFormData] = useState({
         transacImg: '',
-        transacId: '',
+        applicantId: '',
         leader: '',
         email: '',
         phone: '',
@@ -33,7 +34,7 @@ const EventsRegister = ({ params }) => {
         size: teamSize
     });
 
-    const { transacImg, leader, email, phone, college, usn } = formData
+    const { transacImg, applicantId, leader, email, phone, college, usn } = formData
 
     const teamSizeData = event?.fixedSize ? [event?.fixedSize] : dropDownData.slice((event?.minSize - 1), (event?.maxSize))
 
@@ -62,6 +63,42 @@ const EventsRegister = ({ params }) => {
         })
     };
 
+    const handleNext1 = () => {
+        if (leader && email && phone && college && usn && teamSize) {
+            if (teamSize != 1) {
+                members?.map((member) => {
+                    if (member.name && member.email && member.phone && member.college) {
+                        setPage(2)
+                    } else {
+                        setPage(1)
+                    }
+                })
+            } else {
+                setPage(2)
+            }
+        } else {
+            setPage(1)
+        }
+    }
+
+    const handleNext2 = () => {
+        setPage(3)
+    }
+
+    const onSubmit = () => {
+        let data;
+
+        if (event?.id === "QX_EV_12") {
+            data = { teamName, transacImg, applicantId, leader, email, phone, college, usn, members }
+        } else if (event?.id === "QX_EV_02" || event?.id === "QX_EV_03") {
+            data = { discord, transacImg, applicantId, leader, email, phone, college, usn, members }
+        } else {
+            data = { transacImg, applicantId, leader, email, phone, college, usn, members }
+        }
+        console.log(data);
+    }
+
+
     useEffect(() => {
         if (event?.fixedSize) {
             handleTeamSizeChange(event?.fixedSize)
@@ -85,36 +122,65 @@ const EventsRegister = ({ params }) => {
                         </div>
                     </div>
                     <div className="flex flex-col sm:items-center min-[1293px]:justify-between min-[1293px]:ml-20 mt-5 md:mt-16 min-[1293px]:mt-0" >
-                        <div>
-                            <FilterDropdown data={teamSizeData} name="Team size :" setFilterData={handleTeamSizeChange} filterData={teamSize} />
-                            <div className="mt-5 md:mt-10" >
-                                {event?.id === "QX_EV_12" && (
-                                    <FormInput name="Team name" data={teamName} setdata={e => setTeamName(e.target.value)} placeholder="Team name" />
-                                )}
-                                {(event?.id === "QX_EV_02" || event?.id === "QX_EV_03") && (
-                                    <FormInput name="Discord id" data={discord} setdata={e => setDiscord(e.target.value)} placeholder="Discord id" />
-                                )}
-                                <FormInput inputName="leader" name="Team leader name" data={leader} setdata={onChange} placeholder="Full name" />
-                                <FormInput inputName="email" name="Email" data={email} setdata={onChange} placeholder="Email ID" type="email" />
-                                <FormInput inputName="phone" name="Phone number" data={phone} setdata={onChange} placeholder="Phone number" type="tel" />
-                                <FormInput inputName="college" name="College name" data={college} setdata={onChange} placeholder="College name" />
-                                <FormInput inputName="usn" name="USN" data={usn} setdata={onChange} placeholder="USN" />
-                            </div>
-                            {/* {teamSize && teamSize != 1 && <div className="h-1 w-full my-5 rounded-full bg-gray-700" />} */}
+                        {page === 1 ? (
                             <div>
-                                {teamSize > 1 && [...Array(teamSize - 1)].map((e, i) => (
-                                    <div key={i} >
-                                        <div className="h-1 w-full my-5 rounded-full bg-gray-700" />
-                                        <FormInput inputName="name" name={`Team member ${i + 1}`} data={members[i].name} setdata={onMemberChange} placeholder="Full name" inputIndex={i} />
-                                        <FormInput inputName="email" name="Email" data={members[i].email} setdata={onMemberChange} placeholder="Email" inputIndex={i} />
-                                        <FormInput inputName="phone" name="Phone number" data={members[i].phone} setdata={onMemberChange} placeholder="Phone number" inputIndex={i} />
-                                        <FormInput inputName="college" name="College name" data={members[i].college} setdata={onMemberChange} placeholder="College name" inputIndex={i} />
-                                    </div>
-                                ))}
+                                <FilterDropdown data={teamSizeData} name="Team size :" setFilterData={handleTeamSizeChange} filterData={teamSize} />
+                                <div className="mt-5 md:mt-10" >
+                                    {event?.id === "QX_EV_12" && (
+                                        <FormInput name="Team name" data={teamName} setdata={e => setTeamName(e.target.value)} placeholder="Team name" />
+                                    )}
+                                    {(event?.id === "QX_EV_02" || event?.id === "QX_EV_03") && (
+                                        <FormInput name="Discord id" data={discord} setdata={e => setDiscord(e.target.value)} placeholder="Discord id" />
+                                    )}
+                                    <FormInput inputName="leader" name="Team leader name" data={leader} setdata={onChange} placeholder="Full name" />
+                                    <FormInput inputName="email" name="Email" data={email} setdata={onChange} placeholder="Email ID" type="email" />
+                                    <FormInput inputName="phone" name="Phone number" data={phone} setdata={onChange} placeholder="Phone number" type="tel" />
+                                    <FormInput inputName="college" name="College name" data={college} setdata={onChange} placeholder="College name" />
+                                    <FormInput inputName="usn" name="USN" data={usn} setdata={onChange} placeholder="USN" />
+                                </div>
+                                {/* {teamSize && teamSize != 1 && <div className="h-1 w-full my-5 rounded-full bg-gray-700" />} */}
+                                <div>
+                                    {teamSize > 1 && [...Array(teamSize - 1)].map((e, i) => (
+                                        <div key={i} >
+                                            <div className="h-1 w-full my-5 rounded-full bg-gray-700" />
+                                            <FormInput inputName="name" name={`Team member ${i + 1}`} data={members[i].name} setdata={onMemberChange} placeholder="Full name" inputIndex={i} />
+                                            <FormInput inputName="email" name="Email" data={members[i].email} setdata={onMemberChange} placeholder="Email" inputIndex={i} />
+                                            <FormInput inputName="phone" name="Phone number" data={members[i].phone} setdata={onMemberChange} placeholder="Phone number" inputIndex={i} />
+                                            <FormInput inputName="college" name="College name" data={members[i].college} setdata={onMemberChange} placeholder="College name" inputIndex={i} />
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                        <div className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
-                            <p className='text-white text-lg font-mono' >Next</p>
+                        ) : page === 2 ? (
+                            <div className="text-white" >
+                                <div className="mb-20" >
+                                    <p className="mb-7" >Instruction to follow:</p>
+                                    <div>
+                                        💣 Copy this text <b>"Qx24-{event?.name}"</b> and paste it in the Purpose of payment input.
+                                        <br />
+                                        <br />
+                                        💣 Any discrepancies in filling the form may lead to disqualification of the application without refund.
+                                        <br />
+                                        <br />
+                                        💣 This is the about to be paid <b className="text-red-600" >"&#8377; {event?.fee}"</b>
+                                        <br />
+                                        <br />
+                                    </div>
+                                </div>
+                                <a href="https://forms.eduqfix.com/misce3/add" target="_blank"  >
+                                    <p className="bg-blue-600 text-center px-5 p-3 rounded-xl select-none" >Pay now</p>
+                                </a>
+                            </div>
+                        ) : page === 3 && (
+                            <div className="text-white" >
+                                <div>
+                                    <FormInput inputName="transacImg" name="Transaction Image" data={transacImg} setdata={onChange} type="file" />
+                                    <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
+                                </div>
+                            </div>
+                        )}
+                        <div onClick={page === 1 ? handleNext1 : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
+                            <p className='text-white text-lg font-mono' >{page === 3 ? "Submit" : "Next"}</p>
                         </div>
                     </div>
                 </div>

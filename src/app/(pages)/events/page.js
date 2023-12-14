@@ -28,7 +28,7 @@ const Events = () => {
             </div>
             <div className="bg-[url('/events-bg(2).png')] bg-bottom bg-cover bg-fixed min-h-screen" >
                 <div className='flex justify-center' >
-                    <div className='flex mt-10 md:mt-20 bg-[#ed00e9b3] backdrop-blur-sm border-2 border-gray-400 p-3 w-[27rem] md:w-[40rem] rounded-xl' >
+                    <div className='flex mt-10 md:mt-20 bg-[#ed00e9b3] backdrop-blur-sm border-2 border-gray-400 p-3 w-[22rem] md:w-[40rem] rounded-xl' >
                         <Image src="/search.svg" width={20} height={20} alt='search' />
                         <div className='w-[0.05rem] mx-2 bg-gray-400' />
                         <input value={searchText} onChange={(e) => setSearchText(e.target.value)} className='w-full bg-transparent text-white outline-none' placeholder='Search...' />
