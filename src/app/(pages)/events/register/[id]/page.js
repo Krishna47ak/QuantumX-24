@@ -156,13 +156,13 @@ const EventsRegister = ({ params }) => {
                                 <div className="mb-20" >
                                     <p className="mb-7" >Instruction to follow:</p>
                                     <div>
-                                        💣 Copy this text <b>"Qx24-{event?.name}"</b> and paste it in the Purpose of payment input.
+                                        💣 Copy this text <b>&quot;Qx24-{event?.name}&quot;</b> and paste it in the Purpose of payment input.
                                         <br />
                                         <br />
                                         💣 Any discrepancies in filling the form may lead to disqualification of the application without refund.
                                         <br />
                                         <br />
-                                        💣 This is the about to be paid <b className="text-red-600" >"&#8377; {event?.fee}"</b>
+                                        💣 This is the about to be paid <b className="text-red-600" >&quot;&#8377; {event?.fee}&quot;</b>
                                         <br />
                                         <br />
                                     </div>
