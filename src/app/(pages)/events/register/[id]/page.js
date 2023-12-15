@@ -88,7 +88,9 @@ const EventsRegister = ({ params }) => {
     const onSubmit = () => {
         let data;
 
-        if (event?.id === "QX_EV_12") {
+        if (event?.fee === 0) {
+            data = { leader, email, phone, college, usn, members }
+        } else if (event?.id === "QX_EV_12") {
             data = { teamName, transacImg, applicantId, leader, email, phone, college, usn, members }
         } else if (event?.id === "QX_EV_02" || event?.id === "QX_EV_03") {
             data = { discord, transacImg, applicantId, leader, email, phone, college, usn, members }
@@ -122,6 +124,9 @@ const EventsRegister = ({ params }) => {
                         </div>
                     </div>
                     <div className="flex flex-col sm:items-center min-[1293px]:justify-between min-[1293px]:ml-20 mt-5 md:mt-16 min-[1293px]:mt-0" >
+                        <div className="bg-gray-500  h-2.5 w-full rounded-full" >
+                            <div className={`bg-green-500 h-2.5 self-start rounded-full`} style={{ width: `${(((event?.fee === 0 ? 3 : page) / 3) * 100).toFixed(2)}%` }} />
+                        </div>
                         {page === 1 ? (
                             <div>
                                 <FilterDropdown data={teamSizeData} name="Team size :" setFilterData={handleTeamSizeChange} filterData={teamSize} />
@@ -162,7 +167,7 @@ const EventsRegister = ({ params }) => {
                                         💣 Any discrepancies in filling the form may lead to disqualification of the application without refund.
                                         <br />
                                         <br />
-                                        💣 This is the about to be paid <b className="text-red-600" >&quot;&#8377; {event?.fee}&quot;</b>
+                                        💣 The amount to be paid is <b className="text-red-600" >&quot;&#8377; {event?.fee}&quot;</b>
                                         <br />
                                         <br />
                                     </div>
@@ -174,13 +179,13 @@ const EventsRegister = ({ params }) => {
                         ) : page === 3 && (
                             <div className="text-white" >
                                 <div>
-                                    <FormInput inputName="transacImg" name="Transaction Image" data={transacImg} setdata={onChange} type="file" />
+                                    <FormInput inputName="transacImg" name="Transaction reciept Image" data={transacImg} setdata={onChange} type="file" />
                                     <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
                                 </div>
                             </div>
                         )}
-                        <div onClick={page === 1 ? handleNext1 : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
-                            <p className='text-white text-lg font-mono' >{page === 3 ? "Submit" : "Next"}</p>
+                        <div onClick={page === 1 ? (event?.fee === 0 ? onSubmit : handleNext1) : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
+                            <p className='text-white text-lg font-mono' >{page === 3 ? "Submit" : (event?.fee === 0 ? "Submit" : "Next")}</p>
                         </div>
                     </div>
                 </div>
