@@ -17,12 +17,13 @@ const EventsRegister = ({ params }) => {
     const event = eventsData.find((event) => event.id === params.id)
     const [teamSize, setTeamSize] = useState(null)
     const [members, setMembers] = useState(Array(teamSize).fill(memberStruct));
+    const [transacImg, setTransImg] = useState("");
     const [page, setPage] = useState(1)
-
+    const [error, setError] = useState(false)
+    const [imageSizeError, setImageSizeError] = useState(false)
     const [teamName, setTeamName] = useState("")
     const [discord, setDiscord] = useState("")
     const [formData, setFormData] = useState({
-        transacImg: '',
         applicantId: '',
         leader: '',
         email: '',
@@ -30,11 +31,10 @@ const EventsRegister = ({ params }) => {
         college: '',
         usn: '',
         fee: event?.fee,
-        event: event?.name,
-        size: teamSize
+        eventName: event?.name
     });
 
-    const { transacImg, applicantId, leader, email, phone, college, usn } = formData
+    const { applicantId, leader, email, phone, college, usn, fee, eventName } = formData
 
     const teamSizeData = event?.fixedSize ? [event?.fixedSize] : dropDownData.slice((event?.minSize - 1), (event?.maxSize))
 
@@ -53,7 +53,11 @@ const EventsRegister = ({ params }) => {
         });
     };
 
-    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
+    const onChange = e => (
+        setFormData({ ...formData, [e.target.name]: e.target.value }),
+        setError(false)
+    )
+
 
     const onMemberChange = (index, name, value) => {
         setMembers((prevMembers) => {
@@ -71,6 +75,7 @@ const EventsRegister = ({ params }) => {
                         setPage(2)
                     } else {
                         setPage(1)
+                        setError(true)
                     }
                 })
             } else {
@@ -78,6 +83,7 @@ const EventsRegister = ({ params }) => {
             }
         } else {
             setPage(1)
+            setError(true)
         }
     }
 
@@ -89,17 +95,36 @@ const EventsRegister = ({ params }) => {
         let data;
 
         if (event?.fee === 0) {
-            data = { leader, email, phone, college, usn, members }
+            data = { leader, email, phone, college, usn, teamSize, members, fee, eventName }
         } else if (event?.id === "QX_EV_12") {
-            data = { teamName, transacImg, applicantId, leader, email, phone, college, usn, members }
+            data = { teamName, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
         } else if (event?.id === "QX_EV_02" || event?.id === "QX_EV_03") {
-            data = { discord, transacImg, applicantId, leader, email, phone, college, usn, members }
+            data = { discord, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
         } else {
-            data = { transacImg, applicantId, leader, email, phone, college, usn, members }
+            data = { transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
         }
         console.log(data);
     }
 
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+
+        if (file) {
+            const imageSizeInBytes = file.size;
+            const imageSizeInKb = imageSizeInBytes / 1024;
+            if (imageSizeInKb > 300) {
+                setImageSizeError(true)
+            } else {
+                setImageSizeError(false)
+                var reader = new FileReader();
+
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    setTransImg(reader.result);
+                };
+            }
+        }
+    };
 
     useEffect(() => {
         if (event?.fixedSize) {
@@ -124,9 +149,10 @@ const EventsRegister = ({ params }) => {
                         </div>
                     </div>
                     <div className="flex flex-col sm:items-center min-[1293px]:justify-between min-[1293px]:ml-20 mt-5 md:mt-16 min-[1293px]:mt-0" >
-                        <div className="bg-gray-500  h-2.5 w-full rounded-full" >
+                        <div className="bg-gray-500 mb-5 h-2.5 w-full rounded-full" >
                             <div className={`bg-green-500 h-2.5 self-start rounded-full`} style={{ width: `${(((event?.fee === 0 ? 3 : page) / 3) * 100).toFixed(2)}%` }} />
                         </div>
+                        {error && <div className="bg-yellow-400 text-red-600 font-semibold mb-5 text-center rounded-xl w-full" >Enter all fields</div>}
                         {page === 1 ? (
                             <div>
                                 <FilterDropdown data={teamSizeData} name="Team size :" setFilterData={handleTeamSizeChange} filterData={teamSize} />
@@ -170,6 +196,8 @@ const EventsRegister = ({ params }) => {
                                         💣 The amount to be paid is <b className="text-red-600" >&quot;&#8377; {event?.fee}&quot;</b>
                                         <br />
                                         <br />
+                                        💣 After completing the payment, fill the payment details in the next step.
+                                        <br />
                                     </div>
                                 </div>
                                 <a href="https://forms.eduqfix.com/misce3/add" target="_blank"  >
@@ -177,11 +205,10 @@ const EventsRegister = ({ params }) => {
                                 </a>
                             </div>
                         ) : page === 3 && (
-                            <div className="text-white" >
-                                <div>
-                                    <FormInput inputName="transacImg" name="Transaction reciept Image" data={transacImg} setdata={onChange} type="file" />
-                                    <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
-                                </div>
+                            <div className="text-white overflow-hidden" >
+                                <FormInput inputName="transacImg" name="Payment reciept image" setdata={handleImageChange} type="file" />
+                                {imageSizeError && <div className="text-red-600 text-xs ml-2 sm:ml-[14rem] -mt-5 md:-mt-10 mb-7 font-semibold  rounded-xl w-full" >Image size is more than 200KB</div>}
+                                <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
                             </div>
                         )}
                         <div onClick={page === 1 ? (event?.fee === 0 ? onSubmit : handleNext1) : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
