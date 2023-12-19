@@ -8,7 +8,7 @@ export const eventsData = [
         img: bestManagerImg,
         imgDesc: bestManagerDescImg,
         desc: "It is a dynamic arena of unique challenges and tasks where managers can showcase their strategic acumen, decision-making prowess, and innovative leadership skills. This immersive competition will test the mettle of participants, demanding quick thinking, strategic planning, and effective communication.",
-        date: "23/01/24",
+        date: "25/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,
@@ -16,13 +16,13 @@ export const eventsData = [
         prizePool: 12000,
         location: "Chanakya Seminar Hall, NHCE",
         contact: "Anish B - +91 84318 75412",
-        ruleBook: ""
+        ruleBook: "https://docs.google.com/document/d/1rC7nnaj7M2g0L7LXReRorXwod54rVybcEpA8Pohwtqs/edit?usp=sharing"
     },
     {
         id: "QX_EV_02",
         name: "BYTE BRAWL-BGMI",
         img: byteBrawlBgmiImg,
-        imgDesc: byteBrawlDescImg,
+        imgDesc: byteBrawlBgmiDescImg,
         desc: "Immerse yourselves in the world of Battlegrounds Mobile India (BGMI) in a Team DeathMatch to be the final survivor.",
         date: "23/01/24",
         minSize: 4,
@@ -30,15 +30,15 @@ export const eventsData = [
         fixedSize: null,
         fee: 500,
         prizePool: 12000,
-        location: "C203, NHCE",
+        location: "2 ISE classrooms, VMware lab, Eurofins lab",
         contact: "Adnan Azam- +91 99868 67746",
-        ruleBook: ""
+        ruleBook: "https://docs.google.com/document/d/11uOwKVAi4Kzt2KVGcueFqPPuk8YLDWiSCR3lrS2x_d8/edit?usp=sharing"
     },
     {
         id: "QX_EV_03",
         name: "BYTE BRAWL-COD",
         img: byteBrawlCodImg,
-        imgDesc: byteBrawlDescImg,
+        imgDesc: byteBrawlCodDescImg,
         desc: "Immerse yourselves in the world of Battlegrounds Mobile India (BGMI) in a Team DeathMatch to be the final survivor.",
         date: "25/01/24",
         minSize: 4,
@@ -46,9 +46,9 @@ export const eventsData = [
         fixedSize: null,
         fee: 500,
         prizePool: 12000,
-        location: "C203, NHCE",
+        location: "2 ISE classrooms, VMware lab, Eurofins lab",
         contact: "Adnan Azam- +91 99868 67746",
-        ruleBook: ""
+        ruleBook: "https://docs.google.com/document/d/17y0c8PuY34Dxt5YKjbHmVp278nOz79mEVZq0WcXZPJs/edit?usp=sharing"
     },
     {
         id: "QX_EV_04",
@@ -59,12 +59,11 @@ export const eventsData = [
         date: "23/01/24",
         minSize: null,
         maxSize: null,
-        fixedSize: 1,
-        fee: 0,
+        fixedSize: null,
+        fee: free,
         prizePool: null,
         location: "Auditorium",
-        contact: "Achinth H S - +91 89048 97375",
-        ruleBook: ""
+        contact: "Md Aman - 9886959676",
     },
     {
         id: "QX_EV_05",
@@ -76,11 +75,10 @@ export const eventsData = [
         minSize: null,
         maxSize: null,
         fixedSize: 1,
-        fee: 0,
+        fee: free,
         prizePool: null,
         location: "Auditorium",
-        contact: "",
-        ruleBook: ""
+        contact: "Achinth H S - 8904897375",
     },
     {
         id: "QX_EV_06",
@@ -92,11 +90,10 @@ export const eventsData = [
         minSize: null,
         maxSize: null,
         fixedSize: 1,
-        fee: 0,
+        fee: free,
         prizePool: null,
         location: "Auditorium",
-        contact: "",
-        ruleBook: ""
+        contact: "Keerthana Y - 7975646388",
     },
     {
         id: "QX_EV_07",
@@ -104,15 +101,14 @@ export const eventsData = [
         img: streetImg,
         imgDesc: streetDescImg,
         desc: "Navigate through a labyrinth of booths showcasing cutting-edge products, services, and solutions from a diverse range of startups. Engage in thought-provoking conversations with passionate founders and industry experts as they delve into the intricacies of their ventures.",
-        date: "23/01/2024",
+        date: "23/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,
-        fee: 0,
+        fee: free,
         prizePool: null,
         location: "SVM Hostel Corridor",
-        contact: "",
-        ruleBook: ""
+        contact: "Gagan M - 8217784192",
     },
     {
         id: "QX_EV_08",
@@ -124,11 +120,11 @@ export const eventsData = [
         minSize: null,
         maxSize: null,
         fixedSize: 2,
-        fee: 0,
+        fee: free,
         prizePool: 6000,
-        location: "",
+        location: "AIML Corridors",
         contact: "John Joseph R - +91 97405 88099",
-        ruleBook: ""
+        ruleBook: "https://docs.google.com/document/d/1XqqG1Ex8k_ikcDNyV6cAEvyK8ZPpHYS4eVLWyYsgyU0/edit?usp=sharing"
     },
     {
         id: "QX_EV_09",
@@ -140,27 +136,27 @@ export const eventsData = [
         minSize: null,
         maxSize: null,
         fixedSize: 1,
-        fee: 0,
+        fee: free,
         prizePool: 5000,
-        location: "",
+        location: "C503,C509",
         contact: "Shreyas P Kuppasad - +91 80957 90154",
-        ruleBook: ""
+        ruleBook: "https://docs.google.com/document/d/1qlBJdU0ivwoLia00LwkNH9C5V21vcxThFZeo9WM0ZaA/edit?usp=sharing"
     },
     {
         id: "QX_EV_10",
         name: "CYBERCODE QUEST JR.",
-        img: questJrImg,
-        imgDesc: questJrDescImg,
+        img: cybercodeImg,
+        imgDesc: cybercodeDescImg,
         desc: "Dive into a world of algorithms, data structures, and problem-solving as you tackle a series of challenging coding tasks. Test your skills against fellow students and experience the thrill of competition.",
         date: "23/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,
-        fee: 0,
+        fee: free,
         prizePool: 5000,
         location: "MCA Labs, Netaji Subhash Chandra Bose Block, NHCE",
-        contact: "Abhijit - +91 96203 02533",
-        ruleBook: ""
+        contact: "Abhijit R S - +91 96203 02533",
+        ruleBook: "https://docs.google.com/document/d/13bGMzuj9bkcGBjfyEVxpyIfV_HnO0vt62ep8qw5aRpo/edit?usp=sharing"
     },
     {
         id: "QX_EV_11",
@@ -171,12 +167,12 @@ export const eventsData = [
         date: "23/01/24",
         minSize: null,
         maxSize: null,
-        fixedSize: 1,
-        fee: 0,
+        fixedSize: 2,
+        fee: free,
         prizePool: 5000,
         location: "Tejas Seminar Hall",
         contact: "Adrian Mathew - +91 91080 37471",
-        ruleBook: ""
+        ruleBook: "https://docs.google.com/document/d/1Ij-oEuThzrFUa3Dk4DsycdFCXsKhR38GIPfnjeLUGH4/edit?usp=sharing"
     },
     {
         id: "QX_EV_12",
@@ -185,30 +181,30 @@ export const eventsData = [
         imgDesc: quantumHacksDescImg,
         desc: "This is a dynamic arena where collaboration and ingenuity converge to tackle real-world challenges. This immersive event extends beyond mere competition; it's a journey of learning, growth, and the collective pursuit of meaningful impact.",
         date: "24/01/24",
-        minSize: 3,
-        maxSize: 5,
-        fixedSize: null,
+        minSize: null,
+        maxSize: null,
+        fixedSize: 3,
         fee: 1000,
-        prizePool: 60000,
+        prizePool: 50000,
         location: "Library, Amar Jawan Block, NHCE",
         contact: "Shazib Wani - +91 60058 33691",
-        ruleBook: ""
+        ruleBook: "https://docs.google.com/document/d/1Sj1LtHyfWayr4HiBfGvGGyk9ws12msW2bcFpg7ameKU/edit?usp=sharing"
     },
     {
         id: "QX_EV_13",
         name: "CYBERCODE QUEST SR.",
-        img: questSrImg,
-        imgDesc: questSrDescImg,
+        img: cyberquestSrImg,
+        imgDesc: cyberquestSrDescImg,
         desc: "This challenge is designed to test the participants' analytical skills and push them to the boundaries of their algorithmic knowledge. They will be confronted with complex problems and must devise innovative solutions.",
         date: "25/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,
         fee: 200,
-        prizePool: 15000,
-        location: "",
-        contact: "Abhijit - +91 96203 02533",
-        ruleBook: ""
+        prizePool: 9500,
+        location: "MCA labs",
+        contact: "Abhijit R S - +91 96203 02533",
+        ruleBook: "https://docs.google.com/document/d/1J5DGivvh_lm1pX279UptDjJHbjD7sdlv-5Z0aZ6KYyY/edit?usp=sharing"
     },
     {
         id: "QX_EV_14",
@@ -221,10 +217,10 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 3,
         fee: 500,
-        prizePool: 20000,
+        prizePool: 10000,
         location: "ECE Labs, Netaji Subhash Chandra Bose Block, NHCE",
         contact: "Rohanth Hari - +91 91104 18016",
-        ruleBook: ""
+        ruleBook: "https://docs.google.com/document/d/1ii7UAxHL5mSlc59EP201FLaeob1PEwC6opXtn-GkDg4/edit?usp=sharing"
     },
     {
         id: "QX_EV_15",
@@ -238,9 +234,9 @@ export const eventsData = [
         fixedSize: 3,
         fee: 1000,
         prizePool: 20000,
-        location: "Falconry Hall, Netaji Subhash Chandra Bose Block, NHCE",
+        location: "Tejas Seminar Hall",
         contact: "Shashank S - +91 91081 31629",
-        ruleBook: ""
+        ruleBook: "https://docs.google.com/document/d/1y3g807xy9ptZVoNIkS21vffYxobAuIFWUWQS0k9tgDg/edit?usp=sharing"
     },
     {
         id: "QX_EV_16",
@@ -253,10 +249,10 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 3,
         fee: 300,
-        prizePool: 15000,
+        prizePool: 16000,
         location: "Ground, NHCE",
-        contact: "Syed- +91 80954 18861",
-        ruleBook: ""
+        contact: "Syed Hannan - +91 80954 18861",
+        ruleBook: "https://docs.google.com/document/d/1bGla0epgaH-7F0OG-4VZE2fg-0g6DXl3UWN3D9ASzEc/edit?usp=sharing"
     },
     {
         id: "QX_EV_17",
@@ -264,15 +260,15 @@ export const eventsData = [
         img: aquaRushImg,
         imgDesc: aquaRushDescImg,
         desc: "Prepare to be captivated by the thrilling spectacle of the RC Boat Race, where miniature speedsters navigate the aquatic arena with precision and agility.",
-        date: "24/01/24",
+        date: "24/01/24", 
         minSize: null,
         maxSize: null,
-        fixedSize: 1,
+        fixedSize: 2,
         fee: 300,
-        prizePool: 15000,
+        prizePool: 16000,
         location: "Sports Ground, NHCE.",
-        contact: "Kriti Sujai Kumar Devatha - +91 95132 79515",
-        ruleBook: ""
+        contact: "Diya Chandrashekar - +91 79755 74212",
+        ruleBook: "https://docs.google.com/document/d/1GsYbnEIberwL0MyMJJ65uiYS7FHYIR5LYgEUPlVszmo/edit"
     },
     {
         id: "QX_EV_18",
@@ -287,8 +283,8 @@ export const eventsData = [
         fee: 1000,
         prizePool: 130000,
         location: "Basketball Quadrangle, NHCE",
-        contact: "Yashasvi- +91 63648 83602",
-        ruleBook: ""
+        contact: "Yashasvi Linga Reddy - +91 63648 83602",
+        ruleBook: "https://docs.google.com/document/d/1455mmKqWtwvj4YsubozNAVzhFD8vho0eTkbDA01C2sI/edit"
     },
     {
         id: "QX_EV_19",
@@ -301,10 +297,10 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 2,
         fee: 300,
-        prizePool: 15000,
+        prizePool: 16000,
         location: "Basketball Quadrangle, NHCE",
-        contact: "Chandana - +91 63640 45698",
-        ruleBook: ""
+        contact: "M Chandana - +91 63640 45698",
+        ruleBook: "https://docs.google.com/document/d/1gTC9i9SMPDdXQtXTsZv29fJjyw6JmN8oYt97XCoupCI/edit?usp=sharing"
     },
     {
         id: "QX_EV_20",
@@ -315,12 +311,12 @@ export const eventsData = [
         date: "23/01/24",
         minSize: null,
         maxSize: null,
-        fixedSize: 1,
+        fixedSize: 2,
         fee: 300,
-        prizePool: 10000,
+        prizePool: 16000 ,
         location: "Ground Floor, Netaji Subhash Chandra Bose Block, NHCE",
         contact: "G Guru Saran Reddy - +91 82474 23833",
-        ruleBook: ""
+        ruleBook: "https://docs.google.com/document/d/1afostJonJ1YyM0ku6X7YSOrJ8x53DCCZf-8ewl04E_M/edit?usp=sharing"
     },
     {
         id: "QX_EV_21",
@@ -335,7 +331,7 @@ export const eventsData = [
         fee: 1000,
         prizePool: 60000,
         location: "Sports Ground, NHCE",
-        contact: "Harsha - +91 86189 86078",
-        ruleBook: "https://docs.google.com/document/d/1LCPIK_pEYlipq52cjDbp4Hnyuh4YfLrM/edit?usp=sharing&ouid=103811776576971983524&rtpof=true&sd=true"
-    },
+        contact: "Harshavardhan PR - +91 86189 86078",
+        ruleBook: "https://docs.google.com/document/d/1RmiPcnPU_dsr2SLDctIgNqgWtaZpEqivRvZevm0blu4/edit?usp=sharing"
+    },  
 ]
