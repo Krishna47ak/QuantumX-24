@@ -1,10 +1,12 @@
 "use client"
 import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 import Image from "next/image"
 import FilterDropdown from "@/components/FilterDropdown"
 import { dropDownData } from "@/utils/contants"
 import { eventsData } from "@/utils/event-details"
 import FormInput from "@/components/FormInput"
+import Spinner from "@/components/Spinner"
 
 const memberStruct = {
     name: '',
@@ -14,6 +16,9 @@ const memberStruct = {
 }
 
 const EventsRegister = ({ params }) => {
+    const router = useRouter();
+
+    const [loading, setLoading] = useState(false)
     const event = eventsData.find((event) => event.id === params.id)
     const [teamSize, setTeamSize] = useState(null)
     const [members, setMembers] = useState(Array(teamSize).fill(memberStruct));
@@ -91,6 +96,27 @@ const EventsRegister = ({ params }) => {
         setPage(3)
     }
 
+    const registerEvent = async (body) => {
+        setLoading(true)
+        try {
+            const res = await fetch(`http://localhost:3000/api/events`, {
+                credentials: "include",
+                method: "POST",
+                body,
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data = await res.json()
+            if (data?.success) {
+                router.push("/success")
+            } else {
+                router.push("/failed")
+            }
+        } catch (err) {
+            console.error(err);
+            router.push("/failed")
+        }
+    }
+
     const onSubmit = () => {
         let data;
 
@@ -103,7 +129,9 @@ const EventsRegister = ({ params }) => {
         } else {
             data = { transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
         }
-        console.log(data);
+
+        const body = JSON.stringify(data)
+        registerEvent(body)
     }
 
     const handleImageChange = (e) => {
@@ -133,7 +161,7 @@ const EventsRegister = ({ params }) => {
     }, [])
 
 
-    return (
+    return loading ? <Spinner /> : (
         <div className='bg-black text-white min-h-screen p-7 pt-20 md:p-20 md:px-28' >
             <div>
                 <p className="text-4xl text-center font-semibold mb-5 md:mb-14" >Register for <span className="font-bold text-violet-300" >{event?.name}</span></p>
@@ -143,7 +171,7 @@ const EventsRegister = ({ params }) => {
                             <Image className='w-full h-full rounded-2xl' src={event?.imgDesc} width={250} height={250} alt="Event" />
                         </div>
                         <div>
-                            <p className="text-lg font-medium" >Amount : &#8377; {event?.fee} (per team)</p>
+                            <p className="text-lg font-medium" >Amount : &#8377; {event?.fee === 0 ? "Free" : event?.fee} (per team)</p>
                             <p className="text-lg font-medium" >Team size : {event?.fixedSize ? event?.fixedSize : `${event?.minSize} - ${event?.maxSize}`}</p>
                             <p className="text-lg font-medium" >Start Date: {event?.date}</p>
                         </div>

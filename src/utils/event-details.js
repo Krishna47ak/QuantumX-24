@@ -59,7 +59,7 @@ export const eventsData = [
         date: "23/01/24",
         minSize: null,
         maxSize: null,
-        fixedSize: null,
+        fixedSize: 1,
         fee: 0,
         prizePool: null,
         location: "Auditorium",

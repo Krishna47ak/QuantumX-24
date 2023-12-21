@@ -48,7 +48,7 @@ const EventCard = ({ data, from }) => {
                                                 {(data?.fixedSize || data?.minSize) && (
                                                     <div className='sm:text-lg font-medium text-slate-400 mt-2 font-mono' >Team size : {data?.fixedSize ? data?.fixedSize : `${data?.minSize} - ${data?.maxSize}`}</div>
                                                 )}
-                                                <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Fee: &#8377; {data?.fee}</p>
+                                                <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Fee: &#8377; {data?.fee === 0 ? "Free" : data?.fee}</p>
                                                 {data?.prizePool && <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Prize pool: &#8377; {data?.prizePool}</p>}
                                             </>
                                         )}

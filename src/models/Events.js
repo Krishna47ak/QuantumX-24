@@ -8,13 +8,10 @@ const eventSchema = new mongoose.Schema({
         type: String
     },
     transacImg: {
-        type: String,
-        required: [true, "Please provide the transaction image"],
+        type: String
     },
     applicantId: {
-        type: String,
-        unique: true,
-        required: [true, "Please provide a applicant id"],
+        type: String
     },
     leader: {
         type: String,
