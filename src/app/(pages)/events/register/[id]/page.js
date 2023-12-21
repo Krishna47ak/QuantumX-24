@@ -99,7 +99,7 @@ const EventsRegister = ({ params }) => {
     const registerEvent = async (body) => {
         setLoading(true)
         try {
-            const res = await fetch(`${process.env.DOMAIN}/api/events`, {
+            const res = await fetch(`https://www.quantumxfest.com/api/events`, {
                 credentials: "include",
                 method: "POST",
                 body,
