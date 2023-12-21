@@ -28,7 +28,7 @@ const Contact = () => {
                     <br />
                     adhithyaadhibn@gmail.com
                     <br />
-                    +91 7975063417
+                    +91 79750 63417
                     <br />
                     <br />
                 </div>

@@ -12,9 +12,9 @@ const Footer = () => {
                         <a href='https://instagram.com/quantumx.nhce?igshid=OGQ5ZDc2ODk2ZA==' target='_blank' >
                             <Image className='hover:scale-105 cursor-pointer' src="/insta-icon.svg" width={24} height={24} alt='instagram' />
                         </a>
-                        {/* <a href='https://instagram.com/quantumx.nhce?igshid=OGQ5ZDc2ODk2ZA==' target='_blank' >
+                        <a href='https://twitter.com/QuantumX_fest' target='_blank' >
                             <Image className='hover:scale-105 cursor-pointer' src="/twitter-icon.svg" width={24} height={24} alt='instagram' />
-                        </a> */}
+                        </a>
                         <a href='http://www.linkedin.com/in/quantumx-technomanagementfest' target='_blank' >
                             <Image className='hover:scale-105 cursor-pointer' src="/linkedin-icon.svg" width={24} height={24} alt='instagram' />
                         </a>

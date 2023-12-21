@@ -185,7 +185,7 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 3,
         fee: 1000,
-        prizePool: 50000,
+        prizePool: 60000,
         location: "Library, Amar Jawan Block, NHCE",
         contact: "Shazib Wani - +91 60058 33691",
         ruleBook: "https://docs.google.com/document/d/1Sj1LtHyfWayr4HiBfGvGGyk9ws12msW2bcFpg7ameKU/edit?usp=sharing"
@@ -201,7 +201,7 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 200,
-        prizePool: 9500,
+        prizePool: 15000,
         location: "MCA labs",
         contact: "Abhijit R S - +91 96203 02533",
         ruleBook: "https://docs.google.com/document/d/1J5DGivvh_lm1pX279UptDjJHbjD7sdlv-5Z0aZ6KYyY/edit?usp=sharing"
@@ -217,7 +217,7 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 3,
         fee: 500,
-        prizePool: 10000,
+        prizePool: 20000,
         location: "ECE Labs, Netaji Subhash Chandra Bose Block, NHCE",
         contact: "Rohanth Hari - +91 91104 18016",
         ruleBook: "https://docs.google.com/document/d/1ii7UAxHL5mSlc59EP201FLaeob1PEwC6opXtn-GkDg4/edit?usp=sharing"
@@ -249,7 +249,7 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 3,
         fee: 300,
-        prizePool: 16000,
+        prizePool: 15000,
         location: "Ground, NHCE",
         contact: "Syed Hannan - +91 80954 18861",
         ruleBook: "https://docs.google.com/document/d/1bGla0epgaH-7F0OG-4VZE2fg-0g6DXl3UWN3D9ASzEc/edit?usp=sharing"
@@ -265,7 +265,7 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 2,
         fee: 300,
-        prizePool: 16000,
+        prizePool: 15000,
         location: "Sports Ground, NHCE.",
         contact: "Diya Chandrashekar - +91 79755 74212",
         ruleBook: "https://docs.google.com/document/d/1GsYbnEIberwL0MyMJJ65uiYS7FHYIR5LYgEUPlVszmo/edit"
@@ -297,7 +297,7 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 2,
         fee: 300,
-        prizePool: 16000,
+        prizePool: 15000,
         location: "Basketball Quadrangle, NHCE",
         contact: "M Chandana - +91 63640 45698",
         ruleBook: "https://docs.google.com/document/d/1gTC9i9SMPDdXQtXTsZv29fJjyw6JmN8oYt97XCoupCI/edit?usp=sharing"
@@ -313,7 +313,7 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 2,
         fee: 300,
-        prizePool: 16000 ,
+        prizePool: 10000,
         location: "Ground Floor, Netaji Subhash Chandra Bose Block, NHCE",
         contact: "G Guru Saran Reddy - +91 82474 23833",
         ruleBook: "https://docs.google.com/document/d/1afostJonJ1YyM0ku6X7YSOrJ8x53DCCZf-8ewl04E_M/edit?usp=sharing"
@@ -329,7 +329,7 @@ export const eventsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        prizePool: 60000,
+        prizePool: 45000,
         location: "Sports Ground, NHCE",
         contact: "Harshavardhan PR - +91 86189 86078",
         ruleBook: "https://docs.google.com/document/d/1RmiPcnPU_dsr2SLDctIgNqgWtaZpEqivRvZevm0blu4/edit?usp=sharing"
