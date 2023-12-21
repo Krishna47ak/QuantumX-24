@@ -112,7 +112,7 @@ const EventsRegister = ({ params }) => {
         if (file) {
             const imageSizeInBytes = file.size;
             const imageSizeInKb = imageSizeInBytes / 1024;
-            if (imageSizeInKb > 300) {
+            if (imageSizeInKb > 201) {
                 setImageSizeError(true)
             } else {
                 setImageSizeError(false)
@@ -207,7 +207,7 @@ const EventsRegister = ({ params }) => {
                         ) : page === 3 && (
                             <div className="text-white overflow-hidden" >
                                 <FormInput inputName="transacImg" name="Payment reciept image" setdata={handleImageChange} type="file" />
-                                {imageSizeError && <div className="text-red-600 text-xs ml-2 sm:ml-[14rem] -mt-5 md:-mt-10 mb-7 font-semibold  rounded-xl w-full" >Image size is more than 200KB</div>}
+                                {imageSizeError && <div className="text-red-600 text-xs ml-2 sm:ml-[14rem] -mt-5 md:-mt-10 mb-7 font-semibold  rounded-xl w-full" >Image size should be less than 200KB</div>}
                                 <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
                             </div>
                         )}
