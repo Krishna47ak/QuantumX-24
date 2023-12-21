@@ -99,7 +99,7 @@ const EventsRegister = ({ params }) => {
     const registerEvent = async (body) => {
         setLoading(true)
         try {
-            const res = await fetch(`http://localhost:3000/api/events`, {
+            const res = await fetch(`${process.env.DOMAIN}/api/events`, {
                 credentials: "include",
                 method: "POST",
                 body,
