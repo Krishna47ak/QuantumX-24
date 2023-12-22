@@ -26,7 +26,7 @@ const EventCard = ({ data, from }) => {
 
     return (
         <div>
-            <div onClick={() => (from != "home" && setOnCard(true))} className={`flex justify-center ${from != "home" ? "w-[68vw]" : "scale-90 md:scale-100"} min-[500px]:w-[52vw] sm:w-[40vw] md:w-[30vw] lg:w-[22vw] xl:w-[18.5vw] h-[460px] md:hover:scale-105 duration-700 bg-gradient-to-t rounded-xl from-[#2f165a] to-[#1e0e34] mb-10 cursor-pointer`} style={{ "filter": "drop-shadow(0 0 0.3rem #ff10f0)" }} >
+            <div id={data?.id} onClick={() => (from != "home" && setOnCard(true))} className={`flex justify-center ${from != "home" ? "w-[68vw]" : "scale-90 md:scale-100"} min-[500px]:w-[52vw] sm:w-[40vw] md:w-[30vw] lg:w-[22vw] xl:w-[18.5vw] h-[460px] md:hover:scale-105 duration-700 bg-gradient-to-t rounded-xl from-[#2f165a] to-[#1e0e34] mb-10 cursor-pointer`} style={{ "filter": "drop-shadow(0 0 0.3rem #ff10f0)" }} >
                 <Image className='rounded-xl w-full object-fill shadow-md shadow-indigo-600' src={data?.img} width={250} height={250} alt='logo' />
             </div>
             {onCard && from != "home" && (
@@ -63,7 +63,7 @@ const EventCard = ({ data, from }) => {
                                             <Image className='mt-1' src="/location.svg" width={20} height={20} alt='location' />
                                             <p className='ml-2 text-lg sm:text-xl font-medium text-slate-400 font-mono' >Location: {data?.location}</p>
                                         </div>}
-                                        {((data?.id != "QX_EV_05") && (data?.id != "QX_EV_06") && (data?.id != "QX_EV_07")) && (
+                                        {((data?.id != "QX_EV_04") && (data?.id != "QX_EV_05") && (data?.id != "QX_EV_06") && (data?.id != "QX_EV_07")) && (
                                             <div className='flex items-center mt-2' >
                                                 <Image src="/rule-book.svg" width={20} height={20} alt='location' />
                                                 <a href={data?.ruleBook} target='_blank' className='ml-2 text-blue-600 text-lg sm:text-xl font-medium font-mono underline cursor-pointer select-none' >Rule book</a>

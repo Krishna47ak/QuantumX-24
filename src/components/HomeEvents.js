@@ -12,10 +12,16 @@ const HomeEvents = () => {
             <div id="events" className='absolute -top-[9vh] left-0' />
             <Image className='mx-auto scale-75 md:scale-100' src="/events-heading.png" width={270} height={270} alt='events' />
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:px-28 mt-14' >
-                <EventCard data={{ img: circuitPremierLeagueDescImg }} from="home" />
-                <EventCard data={{ img: quantumHacksDescImg }} from="home" />
+                <Link href="/events/#QX_EV_14" >
+                    <EventCard data={{ img: circuitPremierLeagueDescImg }} from="home" />
+                </Link>
+                <Link href="/events/#QX_EV_12" >
+                    <EventCard data={{ img: quantumHacksDescImg }} from="home" />
+                </Link>
                 <div className='sm:hidden lg:block' >
-                    <EventCard data={{ img: botsRoyaleDescImg }} from="home" />
+                    <Link href="/events/#QX_EV_18" >
+                        <EventCard data={{ img: botsRoyaleDescImg }} from="home" />
+                    </Link>
                 </div>
             </div>
             <Link href="/events" className='flex justify-center mt-9 mb-20 scale-90 md:scale-100' >
@@ -25,10 +31,16 @@ const HomeEvents = () => {
             </Link>
             <Image className='mx-auto scale-75 md:scale-100' src="/workshops-heading.png" width={400} height={400} alt='events' />
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:px-28 mt-16' >
-                <EventCard data={{ img: humanoidRoboticsDescImg }} from="home" />
-                <EventCard data={{ img: dataScienceDescImg }} from="home" />
+                <Link href="/workshops/#QX_WS_09" >
+                    <EventCard data={{ img: humanoidRoboticsDescImg }} from="home" />
+                </Link>
+                <Link href="/workshops/#QX_WS_15" >
+                    <EventCard data={{ img: dataScienceDescImg }} from="home" />
+                </Link>
                 <div className='sm:hidden lg:block' >
-                    <EventCard data={{ img: guidedRoboticsDescImg }} from="home" />
+                    <Link href="/workshops/#QX_WS_04" >
+                        <EventCard data={{ img: guidedRoboticsDescImg }} from="home" />
+                    </Link>
                 </div>
             </div>
             <Link href="/workshops" className='flex justify-center mt-9 mb-20 scale-90 md:scale-100' >
