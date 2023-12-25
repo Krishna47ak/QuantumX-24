@@ -18,7 +18,7 @@ const Admin = () => {
         <div className='bg-black text-center text-white min-h-screen p-10 pt-24 md:p-20 overflow-hidden' >
             <div>
                 {events?.map((event) => (
-                    <div className='bg-gray-800 p-5 mb-5 rounded-xl' >
+                    <div key={event?._id} className='bg-gray-800 p-5 mb-5 rounded-xl' >
                         <div className='mb-2' >
                             <p className='mb-1' >Name:  {event?.leader}</p>
                             <p className='mb-1' >Email: {event?.email}</p>
@@ -29,7 +29,7 @@ const Admin = () => {
                             <p className='mb-1' >Event name: {event?.eventName}</p>
                         </div>
                         {event?.members?.map((member) => (
-                            <div className='mb-3' >
+                            <div key={member?._id} className='mb-3' >
                                 <p className='mb-1' >Member name: {member?.name}</p>
                                 <p className='mb-1' >Member email:{member?.email}</p>
                                 <p className='mb-1' >Member phone number: {member?.phone}</p>
