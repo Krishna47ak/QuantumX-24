@@ -120,10 +120,11 @@ const EventsRegister = ({ params }) => {
     const onSubmit = () => {
         let data;
 
-        if (!imageSizeError && applicantId) {
-            if (event?.fee === 0) {
-                data = { leader, email, phone, college, usn, teamSize, members, fee, eventName }
-            } else if (event?.id === "QX_EV_12") {
+        if (event?.fee === 0) {
+            data = { leader, email, phone, college, usn, teamSize, members, fee, eventName }
+        }
+        else if (transacImg && !imageSizeError && applicantId) {
+            if (event?.id === "QX_EV_12") {
                 data = { teamName, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
             } else if (event?.id === "QX_EV_02" || event?.id === "QX_EV_03") {
                 data = { discord, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
@@ -132,8 +133,10 @@ const EventsRegister = ({ params }) => {
             }
         }
 
-        const body = JSON.stringify(data)
-        registerEvent(body)
+        if (data) {
+            const body = JSON.stringify(data)
+            registerEvent(body)
+        }
     }
 
     const handleImageChange = (e) => {

@@ -1,15 +1,22 @@
 "use client"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { workshopsData } from "@/utils/workshop-details"
 import FormInput from "@/components/FormInput"
+import Spinner from "@/components/Spinner"
 
 const WorkshopsRegister = ({ params }) => {
+    const router = useRouter();
+
     const workshop = workshopsData.find((workshop) => workshop.id === params.id)
     const [page, setPage] = useState(1)
+    const [imageSizeError, setImageSizeError] = useState(false)
+    const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false)
 
+    const [transacImg, setTransImg] = useState("");
     const [formData, setFormData] = useState({
-        transacImg: '',
         applicantId: '',
         name: '',
         email: '',
@@ -17,10 +24,10 @@ const WorkshopsRegister = ({ params }) => {
         college: '',
         usn: '',
         fee: workshop?.fee,
-        workshop: workshop?.name
+        workshopName: workshop?.name
     });
 
-    const { transacImg, applicantId, name, email, phone, college, usn } = formData
+    const { applicantId, name, email, phone, college, usn, fee, workshopName } = formData
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
 
@@ -29,6 +36,7 @@ const WorkshopsRegister = ({ params }) => {
             setPage(2)
         } else {
             setPage(1)
+            setError(1)
         }
     }
 
@@ -36,24 +44,67 @@ const WorkshopsRegister = ({ params }) => {
         setPage(3)
     }
 
+    const registerWorkshop = async (body) => {
+        setLoading(true)
+        try {
+            const res = await fetch(`https://www.quantumxfest.com/api/workshops`, {
+                credentials: "include",
+                method: "POST",
+                body,
+                headers: { 'Content-Type': 'application/json' }
+            });
+            const data = await res.json()
+            if (data?.success) {
+                router.push("/success")
+            } else {
+                router.push("/failed")
+            }
+        } catch (err) {
+            console.error(err);
+            router.push("/failed")
+        }
+    }
+
+
     const onSubmit = () => {
         let data;
 
         if (workshop?.fee === 0) {
-            data = { name, email, phone, college, usn, members }
-        } else if (workshop?.id === "QX_EV_12") {
-            data = { teamName, transacImg, applicantId, name, email, phone, college, usn, members }
-        } else if (workshop?.id === "QX_EV_02" || workshop?.id === "QX_EV_03") {
-            data = { discord, transacImg, applicantId, name, email, phone, college, usn, members }
-        } else {
-            data = { transacImg, applicantId, name, email, phone, college, usn, members }
+            data = { name, email, phone, college, usn, fee, workshopName }
         }
-        console.log(data);
+        else if (transacImg && !imageSizeError && applicantId) {
+            data = { transacImg, applicantId, name, email, phone, college, usn, fee, workshopName }
+        }
+
+        if (data) {
+            const body = JSON.stringify(data)
+            registerWorkshop(body)
+        }
     }
 
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+
+        if (file) {
+            const imageSizeInBytes = file.size;
+            const imageSizeInKb = imageSizeInBytes / 1024;
+            if (imageSizeInKb > 201) {
+                setImageSizeError(true)
+            } else {
+                setImageSizeError(false)
+                var reader = new FileReader();
+
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    setTransImg(reader.result);
+                };
+            }
+        }
+    };
 
 
-    return (
+
+    return loading ? <Spinner /> : (
         <div className='bg-black text-white min-h-screen p-7 pt-20 md:p-20 md:px-28' >
             <div>
                 <p className="text-4xl text-center font-semibold mb-5 md:mb-14" >Register for <span className="font-bold text-violet-300" >{workshop?.name}</span></p>
@@ -72,6 +123,7 @@ const WorkshopsRegister = ({ params }) => {
                         <div className="bg-gray-500 mb-5 h-2.5 w-full rounded-full" >
                             <div className={`bg-green-500 h-2.5 self-start rounded-full`} style={{ width: `${(((workshop?.fee === 0 ? 3 : page) / 3) * 100).toFixed(2)}%` }} />
                         </div>
+                        {error && <div className="bg-yellow-400 text-red-600 font-semibold mb-5 text-center rounded-xl w-full" >Enter all fields</div>}
                         {page === 1 ? (
                             <div>
                                 <div className="mt-5 md:mt-10" >
@@ -102,6 +154,8 @@ const WorkshopsRegister = ({ params }) => {
                                         💣 The amount to be paid is <b className="text-red-600" >&quot;&#8377; {workshop?.fee}&quot;</b>
                                         <br />
                                         <br />
+                                        💣 After completing the payment, fill the payment details in the next step.
+                                        <br />
                                     </div>
                                 </div>
                                 <a href="https://forms.eduqfix.com/misce3/add" target="_blank"  >
@@ -109,11 +163,10 @@ const WorkshopsRegister = ({ params }) => {
                                 </a>
                             </div>
                         ) : page === 3 && (
-                            <div className="text-white" >
-                                <div>
-                                    <FormInput inputName="transacImg" name="Transaction reciept Image" data={transacImg} setdata={onChange} type="file" />
-                                    <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
-                                </div>
+                            <div className="text-white overflow-hidden" >
+                                <FormInput inputName="transacImg" name="Payment reciept image" setdata={handleImageChange} type="file" />
+                                {imageSizeError && <div className="text-red-600 text-xs ml-2 sm:ml-[14rem] -mt-5 md:-mt-10 mb-7 font-semibold  rounded-xl w-full" >Image size should be less than 200KB</div>}
+                                <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
                             </div>
                         )}
                         <div onClick={page === 1 ? (workshop?.fee === 0 ? onSubmit : handleNext1) : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
