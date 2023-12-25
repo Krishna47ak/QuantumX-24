@@ -8,54 +8,50 @@ const Contact = () => {
 
             <div className='grid md:grid-cols-2' >
                 <div>
-                    Ananda Krishna M
-                    <br />
-                    anandakrishna047@gmail.com
-                    <br />
-                    +91 63623 98767
-                    <br />
-                    <br />
-
-                    Sai Kiran
-                    <br />
-                    saivostro2001@gmail.com
-                    <br />
-                    +91 70222 67508
-                    <br />
-                    <br />
-
-                    Adhithya B N
-                    <br />
-                    adhithyaadhibn@gmail.com
-                    <br />
-                    +91 79750 63417
-                    <br />
-                    <br />
+                    <div>
+                        <p>Ananda Krishna M</p>
+                        <p>anandakrishna047@gmail.com</p>
+                        <p>+91 63623 98767</p>
+                        <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Lead Developer</p>
+                        <br />
+                    </div>
+                    <div>
+                        <p>Sai Kiran</p>
+                        <p>saivostro2001@gmail.com</p>
+                        <p>+91 70222 67508</p>
+                        <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Fest Lead</p>
+                        <br />
+                    </div>
+                    <div>
+                        <p>Adhithya B N</p>
+                        <p>adhithyaadhibn@gmail.com</p>
+                        <p>+91 79750 63417</p>
+                        <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Creative Lead</p>
+                        <br />
+                    </div>
                 </div>
                 <div>
-                    V Mahesh Babu
-                    <br />
-                    maheshvejandla5@gmail.com
-                    <br />
-                    +91 97018 48618
-                    <br />
-                    <br />
-
-                    Neha Darawan
-                    <br />
-                    dneha750@gmail.com
-                    <br />
-                    +91 96068 20633
-                    <br />
-                    <br />
-
-                    Abhijeeth Talari
-                    <br />
-                    abhijeethtalari@gmail.com
-                    <br />
-                    +91 86601 23179
-                    <br />
-                    <br />
+                    <div>
+                        <p>V Mahesh Babu</p>
+                        <p>maheshvejandla5@gmail.com</p>
+                        <p>+91 97018 48618</p>
+                        <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Finance Lead</p>
+                        <br />
+                    </div>
+                    <div>
+                        <p>Neha Darawan</p>
+                        <p>dneha750@gmail.com</p>
+                        <p>+91 96068 20633</p>
+                        <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Workshops Lead</p>
+                        <br />
+                    </div>
+                    <div>
+                        <p>Abhijeeth Talari</p>
+                        <p>abhijeethtalari@gmail.com</p>
+                        <p>+91 86601 23179</p>
+                        <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Events Lead</p>
+                        <br />
+                    </div>
                 </div>
             </div>
 

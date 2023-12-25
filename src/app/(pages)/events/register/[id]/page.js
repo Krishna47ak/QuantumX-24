@@ -120,14 +120,16 @@ const EventsRegister = ({ params }) => {
     const onSubmit = () => {
         let data;
 
-        if (event?.fee === 0) {
-            data = { leader, email, phone, college, usn, teamSize, members, fee, eventName }
-        } else if (event?.id === "QX_EV_12") {
-            data = { teamName, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
-        } else if (event?.id === "QX_EV_02" || event?.id === "QX_EV_03") {
-            data = { discord, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
-        } else {
-            data = { transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
+        if (!imageSizeError && applicantId) {
+            if (event?.fee === 0) {
+                data = { leader, email, phone, college, usn, teamSize, members, fee, eventName }
+            } else if (event?.id === "QX_EV_12") {
+                data = { teamName, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
+            } else if (event?.id === "QX_EV_02" || event?.id === "QX_EV_03") {
+                data = { discord, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
+            } else {
+                data = { transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
+            }
         }
 
         const body = JSON.stringify(data)

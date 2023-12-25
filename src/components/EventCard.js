@@ -26,7 +26,8 @@ const EventCard = ({ data, from }) => {
 
     return (
         <div>
-            <div id={data?.id} onClick={() => (from != "home" && setOnCard(true))} className={`flex justify-center ${from != "home" ? "w-[68vw]" : "scale-90 md:scale-100"} min-[500px]:w-[52vw] sm:w-[40vw] md:w-[30vw] lg:w-[22vw] xl:w-[18.5vw] h-[460px] md:hover:scale-105 duration-700 bg-gradient-to-t rounded-xl from-[#2f165a] to-[#1e0e34] mb-10 cursor-pointer`} style={{ "filter": "drop-shadow(0 0 0.3rem #ff10f0)" }} >
+            <div onClick={() => (from != "home" && setOnCard(true))} className={`flex justify-center ${from != "home" ? "w-[68vw]" : "scale-90 md:scale-100"} min-[500px]:w-[52vw] sm:w-[40vw] md:w-[30vw] lg:w-[22vw] xl:w-[18.5vw] h-[460px] md:hover:scale-105 duration-700 bg-gradient-to-t rounded-xl from-[#2f165a] to-[#1e0e34] mb-10 cursor-pointer`} style={{ "filter": "drop-shadow(0 0 0.3rem #ff10f0)" }} >
+                <div id={data?.id} className='absolute -top-[20vh] left-0' />
                 <Image className='rounded-xl w-full object-fill shadow-md shadow-indigo-600' src={data?.img} width={250} height={250} alt='logo' />
             </div>
             {onCard && from != "home" && (
@@ -71,6 +72,9 @@ const EventCard = ({ data, from }) => {
                                         )}
                                     </div>
                                 </div>
+                                {((data?.id === "QX_EV_08") || (data?.id === "QX_EV_09") || (data?.id === "QX_EV_10") || (data?.id === "QX_EV_11")) && (
+                                    <div className='text-yellow-400 text-sm mt-2' >*Only for school students</div>
+                                )}
                             </div>
                             <Link href={`${pathname}/register/${data?.id}`} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
                                 <p className='text-white text-lg font-mono' >Register</p>
