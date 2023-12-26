@@ -23,8 +23,11 @@ const Events = () => {
 
     return (
         <div className="bg-black">
-            <div className="bg-[url('/events-bg.jpg')] bg-center bg-cover bg-fixed py-[9vh] bg-no-repeat flex flex-col justify-center items-center min-h-screen overflow-hidden" >
+            <div className="relative bg-[url('/events-bg.jpg')] bg-center bg-cover bg-fixed py-[9vh] bg-no-repeat flex flex-col justify-center items-center min-h-screen overflow-hidden" >
                 <Image className='scale-75 md:scale-100' src="/events-heading.png" width={600} height={600} alt='events' />
+                <div className='absolute bottom-[10%] animate-bounce' >
+                    <Image src="/scrolldown-arrow.svg" width={200} height={200} alt='scroll' />
+                </div>
             </div>
             <div className="bg-[url('/events-bg(2).png')] bg-bottom bg-cover bg-fixed min-h-screen" >
                 <div className='flex justify-center' >
