@@ -1,4 +1,4 @@
-import { androidDevelopmentDescImg, androidDevelopmentImg, artificialIntelligenceDescImg, artificialIntelligenceImg, awsDescImg, awsImg, cvTrackingSystemDescImg, dataScienceDescImg, dataScienceImg, databasesDescImg, databasesImg, deepLearningDescImg, deepLearningImg, designThinkingDescImg, designThinkingImg, devopsDescImg, devopsImg, digitalMarketingDescImg, digitalMarketingImg, dsaImg, ethicalHackingDescImg, ethicalHackingImg, gameDevelopmentDescImg, gameDevelopmentImg, gestureRoboticsDescImg, gestureRoboticsImg, gsmGpsTrackingSystemDescImg, gsmGpsTrackingSystemImg, guidedRoboticsDescImg, guidedRoboticsImg, homeAutomationDescImg, homeAutomationImg, humanoidRoboticsDescImg, humanoidRoboticsImg, machineLearningDescImg, machineLearningImg, nftDescImg, nftImg, nodejsDescImg, nodejsImg, openSourceWorkflowDescImg, openSourceWorkflowImg, opencvControlOfPointerDescImg, opencvControlOfPointerImg, opencvPhotoCaptureDescImg, opencvPhotoCaptureImg, reactjsDescImg, reactjsImg, sixthSenseDescImg, sixthSenseImg, smartBuildingSystemDescImg, smartBuildingSystemImg, swarmRoboticsDescImg, swarmRoboticsImg, web3DescImg, web3Img, wifiRoboticsDescImg, wifiRoboticsImg } from "./workshop-images";
+import { androidDevelopmentDescImg, androidDevelopmentImg, artificialIntelligenceDescImg, artificialIntelligenceImg, awsDescImg, awsImg, cvTrackingSystemDescImg, cvTrackingSystemImg, dataScienceDescImg, dataScienceImg, databasesDescImg, databasesImg, deepLearningDescImg, deepLearningImg, designThinkingDescImg, designThinkingImg, devopsDescImg, devopsImg, digitalMarketingDescImg, digitalMarketingImg, dsaImg, ethicalHackingDescImg, ethicalHackingImg, gameDevelopmentDescImg, gameDevelopmentImg, gestureRoboticsDescImg, gestureRoboticsImg, gsmGpsTrackingSystemDescImg, gsmGpsTrackingSystemImg, guidedRoboticsDescImg, guidedRoboticsImg, homeAutomationDescImg, homeAutomationImg, humanoidRoboticsDescImg, humanoidRoboticsImg, machineLearningDescImg, machineLearningImg, nftDescImg, nftImg, nodejsDescImg, nodejsImg, openSourceWorkflowDescImg, openSourceWorkflowImg, opencvControlOfPointerDescImg, opencvControlOfPointerImg, opencvPhotoCaptureDescImg, opencvPhotoCaptureImg, reactjsDescImg, reactjsImg, sixthSenseDescImg, sixthSenseImg, smartBuildingSystemDescImg, smartBuildingSystemImg, swarmRoboticsDescImg, swarmRoboticsImg, web3DescImg, web3Img, wifiRoboticsDescImg, wifiRoboticsImg } from "./workshop-images";
 
 
 export const hardwareWorkshopsData = [
@@ -96,7 +96,7 @@ export const hardwareWorkshopsData = [
     {
         id: "QX_WS_08",
         name: "Computer Vision Based Tracking System",
-        img: openSourceWorkflowImg,
+        img: cvTrackingSystemImg,
         imgDesc: cvTrackingSystemDescImg,
         desc: "Develop a hands-on computer vision-based mouse using Python, exploring image processing algorithms like thresholding, canny edge detection, and object tracking for cursor control.",
         date: "24/01/24",
