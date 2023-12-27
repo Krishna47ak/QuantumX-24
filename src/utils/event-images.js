@@ -23,7 +23,8 @@ import streetImg from '../images/events/street.png'
 import bestManagerDescImg from '../images/events/best-manager-desc.png'
 import aquaRushDescImg from '../images/events/aqua-rush-desc.png'
 import botsRoyaleDescImg from '../images/events/bots-royale-desc.png'
-import byteBrawlDescImg from '../images/events/byte-brawl-desc.png'
+import byteBrawlCodDescImg from '../images/events/byte-brawl-cod-desc.png'
+import byteBrawlBgmiDescImg from '../images/events/byte-brawl-bgmi-desc.png'
 import conclaveDescImg from '../images/events/conclave-desc.png'
 import droneRaceDescImg from '../images/events/drone-race-desc.png'
 import chaiPeCharchaDescImg from '../images/events/chai-pe-charcha-desc.png'
@@ -42,4 +43,4 @@ import speedSprintDescImg from '../images/events/speed-sprint-desc.png'
 import streetDescImg from '../images/events/street-desc.png'
 
 
-export { bestManagerImg, aquaRushImg, botsRoyaleImg, byteBrawlCodImg, byteBrawlBgmiImg, conclaveImg, droneRaceImg, chaiPeCharchaImg, circuitPremierLeagueImg, questSrImg, questSrDescImg, debateImg, forumImg, innovatorsImg, lineRoboChallengeImg, olympiadImg, pitchersImg, quantumHacksImg, questJrImg, roboFootballImg, speedSprintImg, streetImg, byteBrawlDescImg, bestManagerDescImg, forumDescImg, botsRoyaleDescImg, circuitPremierLeagueDescImg, quantumHacksDescImg, aquaRushDescImg, conclaveDescImg, droneRaceDescImg, chaiPeCharchaDescImg, debateDescImg, innovatorsDescImg, olympiadDescImg, pitchersDescImg, lineRoboChallengeDescImg, questJrDescImg, roboFootballDescImg, speedSprintDescImg, streetDescImg }
+export { bestManagerImg, aquaRushImg, botsRoyaleImg, byteBrawlCodImg, byteBrawlBgmiImg, conclaveImg, droneRaceImg, chaiPeCharchaImg, circuitPremierLeagueImg, questSrImg, questSrDescImg, debateImg, forumImg, innovatorsImg, lineRoboChallengeImg, olympiadImg, pitchersImg, quantumHacksImg, questJrImg, roboFootballImg, speedSprintImg, streetImg, byteBrawlCodDescImg, byteBrawlBgmiDescImg, bestManagerDescImg, forumDescImg, botsRoyaleDescImg, circuitPremierLeagueDescImg, quantumHacksDescImg, aquaRushDescImg, conclaveDescImg, droneRaceDescImg, chaiPeCharchaDescImg, debateDescImg, innovatorsDescImg, olympiadDescImg, pitchersDescImg, lineRoboChallengeDescImg, questJrDescImg, roboFootballDescImg, speedSprintDescImg, streetDescImg }

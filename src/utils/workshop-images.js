@@ -14,7 +14,7 @@ import nftImg from '../images/workshops/nft.png'
 import opencvControlOfPointerImg from '../images/workshops/opencv-control-of-pointer.png'
 import opencvPhotoCaptureImg from '../images/workshops/opencv-photo-capture.png'
 import reactjsImg from '../images/workshops/reactjs.png'
-import dataAnalyticsUsingRImg from '../images/workshops/data-analytics-using-r.png'
+import databasesImg from '../images/workshops/databases.png'
 import designThinkingImg from '../images/workshops/design-thinking.png'
 import digitalMarketingImg from '../images/workshops/digital-marketing.png'
 import gameDevelopmentImg from '../images/workshops/game-development.png'
@@ -48,7 +48,7 @@ import nftDescImg from '../images/workshops/nft-desc.png'
 import opencvControlOfPointerDescImg from '../images/workshops/opencv-control-of-pointer-desc.png'
 import opencvPhotoCaptureDescImg from '../images/workshops/opencv-photo-capture-desc.png'
 import reactjsDescImg from '../images/workshops/reactjs-desc.png'
-import dataAnalyticsUsingRDescImg from '../images/workshops/data-analytics-using-r-desc.png'
+import databasesDescImg from '../images/workshops/databases-desc.png'
 import designThinkingDescImg from '../images/workshops/design-thinking-desc.png'
 import digitalMarketingDescImg from '../images/workshops/digital-marketing-desc.png'
 import gameDevelopmentDescImg from '../images/workshops/game-development-desc.png'
@@ -64,4 +64,4 @@ import humanoidRoboticsDescImg from '../images/workshops/humanoid-robotics-desc.
 import gestureRoboticsDescImg from '../images/workshops/gesture-robotics-desc.png'
 import awsDescImg from '../images/workshops/gesture-robotics-desc.png'
 
-export { opencvImageCaptureImg, opencvImageCaptureDescImg, gsmGpsTrackingSystemImg, gsmGpsTrackingSystemDescImg, homeAutomationImg, homeAutomationDescImg, sixthSenseImg, sixthSenseDescImg, smartBuildingSystemImg, smartBuildingSystemDescImg, swarmRoboticsImg, swarmRoboticsDescImg, wifiRoboticsImg, wifiRoboticsDescImg, androidDevelopmentImg, androidDevelopmentDescImg, nodejsImg, nodejsDescImg, openSourceWorkflowImg, openSourceWorkflowDescImg, phpImg, phpDescImg, cryptocurrencyImg, cryptocurrencyDescImg, nftImg, nftDescImg, opencvControlOfPointerImg, opencvControlOfPointerDescImg, opencvPhotoCaptureImg, opencvPhotoCaptureDescImg, reactjsImg, reactjsDescImg, dataAnalyticsUsingRImg, dataAnalyticsUsingRDescImg, deepLearningImg, deepLearningDescImg, designThinkingImg, designThinkingDescImg, digitalMarketingImg, digitalMarketingDescImg, gameDevelopmentImg, gameDevelopmentDescImg, googleCloudComputingImg, googleCloudComputingDescImg, web3Img, web3DescImg, artificialIntelligenceImg, artificialIntelligenceDescImg, ethicalHackingImg, ethicalHackingDescImg, machineLearningImg, machineLearningDescImg, dataScienceImg, dataScienceDescImg, guidedRoboticsImg, guidedRoboticsDescImg, humanoidRoboticsImg, humanoidRoboticsDescImg, gestureRoboticsImg, gestureRoboticsDescImg, awsImg, awsDescImg, dsaImg, devopsImg }
+export { opencvImageCaptureImg, opencvImageCaptureDescImg, gsmGpsTrackingSystemImg, gsmGpsTrackingSystemDescImg, homeAutomationImg, homeAutomationDescImg, sixthSenseImg, sixthSenseDescImg, smartBuildingSystemImg, smartBuildingSystemDescImg, swarmRoboticsImg, swarmRoboticsDescImg, wifiRoboticsImg, wifiRoboticsDescImg, androidDevelopmentImg, androidDevelopmentDescImg, nodejsImg, nodejsDescImg, openSourceWorkflowImg, openSourceWorkflowDescImg, phpImg, phpDescImg, cryptocurrencyImg, cryptocurrencyDescImg, nftImg, nftDescImg, opencvControlOfPointerImg, opencvControlOfPointerDescImg, opencvPhotoCaptureImg, opencvPhotoCaptureDescImg, reactjsImg, reactjsDescImg, databasesImg, databasesDescImg, deepLearningImg, deepLearningDescImg, designThinkingImg, designThinkingDescImg, digitalMarketingImg, digitalMarketingDescImg, gameDevelopmentImg, gameDevelopmentDescImg, googleCloudComputingImg, googleCloudComputingDescImg, web3Img, web3DescImg, artificialIntelligenceImg, artificialIntelligenceDescImg, ethicalHackingImg, ethicalHackingDescImg, machineLearningImg, machineLearningDescImg, dataScienceImg, dataScienceDescImg, guidedRoboticsImg, guidedRoboticsDescImg, humanoidRoboticsImg, humanoidRoboticsDescImg, gestureRoboticsImg, gestureRoboticsDescImg, awsImg, awsDescImg, dsaImg, devopsImg }

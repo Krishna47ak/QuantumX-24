@@ -1,4 +1,4 @@
-import { aquaRushDescImg, aquaRushImg, bestManagerDescImg, bestManagerImg, botsRoyaleDescImg, botsRoyaleImg, byteBrawlBgmiImg, byteBrawlCodImg, byteBrawlDescImg, chaiPeCharchaDescImg, chaiPeCharchaImg, circuitPremierLeagueDescImg, circuitPremierLeagueImg, conclaveDescImg, conclaveImg, debateDescImg, debateImg, droneRaceDescImg, droneRaceImg, forumDescImg, forumImg, innovatorsDescImg, innovatorsImg, lineRoboChallengeDescImg, lineRoboChallengeImg, olympiadDescImg, olympiadImg, pitchersDescImg, pitchersImg, quantumHacksDescImg, quantumHacksImg, questJrDescImg, questJrImg, questSrDescImg, questSrImg, roboFootballDescImg, roboFootballImg, speedSprintDescImg, speedSprintImg, streetDescImg, streetImg } from '@/utils/event-images'
+import { aquaRushDescImg, aquaRushImg, bestManagerDescImg, bestManagerImg, botsRoyaleDescImg, botsRoyaleImg, byteBrawlBgmiDescImg, byteBrawlBgmiImg, byteBrawlCodDescImg, byteBrawlCodImg, chaiPeCharchaDescImg, chaiPeCharchaImg, circuitPremierLeagueDescImg, circuitPremierLeagueImg, conclaveDescImg, conclaveImg, debateDescImg, debateImg, droneRaceDescImg, droneRaceImg, forumDescImg, forumImg, innovatorsDescImg, innovatorsImg, lineRoboChallengeDescImg, lineRoboChallengeImg, olympiadDescImg, olympiadImg, pitchersDescImg, pitchersImg, quantumHacksDescImg, quantumHacksImg, questJrDescImg, questJrImg, questSrDescImg, questSrImg, roboFootballDescImg, roboFootballImg, speedSprintDescImg, speedSprintImg, streetDescImg, streetImg } from '@/utils/event-images'
 
 
 export const eventsData = [
@@ -22,7 +22,7 @@ export const eventsData = [
         id: "QX_EV_02",
         name: "BYTE BRAWL-BGMI",
         img: byteBrawlBgmiImg,
-        imgDesc: byteBrawlDescImg,
+        imgDesc: byteBrawlBgmiDescImg,
         desc: "Immerse yourselves in the world of Battlegrounds Mobile India (BGMI) in a Team DeathMatch to be the final survivor.",
         date: "23/01/24",
         minSize: 4,
@@ -38,7 +38,7 @@ export const eventsData = [
         id: "QX_EV_03",
         name: "BYTE BRAWL-COD",
         img: byteBrawlCodImg,
-        imgDesc: byteBrawlDescImg,
+        imgDesc: byteBrawlCodDescImg,
         desc: "Immerse yourselves in the world of Battlegrounds Mobile India (BGMI) in a Team DeathMatch to be the final survivor.",
         date: "25/01/24",
         minSize: 4,
@@ -181,9 +181,9 @@ export const eventsData = [
         imgDesc: quantumHacksDescImg,
         desc: "This is a dynamic arena where collaboration and ingenuity converge to tackle real-world challenges. This immersive event extends beyond mere competition; it's a journey of learning, growth, and the collective pursuit of meaningful impact.",
         date: "24/01/24",
-        minSize: null,
-        maxSize: null,
-        fixedSize: 3,
+        minSize: 3,
+        maxSize: 5,
+        fixedSize: null,
         fee: 1000,
         prizePool: 50000,
         location: "Library, Amar Jawan Block, NHCE",
@@ -260,7 +260,7 @@ export const eventsData = [
         img: aquaRushImg,
         imgDesc: aquaRushDescImg,
         desc: "Prepare to be captivated by the thrilling spectacle of the RC Boat Race, where miniature speedsters navigate the aquatic arena with precision and agility.",
-        date: "24/01/24", 
+        date: "24/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 2,
@@ -333,5 +333,5 @@ export const eventsData = [
         location: "Sports Ground, NHCE",
         contact: "Harshavardhan PR - +91 86189 86078",
         ruleBook: "https://docs.google.com/document/d/1RmiPcnPU_dsr2SLDctIgNqgWtaZpEqivRvZevm0blu4/edit?usp=sharing"
-    },  
+    },
 ]

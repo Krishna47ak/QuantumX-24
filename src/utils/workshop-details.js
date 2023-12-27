@@ -1,4 +1,4 @@
-import { androidDevelopmentDescImg, androidDevelopmentImg, artificialIntelligenceDescImg, artificialIntelligenceImg, awsDescImg, awsImg, cryptocurrencyDescImg, cryptocurrencyImg, dataAnalyticsUsingRDescImg, dataAnalyticsUsingRImg, dataScienceDescImg, dataScienceImg, deepLearningDescImg, deepLearningImg, designThinkingDescImg, designThinkingImg, devopsImg, digitalMarketingDescImg, digitalMarketingImg, dsaImg, ethicalHackingDescImg, ethicalHackingImg, gameDevelopmentDescImg, gameDevelopmentImg, gestureRoboticsDescImg, gestureRoboticsImg, googleCloudComputingDescImg, googleCloudComputingImg, gsmGpsTrackingSystemDescImg, gsmGpsTrackingSystemImg, guidedRoboticsDescImg, guidedRoboticsImg, homeAutomationDescImg, homeAutomationImg, humanoidRoboticsDescImg, humanoidRoboticsImg, machineLearningDescImg, machineLearningImg, nftDescImg, nftImg, nodejsDescImg, nodejsImg, openSourceWorkflowDescImg, openSourceWorkflowImg, opencvControlOfPointerDescImg, opencvControlOfPointerImg, opencvImageCaptureDescImg, opencvImageCaptureImg, opencvPhotoCaptureDescImg, opencvPhotoCaptureImg, phpDescImg, phpImg, reactjsDescImg, reactjsImg, sixthSenseDescImg, sixthSenseImg, smartBuildingSystemDescImg, smartBuildingSystemImg, swarmRoboticsDescImg, swarmRoboticsImg, web3DescImg, web3Img, wifiRoboticsDescImg, wifiRoboticsImg } from "./workshop-images";
+import { androidDevelopmentDescImg, androidDevelopmentImg, artificialIntelligenceDescImg, artificialIntelligenceImg, awsDescImg, awsImg, dataScienceDescImg, dataScienceImg, databasesDescImg, databasesImg, deepLearningDescImg, deepLearningImg, designThinkingDescImg, designThinkingImg, devopsImg, digitalMarketingDescImg, digitalMarketingImg, dsaImg, ethicalHackingDescImg, ethicalHackingImg, gameDevelopmentDescImg, gameDevelopmentImg, gestureRoboticsDescImg, gestureRoboticsImg, gsmGpsTrackingSystemDescImg, gsmGpsTrackingSystemImg, guidedRoboticsDescImg, guidedRoboticsImg, homeAutomationDescImg, homeAutomationImg, humanoidRoboticsDescImg, humanoidRoboticsImg, machineLearningDescImg, machineLearningImg, nftDescImg, nftImg, nodejsDescImg, nodejsImg, openSourceWorkflowDescImg, openSourceWorkflowImg, opencvControlOfPointerDescImg, opencvControlOfPointerImg, opencvPhotoCaptureDescImg, opencvPhotoCaptureImg, reactjsDescImg, reactjsImg, sixthSenseDescImg, sixthSenseImg, smartBuildingSystemDescImg, smartBuildingSystemImg, swarmRoboticsDescImg, swarmRoboticsImg, web3DescImg, web3Img, wifiRoboticsDescImg, wifiRoboticsImg } from "./workshop-images";
 
 
 export const hardwareWorkshopsData = [
@@ -203,8 +203,8 @@ export const softwareWorkshopsData = [
     {
         id: "QX_WS_16",
         name: "Introduction to Databases",
-        img: dataAnalyticsUsingRImg,
-        imgDesc: dataAnalyticsUsingRDescImg,
+        img: databasesImg,
+        imgDesc: databasesDescImg,
         desc: "This workshop ensures participants gain a strong grasp of database fundamentals, proficiency in SQL usage, and insights into deciding between relational and non-relational databases. Whether you're new to databases or seeking a knowledge refresher, the session empowers you to master organised and efficient data management.",
         date: "23/01/24",
         minSize: null,
@@ -388,7 +388,7 @@ export const softwareWorkshopsData = [
         img: awsImg,
         imgDesc: awsDescImg,
         desc: "Unlock the full potential of Amazon Web Services (AWS) with our immersive workshop designed for cloud enthusiasts and professionals. In this comprehensive training, participants will delve into the core AWS services.",
-        date: "23/01/24",
+        date: "24/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,
@@ -596,8 +596,8 @@ export const workshopsData = [
     {
         id: "QX_WS_16",
         name: "Introduction to Databases",
-        img: dataAnalyticsUsingRImg,
-        imgDesc: dataAnalyticsUsingRDescImg,
+        img: databasesImg,
+        imgDesc: dataScienceDescImg,
         desc: "This workshop ensures participants gain a strong grasp of database fundamentals, proficiency in SQL usage, and insights into deciding between relational and non-relational databases. Whether you're new to databases or seeking a knowledge refresher, the session empowers you to master organised and efficient data management.",
         date: "23/01/24",
         minSize: null,
@@ -625,7 +625,7 @@ export const workshopsData = [
         img: designThinkingImg,
         imgDesc: designThinkingDescImg,
         desc: "Redesign a popular app using the design thinking process, involving user research, problem definition, ideation, prototyping, user testing, and refining designs to enhance the app's user experience.",
-        date: "24/01/24",
+        date: "23/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,
