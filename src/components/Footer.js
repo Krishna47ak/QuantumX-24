@@ -24,7 +24,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='md:pl-7 mt-5 md:mt-0' >
-                    <p className='text-white text-3xl mb-4' >Contact US</p>
+                    <p className='text-white text-3xl mb-4' >Contact Us</p>
                     <p className='text-slate-500 text-lg' >QuantumX - 2024</p>
                     <p className='text-slate-500 text-lg' >quantumx-24@newhorizonindia.edu</p>
                 </div>

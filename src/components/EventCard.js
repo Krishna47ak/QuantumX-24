@@ -47,7 +47,7 @@ const EventCard = ({ data, from }) => {
                                         {((data?.id != "QX_EV_05") && (data?.id != "QX_EV_06") && (data?.id != "QX_EV_07")) && (
                                             <>
                                                 {(data?.fixedSize || data?.minSize) && (
-                                                    <div className='sm:text-lg font-medium text-slate-400 mt-2 font-mono' >Team size : {data?.fixedSize ? data?.fixedSize : `${data?.minSize} - ${data?.maxSize}`}</div>
+                                                    <div className='sm:text-lg font-medium text-slate-400 mt-2 font-mono' >Team size : {data?.fixedSize ? (data?.fixedSize === 1 ? "Individual" : data?.fixedSize) : `${data?.minSize} - ${data?.maxSize}`}</div>
                                                 )}
                                                 <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Fee: &#8377; {data?.fee === 0 ? "Free" : data?.fee}</p>
                                                 {data?.prizePool && <p className='sm:text-xl font-medium text-[#fff523] mt-2 font-mono' >Prize pool: &#8377; {data?.prizePool}</p>}

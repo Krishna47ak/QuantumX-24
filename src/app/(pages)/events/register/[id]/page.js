@@ -12,7 +12,8 @@ const memberStruct = {
     name: '',
     email: '',
     phone: '',
-    college: ''
+    college: '',
+    usn: ''
 }
 
 const EventsRegister = ({ params }) => {
@@ -199,8 +200,10 @@ const EventsRegister = ({ params }) => {
                                     <FormInput inputName="leader" name="Team leader name" data={leader} setdata={onChange} placeholder="Full name" />
                                     <FormInput inputName="email" name="Email" data={email} setdata={onChange} placeholder="Email ID" type="email" />
                                     <FormInput inputName="phone" name="Phone number" data={phone} setdata={onChange} placeholder="Phone number" type="tel" />
-                                    <FormInput inputName="college" name="College name" data={college} setdata={onChange} placeholder="College name" />
-                                    <FormInput inputName="usn" name="USN" data={usn} setdata={onChange} placeholder="USN" />
+                                    <FormInput inputName="college" name={((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) ? "College name" : "School name"} data={college} setdata={onChange} placeholder="College/School name" />
+                                    {((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) && (
+                                        <FormInput inputName="usn" name="USN" data={usn} setdata={onChange} placeholder="USN" />
+                                    )}
                                 </div>
                                 {/* {teamSize && teamSize != 1 && <div className="h-1 w-full my-5 rounded-full bg-gray-700" />} */}
                                 <div>
@@ -210,7 +213,10 @@ const EventsRegister = ({ params }) => {
                                             <FormInput inputName="name" name={`Team member ${i + 1}`} data={members[i].name} setdata={onMemberChange} placeholder="Full name" inputIndex={i} />
                                             <FormInput inputName="email" name="Email" data={members[i].email} setdata={onMemberChange} placeholder="Email" inputIndex={i} />
                                             <FormInput inputName="phone" name="Phone number" data={members[i].phone} setdata={onMemberChange} placeholder="Phone number" inputIndex={i} />
-                                            <FormInput inputName="college" name="College name" data={members[i].college} setdata={onMemberChange} placeholder="College name" inputIndex={i} />
+                                            <FormInput inputName="college" name={((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) ? "College name" : "School name"} data={members[i].college} setdata={onMemberChange} placeholder="College/School name" inputIndex={i} />
+                                            {((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) && (
+                                                <FormInput inputName="usn" name="USN" data={members[i].usn} setdata={onMemberChange} placeholder="USN" inputIndex={i} />
+                                            )}
                                         </div>
                                     ))}
                                 </div>

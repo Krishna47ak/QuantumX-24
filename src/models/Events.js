@@ -30,8 +30,7 @@ const eventSchema = new mongoose.Schema({
         required: [true, "Please provide the college"],
     },
     usn: {
-        type: String,
-        required: [true, "Please provide the USN"],
+        type: String
     },
     teamSize: {
         type: Number,
@@ -49,6 +48,9 @@ const eventSchema = new mongoose.Schema({
                 type: Number
             },
             college: {
+                type: String
+            },
+            usn: {
                 type: String
             }
         }
