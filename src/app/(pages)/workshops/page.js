@@ -51,7 +51,7 @@ const Workshops = () => {
                 </div>
                 <div className='grid sm:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:gap-y-5 md:px-16 lg:px-28 mt-10 md:mt-20' >
                     {hardwareSearchData?.map((event) => (
-                        <EventCard key={event?.desc} data={event} />
+                        <EventCard key={event?.desc} data={event} from="workshop" />
                     ))}
                 </div>
 
@@ -67,7 +67,7 @@ const Workshops = () => {
                 </div>
                 <div className='grid sm:grid-cols-2 lg:grid-cols-3 place-items-center md:gap-x-20 md:gap-y-5 md:px-16 lg:px-28 mt-10 md:mt-20' >
                     {softwareSearchData?.map((event) => (
-                        <EventCard key={event?.desc} data={event} />
+                        <EventCard key={event?.desc} data={event} from="workshop" />
                     ))}
                 </div>
             </div>
