@@ -62,10 +62,6 @@ const eventSchema = new mongoose.Schema({
         type: Number,
         required: [true, "Please provide the fees"],
     },
-    fee: {
-        type: Number,
-        required: [true, "Please provide the fees"],
-    },
     eventName: {
         type: String,
         required: [true, "Please provide the event name"],
