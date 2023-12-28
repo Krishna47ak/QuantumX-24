@@ -13,6 +13,7 @@ const WorkshopsRegister = ({ params }) => {
     const [page, setPage] = useState(1)
     const [imageSizeError, setImageSizeError] = useState(false)
     const [error, setError] = useState(false)
+    const [applicantIdError, setApplicantIdError] = useState(false)
     const [loading, setLoading] = useState(false)
 
     const [transacImg, setTransImg] = useState("");
@@ -76,7 +77,9 @@ const WorkshopsRegister = ({ params }) => {
             data = { transacImg, applicantId, name, email, phone, college, usn, fee, workshopName }
         }
 
-        if (data) {
+        if (applicantId?.length < 14 && workshop?.fee != 0) {
+            setApplicantIdError(true)
+        } else if (data) {
             const body = JSON.stringify(data)
             registerWorkshop(body)
         }
@@ -167,6 +170,7 @@ const WorkshopsRegister = ({ params }) => {
                                 <FormInput inputName="transacImg" name="Payment reciept image" setdata={handleImageChange} type="file" />
                                 {imageSizeError && <div className="text-red-600 text-xs ml-2 sm:ml-[14rem] -mt-5 md:-mt-10 mb-7 font-semibold  rounded-xl w-full" >Image size should be less than 200KB</div>}
                                 <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
+                                {applicantIdError && <div className="text-red-600 text-xs ml-2 sm:ml-[12rem] -mt-3 md:-mt-5 mb-7 font-semibold  rounded-xl w-full" >Invalid applicant Id</div>}
                             </div>
                         )}
                         <div onClick={page === 1 ? (workshop?.fee === 0 ? onSubmit : handleNext1) : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >

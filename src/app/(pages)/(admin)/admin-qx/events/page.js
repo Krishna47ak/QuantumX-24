@@ -21,12 +21,15 @@ const AdminEvents = () => {
             </div>
             <div className='flex items-center' >
                 <div className='flex flex-wrap justify-center gap-5' >
-                    {eventsData?.map((event) => (
-                        <Link href={`/admin-qx/events/${event?.id}`} key={event?.id} className='bg-violet-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
-                            <p>{event?.name}</p>
-                            <Image className='mt-2' src="/pink-arrow.png" width={20} height={20} alt='arrow' />
-                        </Link>
-                    ))}
+                    {eventsData?.map((event) => {
+                        const eventRegLength = data?.filter((reg) => reg?.eventName === event?.name)?.length
+                        return (
+                            <Link href={`/admin-qx/events/${event?.id}`} key={event?.id} className='bg-violet-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
+                                <p>{event?.name} ({eventRegLength ? eventRegLength : 0})</p>
+                                <Image className='mt-2' src="/pink-arrow.png" width={20} height={20} alt='arrow' />
+                            </Link>
+                        )
+                    })}
                 </div>
             </div>
         </div>
