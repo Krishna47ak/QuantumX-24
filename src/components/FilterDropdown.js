@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { useState } from "react"
 
-const FilterDropdown = ({ data, setFilterData, filterData, name, style }) => {
+const FilterDropdown = ({ data, setFilterData, filterData, name, width, style }) => {
     const [onFilter, setOnFilter] = useState(false)
 
     const onFilterSelect = (list) => {
@@ -12,7 +12,7 @@ const FilterDropdown = ({ data, setFilterData, filterData, name, style }) => {
 
     return (
         <div className="relative w-40" >
-            <div onClick={() => setOnFilter(!onFilter)} className={`flex items-center justify-between shadow-lg border w-40 py-2 px-2 rounded-lg select-none ${style}`} >
+            <div onClick={() => setOnFilter(!onFilter)} style={{ width }} className={`flex items-center justify-between shadow-lg border w-40 py-2 px-2 rounded-lg select-none ${style}`} >
                 <div className="flex w-full" >{name} <p className="mx-auto font-bold" >{filterData}</p></div>
                 <Image src="/dropdown.svg" width={30} height={10} alt="dropdown" />
             </div>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import FilterDropdown from "@/components/FilterDropdown"
-import { dropDownData } from "@/utils/contants"
+import { dropDownData, weightDropDownData } from "@/utils/contants"
 import { eventsData } from "@/utils/event-details"
 import FormInput from "@/components/FormInput"
 import Spinner from "@/components/Spinner"
@@ -22,10 +22,12 @@ const EventsRegister = ({ params }) => {
     const [loading, setLoading] = useState(false)
     const event = eventsData.find((event) => event.id === params.id)
     const [teamSize, setTeamSize] = useState(null)
+    const [weightClass, setWeightClass] = useState(null)
     const [members, setMembers] = useState(Array(teamSize).fill(memberStruct));
     const [transacImg, setTransImg] = useState("");
     const [page, setPage] = useState(1)
     const [error, setError] = useState(false)
+    const [applicantIdError, setApplicantIdError] = useState(false)
     const [imageSizeError, setImageSizeError] = useState(false)
     const [teamName, setTeamName] = useState("")
     const [discord, setDiscord] = useState("")
@@ -78,7 +80,15 @@ const EventsRegister = ({ params }) => {
             if (teamSize != 1) {
                 members?.map((member) => {
                     if (member.name && member.email && member.phone && member.college) {
-                        setPage(2)
+                        if (event?.id === "QX_EV_18") {
+                            if (weightClass === null) {
+                                setPage(1)
+                                setError(true)
+                            } else {
+                                setPage(2)
+                                setError(false)
+                            }
+                        }
                     } else {
                         setPage(1)
                         setError(true)
@@ -100,7 +110,7 @@ const EventsRegister = ({ params }) => {
     const registerEvent = async (body) => {
         setLoading(true)
         try {
-            const res = await fetch(`https://www.quantumxfest.com/api/events`, {
+            const res = await fetch(`${process.env.DOMAIN}/api/events`, {
                 credentials: "include",
                 method: "POST",
                 body,
@@ -126,15 +136,19 @@ const EventsRegister = ({ params }) => {
         }
         else if (transacImg && !imageSizeError && applicantId) {
             if (event?.id === "QX_EV_12") {
-                data = { teamName, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
+                data = { teamName, transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim(), teamSize, members, fee, eventName }
+            } else if (event?.id === "QX_EV_18") {
+                data = { weightClass, transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim(), teamSize, members, fee, eventName }
             } else if (event?.id === "QX_EV_02" || event?.id === "QX_EV_03") {
-                data = { discord, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
+                data = { discord, transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim(), teamSize, members, fee, eventName }
             } else {
-                data = { transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName }
+                data = { transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim(), teamSize, members, fee, eventName }
             }
         }
 
-        if (data) {
+        if (applicantId?.length < 14) {
+            setApplicantIdError(true)
+        } else if (data) {
             const body = JSON.stringify(data)
             registerEvent(body)
         }
@@ -146,7 +160,7 @@ const EventsRegister = ({ params }) => {
         if (file) {
             const imageSizeInBytes = file.size;
             const imageSizeInKb = imageSizeInBytes / 1024;
-            if (imageSizeInKb > 201) {
+            if (imageSizeInKb > 151) {
                 setImageSizeError(true)
             } else {
                 setImageSizeError(false)
@@ -189,7 +203,12 @@ const EventsRegister = ({ params }) => {
                         {error && <div className="bg-yellow-400 text-red-600 font-semibold mb-5 text-center rounded-xl w-full" >Enter all fields</div>}
                         {page === 1 ? (
                             <div>
-                                <FilterDropdown data={teamSizeData} name="Team size :" setFilterData={handleTeamSizeChange} filterData={teamSize} />
+                                <div className="flex space-x-5" >
+                                    <FilterDropdown data={teamSizeData} name="Team size :" setFilterData={handleTeamSizeChange} filterData={teamSize} />
+                                    {event?.id === "QX_EV_18" && (
+                                        <FilterDropdown data={weightDropDownData} name="Weight class (KG) :" setFilterData={setWeightClass} filterData={weightClass} width="13.5rem" />
+                                    )}
+                                </div>
                                 <div className="mt-5 md:mt-10" >
                                     {event?.id === "QX_EV_12" && (
                                         <FormInput name="Team name" data={teamName} setdata={e => setTeamName(e.target.value)} placeholder="Team name" />
@@ -201,9 +220,7 @@ const EventsRegister = ({ params }) => {
                                     <FormInput inputName="email" name="Email" data={email} setdata={onChange} placeholder="Email ID" type="email" />
                                     <FormInput inputName="phone" name="Phone number" data={phone} setdata={onChange} placeholder="Phone number" type="tel" />
                                     <FormInput inputName="college" name={((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) ? "College name" : "School name"} data={college} setdata={onChange} placeholder="College/School name" />
-                                    {((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) && (
-                                        <FormInput inputName="usn" name="USN" data={usn} setdata={onChange} placeholder="USN" />
-                                    )}
+                                    <FormInput inputName="usn" name={((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) ? "USN" : "Class & Section"} data={usn} setdata={onChange} placeholder={((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) ? "USN" : "IX A"} />
                                 </div>
                                 {/* {teamSize && teamSize != 1 && <div className="h-1 w-full my-5 rounded-full bg-gray-700" />} */}
                                 <div>
@@ -214,9 +231,7 @@ const EventsRegister = ({ params }) => {
                                             <FormInput inputName="email" name="Email" data={members[i].email} setdata={onMemberChange} placeholder="Email" inputIndex={i} />
                                             <FormInput inputName="phone" name="Phone number" data={members[i].phone} setdata={onMemberChange} placeholder="Phone number" inputIndex={i} />
                                             <FormInput inputName="college" name={((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) ? "College name" : "School name"} data={members[i].college} setdata={onMemberChange} placeholder="College/School name" inputIndex={i} />
-                                            {((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) && (
-                                                <FormInput inputName="usn" name="USN" data={members[i].usn} setdata={onMemberChange} placeholder="USN" inputIndex={i} />
-                                            )}
+                                            <FormInput inputName="usn" name={((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) ? "USN" : "Class & Section"} data={members[i].usn} setdata={onMemberChange} placeholder={((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) ? "USN" : "IX A"} inputIndex={i} />
                                         </div>
                                     ))}
                                 </div>
@@ -246,8 +261,9 @@ const EventsRegister = ({ params }) => {
                         ) : page === 3 && (
                             <div className="text-white overflow-hidden" >
                                 <FormInput inputName="transacImg" name="Payment reciept image" setdata={handleImageChange} type="file" />
-                                {imageSizeError && <div className="text-red-600 text-xs ml-2 sm:ml-[14rem] -mt-5 md:-mt-10 mb-7 font-semibold  rounded-xl w-full" >Image size should be less than 200KB</div>}
+                                {imageSizeError && <div className="text-red-600 text-xs ml-2 sm:ml-[14rem] -mt-5 md:-mt-10 mb-7 font-semibold  rounded-xl w-full" >Image size should be less than 150KB</div>}
                                 <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
+                                {applicantIdError && <div className="text-red-600 text-xs ml-2 sm:ml-[12rem] -mt-3 md:-mt-5 mb-7 font-semibold  rounded-xl w-full" >Invalid applicant Id</div>}
                             </div>
                         )}
                         <div onClick={page === 1 ? (event?.fee === 0 ? onSubmit : handleNext1) : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >

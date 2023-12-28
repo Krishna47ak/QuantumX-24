@@ -7,7 +7,16 @@ connectEventDB();
 export async function POST(request) {
     try {
         const reqBody = await request.json()
-        const { teamName, discord, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, fee, eventName } = reqBody
+        const { teamName, discord, transacImg, applicantId, leader, email, phone, college, usn, teamSize, members, weightClass, fee, eventName } = reqBody
+
+        const existingUser = await Event.findOne({ applicantId });
+
+        if (existingUser) {
+            return NextResponse.json({
+                message: "Applicant Id already exist",
+                success: false
+            })
+        }
 
         const event = new Event({
             teamName,
@@ -21,6 +30,7 @@ export async function POST(request) {
             usn,
             teamSize,
             members,
+            weightClass,
             fee,
             eventName
         })

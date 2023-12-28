@@ -10,7 +10,10 @@ const nextConfig = {
         aggressiveFrontEndNavCaching: true,
         reloadOnOnline: true,
         swcMinify: true,
-    })
+    }),
+    env: {
+        DOMAIN: process.env.DOMAIN,
+    }
 }
 
 module.exports = nextConfig

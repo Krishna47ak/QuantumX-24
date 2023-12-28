@@ -9,6 +9,15 @@ export async function POST(request) {
         const reqBody = await request.json()
         const { transacImg, applicantId, name, email, phone, college, usn, fee, workshopName } = reqBody
 
+        const existingUser = await Workshop.findOne({ applicantId });
+
+        if (existingUser) {
+            return NextResponse.json({
+                message: "Applicant Id already exist",
+                success: false
+            })
+        }
+
         const workshop = new Workshop({
             transacImg,
             applicantId,

@@ -55,6 +55,13 @@ const eventSchema = new mongoose.Schema({
             }
         }
     ],
+    weightClass: {
+        type: Number
+    },
+    fee: {
+        type: Number,
+        required: [true, "Please provide the fees"],
+    },
     fee: {
         type: Number,
         required: [true, "Please provide the fees"],

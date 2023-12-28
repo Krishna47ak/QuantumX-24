@@ -47,7 +47,7 @@ const WorkshopsRegister = ({ params }) => {
     const registerWorkshop = async (body) => {
         setLoading(true)
         try {
-            const res = await fetch(`https://www.quantumxfest.com/api/workshops`, {
+            const res = await fetch(`${process.env.DOMAIN}/api/workshops`, {
                 credentials: "include",
                 method: "POST",
                 body,
