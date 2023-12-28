@@ -39,7 +39,7 @@ export const eventsData = [
         name: "BYTE BRAWL-COD",
         img: byteBrawlCodImg,
         imgDesc: byteBrawlCodDescImg,
-        desc: "Immerse yourselves in the world of Battlegrounds Mobile India (BGMI) in a Team DeathMatch to be the final survivor.",
+        desc: "Immerse yourselves in the world of Call Of Duty Mobile (COD) in a Team Death Match to be the final survivor.",
         date: "25/01/24",
         minSize: 4,
         maxSize: 5,
