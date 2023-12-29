@@ -56,13 +56,13 @@ const WorkshopsRegister = ({ params }) => {
             });
             const data = await res.json()
             if (data?.success) {
-                router.push("/success")
+                router.replace("/success")
             } else {
-                router.push("/failed")
+                router.replace("/failed")
             }
         } catch (err) {
             console.error(err);
-            router.push("/failed")
+            router.replace("/failed")
         }
     }
 

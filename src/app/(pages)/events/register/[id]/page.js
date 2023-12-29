@@ -207,7 +207,7 @@ const EventsRegister = ({ params }) => {
                         {error && <div className="bg-yellow-400 text-red-600 font-semibold mb-5 text-center rounded-xl w-full" >Enter all fields</div>}
                         {page === 1 ? (
                             <div>
-                                <div className="flex space-x-5" >
+                                <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-5" >
                                     <FilterDropdown data={teamSizeData} name="Team size :" setFilterData={handleTeamSizeChange} filterData={teamSize} />
                                     {event?.id === "QX_EV_18" && (
                                         <FilterDropdown data={weightDropDownData} name="Weight class (KG) :" setFilterData={setWeightClass} filterData={weightClass} width="13.5rem" />
