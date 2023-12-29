@@ -7,13 +7,13 @@ const AdminDropDown = ({ user }) => {
     return (
         <div className='text-white mb-3 md:mb-5 text-xs md:text-base' >
             <div onClick={() => setOnDrop(!onDrop)} className='flex justify-center items-center bg-blue-800 border-2 border-white px-5 py-4 rounded-md select-none' >
-                <p className='ml-auto' >{user?.leader}</p>
+                <p className='ml-auto' >{user?.leader ? user?.leader : user?.name}</p>
                 <Image className={`w-7 h-4 ml-auto duration-300 scale-75 md:scale-100 ${onDrop ? '-rotate-180' : 'rotate-0'} `} src="/pink-arrow.png" width={35} height={1} alt='arrow' />
             </div>
             <div className={`p-5 ${onDrop ? 'translate-y-0' : '-translate-y-full hidden'}`} >
                 <div className='flex flex-col lg:flex-row items-start justify-between' >
                     <div>
-                        <p className='mb-1' >Name:  {user?.leader}</p>
+                        <p className='mb-1' >Name:  {user?.leader ? user?.leader : user?.name}</p>
                         <p className='mb-1' >Email: {user?.email}</p>
                         <p className='mb-1' >Phone: {user?.phone}</p>
                         <p className='mb-1' >College: {user?.college}</p>

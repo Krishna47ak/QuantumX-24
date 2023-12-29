@@ -9,10 +9,10 @@ const Admin = () => {
                 <p>EVENTS</p>
                 <Image className='-rotate-90 ml-5' src="/pink-arrow.png" width={35} height={35} alt='arrow' />
             </Link>
-            <div className='bg-purple-700 m-5 flex items-center justify-center text-2xl md:text-4xl font-medium w-[60vw] lg:w-[35vw] h-[30vh] p-10 px-20 hover:scale-105 duration-500 cursor-pointer select-none rounded-xl' >
+            <Link href="/admin-qx/workshops" className='bg-purple-700 m-5 flex items-center justify-center text-2xl md:text-4xl font-medium w-[60vw] lg:w-[35vw] h-[30vh] p-10 px-20 hover:scale-105 duration-500 cursor-pointer select-none rounded-xl' >
                 <p>WORKSHOPS</p>
                 <Image className='-rotate-90 ml-5' src="/pink-arrow.png" width={35} height={35} alt='arrow' />
-            </div>
+            </Link>
         </div>
     )
 }

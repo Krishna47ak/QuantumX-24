@@ -3,14 +3,14 @@ import { useContext } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Context as DataContext } from '@/context/dataContext'
-import { eventsData } from '@/utils/event-details'
+import { workshopsData } from '@/utils/workshop-details'
 import AdminDropDown from '@/components/AdminDropDown'
 
-const AdminEventDetail = ({ params }) => {
+const AdminWorkshopDetail = ({ params }) => {
     const router = useRouter()
-    const event = eventsData.find((event) => event.id === params.id)
-    const { state: { events } } = useContext(DataContext)
-    const eventReg = events?.filter((reg) => reg?.eventName === event?.name)
+    const workshop = workshopsData.find((event) => event.id === params.id)
+    const { state: { workshops } } = useContext(DataContext)
+    const eventReg = workshops?.filter((reg) => reg?.workshopName === workshop?.name)
 
     return (
         <div className='bg-black min-h-screen p-10 lg:p-20 pt-20' >
@@ -31,4 +31,4 @@ const AdminEventDetail = ({ params }) => {
     )
 }
 
-export default AdminEventDetail
+export default AdminWorkshopDetail
