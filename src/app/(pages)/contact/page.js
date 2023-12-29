@@ -20,7 +20,7 @@ const Contact = () => {
                         <Image className='mx-auto scale-110' src="/ananda-krishna.png" width={400} height={50} alt='sai kiran' />
                         <p>anandakrishna047@gmail.com</p>
                         <p>+91 63623 98767</p>
-                        <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Lead Developer</p>
+                        <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Tech Lead</p>
                         <br />
                     </div>
                     <div>
@@ -43,7 +43,7 @@ const Contact = () => {
                         <Image className='mx-auto' src="/ananda-krishna.png" width={400} height={50} alt='ananda krishna' />
                         <p>anandakrishna047@gmail.com</p>
                         <p>+91 63623 98767</p>
-                        <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Lead Developer</p>
+                        <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Tech Lead</p>
                         <br />
                     </div>
                 </div>
