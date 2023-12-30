@@ -277,7 +277,7 @@ export const eventsData = [
         imgDesc: botsRoyaleDescImg,
         desc: "It is a combat robotics competition in which teams design, build, and operate remote-controlled robots to fight in an arena combat elimination tournament. The robots are armed with a variety of weapons, such as hammers, saws, and blades, and the goal is to disable or destroy the opponent's robot.",
         date: "23/01/24",
-        minSize: 3,
+        minSize: 1,
         maxSize: 5,
         fixedSize: null,
         fee: 1000,

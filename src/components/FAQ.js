@@ -17,7 +17,7 @@ const FAQ = () => {
                 <Dropdown ques="Are there any age restrictions for participants?" ans="Will be answered soon......." />
                 <Dropdown ques="How can I become a sponsor or exhibitor at QuantumX-24?" ans="If you're interested in sponsoring or exhibiting at QuantumX-24, please contact our sponsorship team at quantumx-24@newhorizonindia.edu for more information on available opportunities." />
                 <Dropdown ques="Is there accommodation provided for out-of-town participants?" ans="Will be answered soon......." />
-                <Dropdown ques="How can I stay updated on the latest news and announcements about QuantumX-24?" ans="Follow us on social media platforms such as Twitter, Facebook, and Instagram. You can also check our website for regular updates." />
+                <Dropdown ques="How can I stay updated on the latest news and announcements about QuantumX-24?" ans="Follow us on social media platforms such as Twitter X, Facebook, and Instagram. You can also check our website for regular updates." />
                 <Dropdown ques="Do participants of a team have to be from the same college?" ans="No, participants of multiple colleges can be in the same team." />
             </div>
         </div>

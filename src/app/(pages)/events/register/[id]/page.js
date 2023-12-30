@@ -204,7 +204,6 @@ const EventsRegister = ({ params }) => {
                         <div className="bg-gray-500 mb-5 h-2.5 w-full rounded-full" >
                             <div className={`bg-green-500 h-2.5 self-start rounded-full`} style={{ width: `${(((event?.fee === 0 ? 3 : page) / 3) * 100).toFixed(2)}%` }} />
                         </div>
-                        {error && <div className="bg-yellow-400 text-red-600 font-semibold mb-5 text-center rounded-xl w-full" >Enter all fields</div>}
                         {page === 1 ? (
                             <div>
                                 <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-5" >
@@ -264,12 +263,17 @@ const EventsRegister = ({ params }) => {
                             </div>
                         ) : page === 3 && (
                             <div className="text-white overflow-hidden" >
-                                <FormInput inputName="transacImg" name="Payment reciept image" setdata={handleImageChange} type="file" />
-                                {imageSizeError && <div className="text-red-600 text-xs ml-2 sm:ml-[14rem] -mt-5 md:-mt-10 mb-7 font-semibold  rounded-xl w-full" >Image size should be less than 150KB</div>}
+                                <FormInput inputName="transacImg" name="Payment reciept image/pdf" setdata={handleImageChange} type="file" />
+                                {imageSizeError && <div className="text-red-600 text-xs ml-2 sm:ml-[16rem] -mt-5 md:-mt-10 mb-7 font-semibold rounded-xl w-full" >Size should be less than 150KB</div>}
                                 <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
                                 {applicantIdError && <div className="text-red-600 text-xs ml-2 sm:ml-[12rem] -mt-3 md:-mt-5 mb-7 font-semibold  rounded-xl w-full" >Invalid applicant Id</div>}
                             </div>
                         )}
+                        {error && <div className="flex items-center bg-[#facc1595] text-red-700 w-[90%] md:w-full font-semibold my-3 py-1 px-3 text-center rounded-md" >
+                            <Image src="/warning-icon.svg" width={25} height={30} alt="warning" />
+                            <p className="mx-auto pr-2" >Enter all fields</p>
+                        </div>}
+
                         <div onClick={page === 1 ? (event?.fee === 0 ? onSubmit : handleNext1) : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
                             <p className='text-white text-lg font-mono' >{page === 3 ? "Submit" : (event?.fee === 0 ? "Submit" : "Next")}</p>
                         </div>

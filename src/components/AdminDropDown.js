@@ -17,6 +17,12 @@ const AdminDropDown = ({ user }) => {
         className={`p-5 ${onDrop ? "translate-y-0" : "-translate-y-full hidden"}`}>
         <div className="flex flex-col lg:flex-row items-start justify-between">
           <div>
+            {user?.eventName === "QUANTUM HACKS" && (
+              <p className="mb-1">Team Name: {user?.teamName}</p>
+            )}
+            {(user?.eventName === "BYTE BRAWL-BGMI" || user?.eventName === "BYTE BRAWL-COD") && (
+              <p className="mb-1">Discord Id: {user?.discord}</p>
+            )}
             <p className="mb-1">
               Name: {user?.leader ? user?.leader : user?.name}
             </p>
@@ -25,6 +31,9 @@ const AdminDropDown = ({ user }) => {
             <p className="mb-1">College: {user?.college}</p>
             <p className="mb-1">USN: {user?.usn}</p>
             <p className="mb-1">Fee: {user?.fee}</p>
+            {user?.eventName === "BOTS ROYALE" && (
+              <p className="mb-1">Weight Class: {user?.weightClass}</p>
+            )}
             <div className="mt-5 lg:mt-0">
               {user?.members &&
                 user?.members?.map((member, index) => (
@@ -49,7 +58,7 @@ const AdminDropDown = ({ user }) => {
             <div>
               <div className="flex flex-col justify-center items-center mb-2">
                 {user?.transacImg?.split(";")[0] === "data:application/pdf" ? (
-                  <embed className="bg-red-600 sm:w-[35rem] sm:h-60 md:h-[20rem] rounded-xl border border-gray-400" src={user?.transacImg} width="100%" height="100%" type="application/pdf" />
+                  <embed className="sm:w-[35rem] sm:h-60 md:h-[20rem] rounded-xl border border-gray-400" src={user?.transacImg} width="100%" height="100%" type="application/pdf" />
                 ) : (
                   <Image className="w-[35rem] rounded-xl h-[20rem] border border-gray-400 object-cover object-top" src={user?.transacImg} width={200} height={50} alt="tranac" />
                 )}
