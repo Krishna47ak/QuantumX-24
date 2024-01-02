@@ -25,9 +25,9 @@ export const metadata = {
     type: "website",
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: ["/favicon.ico?v=1"],
+    shortcut: ["/apple-touch-icon.png?v=1"],
+    apple: ["/apple-touch-icon.png"],
   },
   robots: {
     index: true,
@@ -57,7 +57,7 @@ export const metadata = {
     "Nhce tech fest",
     "Nhce fest",
     "Tech fest",
-    "Hackathon",
+    "Hackathon"
   ],
   authors: [
     {
@@ -66,7 +66,7 @@ export const metadata = {
     },
   ],
   creator: "Ananda Krishnan Nair",
-  manifest: "/manifest.json",
+  manifest: "/site.webmanifest.json",
 };
 
 export default function RootLayout({ children }) {
