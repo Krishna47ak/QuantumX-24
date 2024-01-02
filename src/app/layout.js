@@ -66,7 +66,7 @@ export const metadata = {
     },
   ],
   creator: "Ananda Krishnan Nair",
-  manifest: "/site.webmanifest.json",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({ children }) {
