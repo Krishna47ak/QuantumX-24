@@ -24,9 +24,48 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  applicationName: "QuantumX-24",
   title: "QuantumX-24",
-  description: "Welcome to the website of QuantumX-24 - the official techno-management fest of New Horizon College of Engineering, Bengaluru. QuantumX-24 is a three-day fest including hackathons, coding challenges, STEM workshops, robo battles, startup pitch sessions, expert talks and many other thrilling events!",
-  keywords: "NHCE, New Horizon College of Engineering, QuantumX, QuantumX22, QuantumX24, Quantum X 24, Quantum, nhce tech fest, tech fest, hackathon",
+  description:
+    "Welcome to the website of QuantumX-24 - the official techno-management fest of New Horizon College of Engineering, Bengaluru. QuantumX-24 is a three-day fest including hackathons, coding challenges, STEM workshops, robo battles, startup pitch sessions, expert talks and many other thrilling events!",
+  keywords: [
+    "NHCE",
+    "New Horizon College of Engineering",
+    "QuantumX",
+    "QuantumX22",
+    "QuantumX24",
+    "Quantum X 24",
+    "Quantum",
+    "Nhce tech fest",
+    "Nhce fest",
+    "Tech fest",
+    "Hackathon",
+  ],
+  authors: [
+    {
+      name: "Ananda Krishnan Nair",
+      url: "https://www.linkedin.com/in/ananda-krishna-m-644678216",
+    },
+  ],
+  creator: "Ananda Krishnan Nair",
   manifest: "/manifest.json",
 };
 
