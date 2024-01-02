@@ -35,9 +35,10 @@ const WorkshopsRegister = ({ params }) => {
     const handleNext1 = () => {
         if (name && email && phone && college && usn) {
             setPage(2)
+            setError(false)
         } else {
             setPage(1)
-            setError(1)
+            setError(true)
         }
     }
 
@@ -141,6 +142,10 @@ const WorkshopsRegister = ({ params }) => {
                                     <FormInput inputName="college" name="College name" data={college} setdata={onChange} placeholder="College name" />
                                     <FormInput inputName="usn" name="USN" data={usn} setdata={onChange} placeholder="USN" />
                                 </div>
+                                {error && <div className="flex items-center bg-[#facc1595] text-red-700 w-[90%] md:w-full font-semibold my-3 py-1 px-3 text-center rounded-md" >
+                                    <Image src="/warning-icon.svg" width={25} height={30} alt="warning" />
+                                    <p className="mx-auto pr-2" >Enter all fields</p>
+                                </div>}
                             </div>
                         ) : page === 2 ? (
                             <div className="text-white" >
@@ -172,10 +177,6 @@ const WorkshopsRegister = ({ params }) => {
                                 {applicantIdError && <div className="text-red-600 text-xs ml-2 sm:ml-[12rem] -mt-3 md:-mt-5 mb-7 font-semibold  rounded-xl w-full" >Invalid applicant Id</div>}
                             </div>
                         )}
-                        {error && <div className="flex items-center bg-[#facc1595] text-red-700 w-[90%] md:w-full font-semibold my-3 py-1 px-3 text-center rounded-md" >
-                            <Image src="/warning-icon.svg" width={25} height={30} alt="warning" />
-                            <p className="mx-auto pr-2" >Enter all fields</p>
-                        </div>}
 
                         <div onClick={page === 1 ? (workshop?.fee === 0 ? onSubmit : handleNext1) : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
                             <p className='text-white text-lg font-mono' >{page === 3 ? "Submit" : (workshop?.fee === 0 ? "Submit" : "Next")}</p>

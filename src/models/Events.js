@@ -66,6 +66,10 @@ const eventSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please provide the event name"],
     },
+    verified: {
+        type: Boolean,
+        default: false
+    },
     date: {
         type: Date,
         default: Date.now
