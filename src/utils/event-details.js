@@ -295,7 +295,7 @@ export const eventsData = [
         date: "24/01/2024",
         minSize: null,
         maxSize: null,
-        fixedSize: 2,
+        fixedSize: 3,
         fee: 300,
         prizePool: 16000,
         location: "Basketball Quadrangle, NHCE",

@@ -48,7 +48,7 @@ const AdminDropDown = ({ user }) => {
                         Member phone number: {member?.phone}
                       </p>
                       <p className="mb-1">Member USN: {member?.usn}</p>
-                      <p className="mb-1">Member collge: {member?.college}</p>
+                      <p className="mb-1">Member college: {member?.college}</p>
                     </div>
                   </div>
                 ))}
