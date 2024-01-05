@@ -15,7 +15,12 @@ export async function POST(request) {
 
             if (existingUser) {
                 return NextResponse.json({
-                    message: "Applicant Id already exist",
+                    message: "Invalid details",
+                    success: false
+                })
+            } else if (applicantId?.length < 15) {
+                return NextResponse.json({
+                    message: "Invalid details",
                     success: false
                 })
             }
@@ -37,8 +42,7 @@ export async function POST(request) {
 
         return NextResponse.json({
             message: "Workshop created",
-            success: true,
-            workshop
+            success: true
         })
 
     } catch (error) {

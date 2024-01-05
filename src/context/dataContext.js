@@ -21,7 +21,7 @@ const dataReducer = (state, action) => {
 
 const fetchEvents = dispatch => async () => {
     try {
-        const response = await fetch(`${process.env.DOMAIN}/api/events`)
+        const response = await fetch(`${process.env.DOMAIN}/api/events`, { next: { revalidate: 3600 } })
         const resData = await response.json()
         dispatch({ type: 'fetch_events', payload: resData?.events })
     } catch (err) {
@@ -31,7 +31,7 @@ const fetchEvents = dispatch => async () => {
 
 const fetchWorkshops = dispatch => async () => {
     try {
-        const response = await fetch(`${process.env.DOMAIN}/api/workshops`)
+        const response = await fetch(`${process.env.DOMAIN}/api/workshops`, { next: { revalidate: 3600 } })
         const resData = await response.json()
         dispatch({ type: 'fetch_workshops', payload: resData?.workshops })
     } catch (err) {

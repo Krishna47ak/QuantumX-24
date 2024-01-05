@@ -150,7 +150,7 @@ const EventsRegister = ({ params }) => {
             }
         }
 
-        if (applicantId?.length < 14 && event?.fee != 0) {
+        if (applicantId?.length < 15 && event?.fee != 0) {
             setApplicantIdError(true)
         } else if (data) {
             const body = JSON.stringify(data)

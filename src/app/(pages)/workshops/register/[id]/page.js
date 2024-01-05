@@ -78,7 +78,7 @@ const WorkshopsRegister = ({ params }) => {
             data = { transacImg, applicantId, name, email, phone, college, usn, fee, workshopName }
         }
 
-        if (applicantId?.length < 14 && workshop?.fee != 0) {
+        if (applicantId?.length < 15 && workshop?.fee != 0) {
             setApplicantIdError(true)
         } else if (data) {
             const body = JSON.stringify(data)
