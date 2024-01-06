@@ -256,11 +256,11 @@ const EventsRegister = ({ params }) => {
                                         💣 The amount to be paid is <b className="text-red-600" >&quot;&#8377; {event?.fee}&quot;</b>
                                         <br />
                                         <br />
-                                        💣 After completing the payment, fill the payment details in the next step.
+                                        💣 After completing the payment, come back to this page and fill the payment details in the next step.
                                         <br />
                                     </div>
                                 </div>
-                                <a href="https://forms.eduqfix.com/misce3/add" target="_blank"  >
+                                <a onClick={handleNext2} href="https://forms.eduqfix.com/misce3/add" target="_blank"  >
                                     <p className="bg-blue-600 text-center px-5 p-3 rounded-xl select-none" >Pay now</p>
                                 </a>
                             </div>

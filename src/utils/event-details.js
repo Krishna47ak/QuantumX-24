@@ -196,14 +196,14 @@ export const eventsData = [
         img: questSrImg,
         imgDesc: questSrDescImg,
         desc: "This challenge is designed to test the participants' analytical skills and push them to the boundaries of their algorithmic knowledge. They will be confronted with complex problems and must devise innovative solutions.",
-        date: "25/01/24",
+        date: "23/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,
         fee: 200,
         prizePool: 9500,
         location: "MCA labs",
-        contact: "Abhijit R S - +91 96203 02533",
+        contact: "Vinayak Sonar - +91 81470 93501",
         ruleBook: "https://docs.google.com/document/d/1J5DGivvh_lm1pX279UptDjJHbjD7sdlv-5Z0aZ6KYyY/edit?usp=sharing"
     },
     {

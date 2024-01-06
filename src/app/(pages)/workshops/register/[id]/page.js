@@ -165,7 +165,7 @@ const WorkshopsRegister = ({ params }) => {
                                         <br />
                                     </div>
                                 </div>
-                                <a href="https://forms.eduqfix.com/misce3/add" target="_blank"  >
+                                <a onClick={handleNext2} href="https://forms.eduqfix.com/misce3/add" target="_blank"  >
                                     <p className="bg-blue-600 text-center px-5 p-3 rounded-xl select-none" >Pay now</p>
                                 </a>
                             </div>
