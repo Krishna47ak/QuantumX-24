@@ -16,7 +16,7 @@ const AdminWorkshops = () => {
 
     return loading ? <Spinner /> : (
         <div className='bg-black text-white min-h-screen p-5 lg:p-10 lg:py-24' >
-            <div className='mt-20 text-center mb-10 text-2xl' >
+            <div className='mt-20 text-center mb-10 text-2xl md:text-3xl' >
                 <p>Total registrations: {workshops?.length}</p>
             </div>
             <div className='flex items-center' >
@@ -28,6 +28,19 @@ const AdminWorkshops = () => {
                                 <p>{event?.name} <span className='text-yellow-400' >({workshopRegCount ? workshopRegCount : 0})</span></p>
                                 <Image className='mt-2' src="/pink-arrow.png" width={20} height={20} alt='arrow' />
                             </Link>
+                        )
+                    })}
+                </div>
+            </div>
+            <div className='my-20 text-center md:text-xl' >
+                <p className='text-2xl md:text-3xl' >Recent registrations :</p>
+                <div className='flex flex-wrap mt-10 justify-center gap-5' >
+                    {workshops?.slice(-6).reverse()?.map((event) => {
+                        return (
+                            <div key={event?.id} className='bg-blue-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
+                                <p>{event?.name}</p>
+                                <span className='text-base text-yellow-400' >({event?.workshopName})</span>
+                            </div>
                         )
                     })}
                 </div>

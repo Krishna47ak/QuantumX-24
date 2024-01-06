@@ -17,7 +17,7 @@ const AdminEvents = () => {
 
     return (loading || !events) ? <Spinner /> : (
         <div className='bg-black text-white min-h-screen p-5 lg:p-10 lg:py-24' >
-            <div className='mt-20 text-center mb-10 text-2xl' >
+            <div className='mt-20 text-center mb-10 text-2xl md:text-3xl' >
                 <p>Total registrations: {events?.length}</p>
             </div>
             <div className='flex items-center' >
@@ -29,6 +29,19 @@ const AdminEvents = () => {
                                 <p>{event?.name} <span className='text-yellow-400' >({eventRegCount ? eventRegCount : 0})</span></p>
                                 <Image className='mt-2' src="/pink-arrow.png" width={20} height={20} alt='arrow' />
                             </Link>
+                        )
+                    })}
+                </div>
+            </div>
+            <div className='my-20 text-center md:text-xl' >
+                <p className='text-2xl md:text-3xl' >Recent registrations :</p>
+                <div className='flex flex-wrap mt-10 justify-center gap-5' >
+                    {events?.slice(-6).reverse()?.map((event) => {
+                        return (
+                            <div key={event?.id} className='bg-blue-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
+                                <p>{event?.leader}</p>
+                                <span className='text-base text-yellow-400' >({event?.eventName})</span>
+                            </div>
                         )
                     })}
                 </div>
