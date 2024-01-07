@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import Event from "@/models/Events";
+import Admin from "@/models/Admin";
 import connectEventDB from "@/dbConfig/eventDBConfig";
+import { getDataFromToken } from "@/helpers/getDataFromToken";
 
 let eventConnection
 
@@ -61,9 +63,20 @@ export async function POST(request) {
     }
 }
 
-export async function GET() {
+export async function GET(request) {
     try {
         eventConnection = await connectEventDB();
+        const userId = await getDataFromToken(request);
+
+        const user = await Admin.findOne({ _id: userId }).select("-password");
+
+        if (!user) {
+            return NextResponse.json({
+                success: false,
+                message: "Unauthorized"
+            })
+        }
+
         const events = await Event.find({})
 
 

@@ -219,7 +219,7 @@ const EventsRegister = ({ params }) => {
                                     {(event?.id === "QX_EV_02" || event?.id === "QX_EV_03") && (
                                         <FormInput name="Discord id" data={discord} setdata={e => setDiscord(e.target.value)} placeholder="Discord id" />
                                     )}
-                                    <FormInput inputName="leader" name="Team leader name" data={leader} setdata={onChange} placeholder="Full name" />
+                                    <FormInput inputName="leader" name={event?.fixedSize === 1 ? "Name" : "Team leader name"} data={leader} setdata={onChange} placeholder="Full name" />
                                     <FormInput inputName="email" name="Email" data={email} setdata={onChange} placeholder="Email ID" type="email" />
                                     <FormInput inputName="phone" name="Phone number" data={phone} setdata={onChange} placeholder="Phone number" type="tel" />
                                     <FormInput inputName="college" name={((event?.id != "QX_EV_08") && (event?.id != "QX_EV_09") && (event?.id != "QX_EV_10") && (event?.id != "QX_EV_11")) ? "College name" : "School name"} data={college} setdata={onChange} placeholder="College/School name" />

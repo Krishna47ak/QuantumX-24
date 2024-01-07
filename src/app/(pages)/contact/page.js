@@ -17,7 +17,7 @@ const Contact = () => {
                         <br />
                     </div>
                     <div className='lg:hidden' >
-                        <Image className='mx-auto scale-110' src="/ananda-krishna.png" width={400} height={50} alt='sai kiran' />
+                        <Image className='mx-auto scale-125 sm:scale-110' src="/ananda-krishna.png" width={400} height={50} alt='sai kiran' />
                         <p>anandakrishna047@gmail.com</p>
                         <p>+91 63623 98767</p>
                         <p className='font-semibold text-purple-500 text-lg md:text-2xl' >Tech Lead</p>
