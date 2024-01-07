@@ -11,8 +11,10 @@ const AdminEvents = () => {
     const { state: { events, loading }, fetchEvents } = useContext(DataContext)
 
     useEffect(() => {
-        fetchEvents()
-    }, [])
+        if (events?.length === 0 && !loading) {
+            fetchEvents()
+        }
+    }, [events, loading])
 
 
     return (loading || !events) ? <Spinner /> : (
@@ -38,7 +40,7 @@ const AdminEvents = () => {
                 <div className='flex flex-wrap mt-10 justify-center gap-5' >
                     {events?.slice(-6).reverse()?.map((event) => {
                         return (
-                            <div key={event?.id} className='bg-blue-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
+                            <div key={event?._id} className='bg-blue-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
                                 <p>{event?.leader}</p>
                                 <span className='text-base text-yellow-400' >({event?.eventName})</span>
                             </div>

@@ -14,6 +14,11 @@ const dataReducer = (state, action) => {
                 workshops: action.payload,
                 loading: false
             }
+        case 'set_loading':
+            return {
+                ...state,
+                loading: true
+            }
         default:
             return state
     }
@@ -21,6 +26,7 @@ const dataReducer = (state, action) => {
 
 const fetchEvents = dispatch => async () => {
     try {
+        dispatch({ type: 'set_loading' })
         const response = await fetch(`${process.env.DOMAIN}/api/events`, { next: { revalidate: 3600 } })
         const resData = await response.json()
         dispatch({ type: 'fetch_events', payload: resData?.events })
@@ -31,6 +37,7 @@ const fetchEvents = dispatch => async () => {
 
 const fetchWorkshops = dispatch => async () => {
     try {
+        dispatch({ type: 'set_loading' })
         const response = await fetch(`${process.env.DOMAIN}/api/workshops`, { next: { revalidate: 3600 } })
         const resData = await response.json()
         dispatch({ type: 'fetch_workshops', payload: resData?.workshops })
@@ -39,4 +46,4 @@ const fetchWorkshops = dispatch => async () => {
     }
 }
 
-export const { Provider, Context } = createDataContext(dataReducer, { fetchEvents, fetchWorkshops }, { events: [], workshops: [], loading: true })
+export const { Provider, Context } = createDataContext(dataReducer, { fetchEvents, fetchWorkshops }, { events: [], workshops: [], loading: false })

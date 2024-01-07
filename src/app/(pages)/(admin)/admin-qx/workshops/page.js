@@ -10,8 +10,10 @@ const AdminWorkshops = () => {
     const { state: { workshops, loading }, fetchWorkshops } = useContext(DataContext)
 
     useEffect(() => {
-        fetchWorkshops()
-    }, [])
+        if (workshops?.length === 0 && !loading) {
+            fetchWorkshops()
+        }
+    }, [workshops, loading])
 
 
     return loading ? <Spinner /> : (
@@ -37,7 +39,7 @@ const AdminWorkshops = () => {
                 <div className='flex flex-wrap mt-10 justify-center gap-5' >
                     {workshops?.slice(-6).reverse()?.map((event) => {
                         return (
-                            <div key={event?.id} className='bg-blue-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
+                            <div key={event?._id} className='bg-blue-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
                                 <p>{event?.name}</p>
                                 <span className='text-base text-yellow-400' >({event?.workshopName})</span>
                             </div>
