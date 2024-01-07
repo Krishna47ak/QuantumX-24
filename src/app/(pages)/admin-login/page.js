@@ -46,7 +46,7 @@ const AdminLogin = () => {
             <p className="text-white text-5xl font-semibold my-3">
                 Login
             </p>
-            <form className='flex flex-col gap-6 mt-5 md:w-[50vw] border border-[#C0C0C0] bg-gray-300 shadow-xl rounded-xl p-8 md:px-20' onSubmit={onSubmit} >
+            <form className='flex flex-col gap-6 mt-5 md:w-[50vw] border border-[#C0C0C0] bg-gray-300 shadow-xl rounded-xl p-9 md:px-20' onSubmit={onSubmit} >
                 <input name='username' value={username} onChange={onChange} type="text" placeholder='Username' className='pr-5 pl-5 py-3 rounded-2xl text-black' required />
                 <input name='password' value={password} onChange={onChange} type="password" placeholder='Password' className='pr-5 pl-5 py-3 rounded-2xl text-black' required minLength={8} />
                 <button type='submit' className='bg-[#340E62] text-white py-2 mt-5 rounded-lg active:scale-95 duration-500' >Submit</button>

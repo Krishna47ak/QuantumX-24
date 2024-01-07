@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { headers } from "next/headers";
 import Workshop from "@/models/Workshops";
 import connectWorkshopDB from "@/dbConfig/workshopDBConfig";
 
@@ -24,6 +25,13 @@ export async function POST(request) {
                     success: false
                 })
             }
+        }
+
+        if (process.env.DOMAIN != headers().get('origin')) {
+            return NextResponse.json({
+                message: "Unauthorized",
+                success: false
+            })
         }
 
         const workshop = new Workshop({

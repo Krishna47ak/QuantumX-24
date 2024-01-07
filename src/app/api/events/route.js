@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { headers } from 'next/headers'
 import Event from "@/models/Events";
 import Admin from "@/models/Admin";
 import connectEventDB from "@/dbConfig/eventDBConfig";
@@ -26,6 +27,13 @@ export async function POST(request) {
                     success: false
                 })
             }
+        }
+
+        if (process.env.DOMAIN != headers().get('origin')) {
+            return NextResponse.json({
+                message: "Unauthorized",
+                success: false
+            })
         }
 
         const event = new Event({
