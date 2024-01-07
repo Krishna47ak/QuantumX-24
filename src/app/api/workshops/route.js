@@ -18,12 +18,12 @@ export async function POST(request) {
                 return NextResponse.json({
                     message: "Invalid details",
                     success: false
-                })
+                }, { status: 400 })
             } else if (applicantId?.length < 15) {
                 return NextResponse.json({
                     message: "Invalid details",
                     success: false
-                })
+                }, { status: 400 })
             }
         }
 
@@ -31,7 +31,7 @@ export async function POST(request) {
             return NextResponse.json({
                 message: "Unauthorized",
                 success: false
-            })
+            }, { status: 401 })
         }
 
         const workshop = new Workshop({
@@ -66,6 +66,14 @@ export async function POST(request) {
 export async function GET() {
     try {
         workshopConnection = await connectWorkshopDB();
+
+        if (`${process.env.DOMAIN}/admin-qx/workshops` != headers().get('referer')) {
+            return NextResponse.json({
+                message: "Unauthorized",
+                success: false
+            }, { status: 401 })
+        }
+
         const workshops = await Workshop.find({})
 
         return NextResponse.json({

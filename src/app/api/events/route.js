@@ -20,12 +20,12 @@ export async function POST(request) {
                 return NextResponse.json({
                     message: "Invalid details",
                     success: false
-                })
+                }, { status: 400 })
             } else if (applicantId?.length < 15) {
                 return NextResponse.json({
                     message: "Invalid details",
                     success: false
-                })
+                }, { status: 400 })
             }
         }
 
@@ -33,7 +33,7 @@ export async function POST(request) {
             return NextResponse.json({
                 message: "Unauthorized",
                 success: false
-            })
+            }, { status: 401 })
         }
 
         const event = new Event({
@@ -82,7 +82,7 @@ export async function GET(request) {
             return NextResponse.json({
                 success: false,
                 message: "Unauthorized"
-            })
+            }, { status: 401 })
         }
 
         const events = await Event.find({})
