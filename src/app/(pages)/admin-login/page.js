@@ -32,6 +32,7 @@ const AdminLogin = () => {
             if (data?.success) {
                 router.replace("/admin-qx")
             } else {
+                setLoading(false)
                 router.replace("/admin-login")
             }
         } catch (err) {

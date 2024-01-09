@@ -76,9 +76,11 @@ const EventCard = ({ data, from }) => {
                                     <div className='text-yellow-400 text-sm mt-2' >*Only for school students</div>
                                 )}
                             </div>
-                            <Link href={`${pathname}/register/${data?.id}`} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
-                                <p className='text-white text-lg font-mono' >Register</p>
-                            </Link>
+                            {((data?.id != "QX_EV_04") && (data?.id != "QX_EV_05") && (data?.id != "QX_EV_06") && (data?.id != "QX_EV_07")) && (
+                                <Link href={`${pathname}/register/${data?.id}`} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
+                                    <p className='text-white text-lg font-mono' >Register</p>
+                                </Link>
+                            )}
                         </div>
                     </div>
                 </div>

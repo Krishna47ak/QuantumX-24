@@ -4,6 +4,7 @@ import Event from "@/models/Events";
 import Admin from "@/models/Admin";
 import connectEventDB from "@/dbConfig/eventDBConfig";
 import { getDataFromToken } from "@/helpers/getDataFromToken";
+import { sendEmail } from "@/helpers/mailer";
 
 let eventConnection
 
@@ -56,6 +57,8 @@ export async function POST(request) {
 
         await event.save()
 
+        await sendEmail({ email, name: leader, eventName })
+
         return NextResponse.json({
             message: "Event created",
             success: true
@@ -80,8 +83,8 @@ export async function GET(request) {
 
         if (!user) {
             return NextResponse.json({
-                success: false,
-                message: "Unauthorized"
+                message: "Unauthorized",
+                success: false
             }, { status: 401 })
         }
 
