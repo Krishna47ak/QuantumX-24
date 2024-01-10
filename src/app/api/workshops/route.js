@@ -19,11 +19,6 @@ export async function POST(request) {
                     message: "Invalid details",
                     success: false
                 }, { status: 400 })
-            } else if (applicantId?.length < 15) {
-                return NextResponse.json({
-                    message: "Invalid details",
-                    success: false
-                }, { status: 400 })
             }
         }
 
@@ -32,6 +27,17 @@ export async function POST(request) {
                 message: "Unauthorized",
                 success: false
             }, { status: 401 })
+        }
+
+        const existingUser = await Workshop.find({ usn });
+
+        for (let i = 0; i < existingUser?.length; i++) {
+            if (existingUser[i]?.workshopName === workshopName) {
+                return NextResponse.json({
+                    message: "Invalid details",
+                    success: false
+                }, { status: 400 })
+            }
         }
 
         const workshop = new Workshop({

@@ -13,13 +13,13 @@ const Footer = () => {
                             <Image className='hover:scale-105 cursor-pointer' src="/insta-icon.svg" width={24} height={24} alt='instagram' />
                         </a>
                         <a href='https://twitter.com/QuantumX_fest' target='_blank' >
-                            <Image className='hover:scale-105 cursor-pointer' src="/twitter-icon.svg" width={24} height={24} alt='instagram' />
+                            <Image className='hover:scale-105 cursor-pointer' src="/twitter-icon.svg" width={24} height={24} alt='twitter' />
                         </a>
-                        <a href='http://www.linkedin.com/in/quantumx-technomanagementfest' target='_blank' >
-                            <Image className='hover:scale-105 cursor-pointer' src="/linkedin-icon.svg" width={24} height={24} alt='instagram' />
+                        <a href='https://www.linkedin.com/company/quantumxfest' target='_blank' >
+                            <Image className='hover:scale-105 cursor-pointer' src="/linkedin-icon.svg" width={24} height={24} alt='linkedin' />
                         </a>
                         <a href='https://youtube.com/@quantumx-nhce?si=dLrjAznRY12xBH0D' target='_blank' >
-                            <Image className='hover:scale-105 cursor-pointer' src="/youtube-icon.svg" width={24} height={24} alt='instagram' />
+                            <Image className='hover:scale-105 cursor-pointer' src="/youtube-icon.svg" width={24} height={24} alt='youtube' />
                         </a>
                     </div>
                 </div>
