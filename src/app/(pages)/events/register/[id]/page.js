@@ -136,17 +136,17 @@ const EventsRegister = ({ params }) => {
         let data;
 
         if (event?.fee === 0) {
-            data = { leader, email, phone, college, usn, teamSize, members, fee, eventName }
+            data = { leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim().toUpperCase(), teamSize, members, fee, eventName }
         }
         else if (transacImg && !imageSizeError && applicantId) {
             if (event?.id === "QX_EV_12") {
-                data = { teamName, transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim(), teamSize, members, fee, eventName }
+                data = { teamName, transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim().toUpperCase(), teamSize, members, fee, eventName }
             } else if (event?.id === "QX_EV_18") {
-                data = { weightClass, transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim(), teamSize, members, fee, eventName }
+                data = { weightClass, transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim().toUpperCase(), teamSize, members, fee, eventName }
             } else if (event?.id === "QX_EV_02" || event?.id === "QX_EV_03") {
-                data = { discord, transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim(), teamSize, members, fee, eventName }
+                data = { discord, transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim().toUpperCase(), teamSize, members, fee, eventName }
             } else {
-                data = { transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim(), teamSize, members, fee, eventName }
+                data = { transacImg, applicantId: applicantId.trim(), leader: leader.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim().toUpperCase(), teamSize, members, fee, eventName }
             }
         }
 
