@@ -1,16 +1,29 @@
 "use client"
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Context as DataContext } from '@/context/dataContext'
 import { eventsData } from '@/utils/event-details'
 import AdminDropDown from '@/components/AdminDropDown'
+import { searchUser } from '@/utils/contants'
 
 const AdminEventDetail = ({ params }) => {
     const router = useRouter()
     const event = eventsData.find((event) => event.id === params.id)
     const { state: { events } } = useContext(DataContext)
     const eventReg = events?.filter((reg) => reg?.eventName === event?.name)
+
+    const [searchData, setSearchData] = useState(eventReg)
+    const [searchText, setSearchText] = useState('')
+
+    useEffect(() => {
+        if (searchText) {
+            const filteredData = searchUser(eventReg, searchText)
+            setSearchData(filteredData)
+        } else {
+            setSearchData(eventReg)
+        }
+    }, [searchText])
 
     return (
         <div className='bg-black min-h-screen p-10 lg:p-20 pt-20' >
@@ -22,8 +35,15 @@ const AdminEventDetail = ({ params }) => {
                     <p>Total registrations: {eventReg?.length}</p>
                 </div>
             </div>
+            <div className='flex justify-center' >
+                <div className='flex mb-10 md:mb-10 bg-[#ed00e9b3] backdrop-blur-sm border-2 border-gray-400 p-3 w-[22rem] md:w-[40rem] rounded-xl' >
+                    <Image src="/search.svg" width={20} height={20} alt='search' />
+                    <div className='w-[0.05rem] mx-2 bg-gray-400' />
+                    <input autoComplete='off' value={searchText} onChange={(e) => setSearchText(e.target.value)} className='w-full bg-transparent text-white outline-none' placeholder='Name, Phone, Applicant Id......' />
+                </div>
+            </div>
             <div className='lg:px-10' >
-                {eventReg?.map((user) => (
+                {searchData?.map((user) => (
                     <AdminDropDown key={user?._id} user={user} />
                 ))}
             </div>

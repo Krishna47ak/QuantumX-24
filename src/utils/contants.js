@@ -9,3 +9,10 @@ export const search = (data, searchText) => {
     ))
     return filteredData
 }
+
+export const searchUser = (data, searchText) => {
+    const filteredData = data.filter((event) => (
+        (event?.leader?.toLocaleLowerCase()?.includes(searchText?.toLocaleLowerCase()) || event?.name?.toLocaleLowerCase()?.includes(searchText?.toLocaleLowerCase()) || event.phone?.toString()?.includes(searchText) || event?.applicantId?.toLocaleLowerCase()?.includes(searchText))
+    ))
+    return filteredData
+}

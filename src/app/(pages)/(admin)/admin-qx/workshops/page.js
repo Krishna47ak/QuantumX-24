@@ -17,7 +17,7 @@ const AdminWorkshops = () => {
 
 
     return loading ? <Spinner /> : (
-        <div className='bg-black text-white min-h-screen p-5 lg:p-10 lg:py-24' >
+        <div className='bg-black text-white min-h-screen p-5 lg:p-10 lg:py-16' >
             <div className='mt-20 text-center mb-10 text-2xl md:text-3xl' >
                 <p>Total registrations: {workshops?.length}</p>
             </div>
