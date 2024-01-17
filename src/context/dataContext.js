@@ -14,6 +14,18 @@ const dataReducer = (state, action) => {
                 workshops: action.payload,
                 loading: false
             }
+        case 'verify_event':
+            return {
+                ...state,
+                events: state.events?.map((event) => event.applicantId === action.payload ? { ...event, verified: true } : event),
+                loading: false
+            }
+        case 'verify_workshop':
+            return {
+                ...state,
+                workshops: state.workshops?.map((workshop) => workshop.applicantId === action.payload ? { ...workshop, verified: true } : workshop),
+                loading: false
+            }
         case 'set_loading':
             return {
                 ...state,
@@ -46,4 +58,34 @@ const fetchWorkshops = dispatch => async () => {
     }
 }
 
-export const { Provider, Context } = createDataContext(dataReducer, { fetchEvents, fetchWorkshops }, { events: [], workshops: [], loading: false })
+const verifyEvent = dispatch => async ({ applicantId }) => {
+    const body = JSON.stringify({ applicantId })
+    try {
+        dispatch({ type: 'set_loading' })
+        await fetch(`${process.env.DOMAIN}/api/verify-event`, {
+            method: "POST",
+            body,
+            headers: { 'Content-Type': 'application/json' }
+        });
+        dispatch({ type: 'verify_event', payload: applicantId })
+    } catch (err) {
+        console.error('somethng went wrong')
+    }
+}
+
+const verifyWorkshop = dispatch => async ({ applicantId }) => {
+    const body = JSON.stringify({ applicantId })
+    try {
+        dispatch({ type: 'set_loading' })
+        await fetch(`${process.env.DOMAIN}/api/verify-workshop`, {
+            method: "POST",
+            body,
+            headers: { 'Content-Type': 'application/json' }
+        });
+        dispatch({ type: 'verify_workshop', payload: applicantId })
+    } catch (err) {
+        console.error('somethng went wrong')
+    }
+}
+
+export const { Provider, Context } = createDataContext(dataReducer, { fetchEvents, fetchWorkshops, verifyEvent, verifyWorkshop }, { events: [], workshops: [], loading: false })

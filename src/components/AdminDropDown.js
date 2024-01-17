@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const AdminDropDown = ({ user }) => {
+const AdminDropDown = ({ user, verify }) => {
   const [onDrop, setOnDrop] = useState(false);
 
   return (
@@ -64,6 +64,7 @@ const AdminDropDown = ({ user }) => {
                 )}
               </div>
               <p>Applicant Id: {user?.applicantId}</p>
+              <div onClick={() => (user?.verified ? alert("Already Verified") : verify({ applicantId: user?.applicantId }))} className={`${user?.verified ? "bg-green-600 active:bg-green-400" : "bg-red-600 active:bg-red-400"} inline-block p-2 px-6 font-semibold rounded-xl my-2 cursor-pointer select-none`} >{user?.verified ? "Verified" : "Verify"}</div>
             </div>
           )}
         </div>

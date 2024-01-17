@@ -10,7 +10,7 @@ import { searchUser } from '@/utils/contants'
 const AdminEventDetail = ({ params }) => {
     const router = useRouter()
     const event = eventsData.find((event) => event.id === params.id)
-    const { state: { events } } = useContext(DataContext)
+    const { state: { events }, verifyEvent } = useContext(DataContext)
     const eventReg = events?.filter((reg) => reg?.eventName === event?.name)
 
     const [searchData, setSearchData] = useState(eventReg)
@@ -23,7 +23,7 @@ const AdminEventDetail = ({ params }) => {
         } else {
             setSearchData(eventReg)
         }
-    }, [searchText])
+    }, [searchText, events])
 
     return (
         <div className='bg-black min-h-screen p-10 lg:p-20 pt-20' >
@@ -44,7 +44,7 @@ const AdminEventDetail = ({ params }) => {
             </div>
             <div className='lg:px-10' >
                 {searchData?.map((user) => (
-                    <AdminDropDown key={user?._id} user={user} />
+                    <AdminDropDown key={user?._id} user={user} verify={verifyEvent} />
                 ))}
             </div>
         </div>
