@@ -64,10 +64,10 @@ const EventCard = ({ data, from }) => {
                                             <Image className='mt-1' src="/location.svg" width={20} height={20} alt='location' />
                                             <p className='ml-2 text-lg sm:text-xl font-medium text-slate-400 font-mono' >Location: {data?.location}</p>
                                         </div>}
-                                        {((data?.id != "QX_EV_04") && (data?.id != "QX_EV_05") && (data?.id != "QX_EV_06") && (data?.id != "QX_EV_07")) && (from != "workshop") && (
+                                        {((data?.id != "QX_EV_04") && (data?.id != "QX_EV_05") && (data?.id != "QX_EV_06") && (data?.id != "QX_EV_07")) && (
                                             <div className='flex items-center mt-2' >
                                                 <Image src="/rule-book.svg" width={20} height={20} alt='location' />
-                                                <a href={data?.ruleBook} target='_blank' className='ml-2 text-blue-600 text-lg sm:text-xl font-medium font-mono underline cursor-pointer select-none' >Rule book</a>
+                                                <a href={data?.ruleBook} target='_blank' className='ml-2 text-blue-600 text-lg sm:text-xl font-medium font-mono underline cursor-pointer select-none' >{from != "workshop" ? "Rule book" : "Details"}</a>
                                             </div>
                                         )}
                                     </div>

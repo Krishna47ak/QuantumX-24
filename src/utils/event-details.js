@@ -211,7 +211,7 @@ export const eventsData = [
         name: "CIRCUIT PREMIER LEAGUE",
         img: circuitPremierLeagueImg,
         imgDesc: circuitPremierLeagueDescImg,
-        desc: "Delve into the intricate world of embedded systems, assembly language, and hardware mastery. From unravelling coding enigmas to crafting ingenious circuits, participants will be immersed in a day of dynamic challenges and inventive exploration.",
+        desc: "Unlock your potential with Cientra! 🚀 Join our sponsored event for a shot at an internship with a cutting-edge semiconductor company. Seize the opportunity - your future in tech starts here!",
         date: "25/01/24",
         minSize: null,
         maxSize: null,

@@ -13,7 +13,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_02",
@@ -26,7 +26,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_03",
@@ -39,7 +39,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_04",
@@ -52,7 +52,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_05",
@@ -65,7 +65,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_06",
@@ -78,7 +78,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_07",
@@ -91,7 +91,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_08",
@@ -104,7 +104,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_09",
@@ -117,7 +117,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_10",
@@ -130,7 +130,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     }
 ]
 
@@ -146,7 +146,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1VNGuGLDf1lOUNtJ7WI5qLrKdrr_DmB8FEgyYR_WylQQ/edit?usp=sharing",
     },
     {
         id: "QX_WS_12",
@@ -159,7 +159,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1bezLoZ_3-K0twL5Srv9yzAzovZPE8R0be67EFGXZWSU/edit?usp=sharing",
     },
     {
         id: "QX_WS_13",
@@ -172,7 +172,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1QoJzVCN7hyh9cJmtU3H7kZQvYelYPewwjAOgFeiHQqI/edit?usp=sharing",
     },
     {
         id: "QX_WS_14",
@@ -185,7 +185,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_15",
@@ -198,7 +198,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1X6FTcPRlenZpIaNvLl0i61fE4FD3m-Uo_fdwg4N9Fp0/edit?usp=sharing",
     },
     {
         id: "QX_WS_16",
@@ -211,7 +211,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1tNRFznjZLd4U5I7Ih0uEFtGB84zcne4z_Jeh0sdfpW8/edit?usp=sharing",
     },
     {
         id: "QX_WS_17",
@@ -224,7 +224,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1Sr7faq6A3-DoLoq7WCV0XmiXnNVWqmY3tumn002zpOw/edit?usp=sharing",
     },
     {
         id: "QX_WS_18",
@@ -237,7 +237,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1_bmwAE4OAl0YCVzLId6M5CSR9VkJrwF2DzXxbZ9fJFg/edit?usp=sharing",
     },
     {
         id: "QX_WS_19",
@@ -250,7 +250,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1aXUjfxQZnskGFK8Mat0mmc4NxcpVRZQfs9jqia6uqdE/edit?usp=sharing",
     },
     {
         id: "QX_WS_20",
@@ -263,7 +263,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1H79JaJspz7Cq2D-4JOAz5DCQaLuQFU-QP_IQ0t6dbBA/edit?usp=sharing",
     },
     {
         id: "QX_WS_21",
@@ -276,7 +276,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1St0JK2eLnVAQBSJ9Vm9OQsOdTDsOsCmP1d-TrTh93rw/edit?usp=sharing",
     },
     {
         id: "QX_WS_22",
@@ -289,7 +289,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1hJK2god1AgcT5qJ1Rc9_Yvb_M6oRMYvsw5ISFybPqQ8/edit?usp=sharing",
     },
     {
         id: "QX_WS_23",
@@ -302,7 +302,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/13ANYk_kJc-oJ3NEOuyB71KtbuYCFzqqug1HyVQJxAnY/edit?usp=sharing",
     },
     {
         id: "QX_WS_24",
@@ -315,7 +315,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1xZspyHlYTK2_0NWVd8LVwxTsYRzZMp5GG06IniGSrRw/edit?usp=sharing",
     },
     {
         id: "QX_WS_25",
@@ -328,7 +328,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1gvDKMuPrtt2wbK-ymMGV6IAAu1LWN3z__mPM5j5YZO0/edit?usp=sharing",
     },
     {
         id: "QX_WS_26",
@@ -341,7 +341,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1-6dmEMwGx9FREkmaayGIFnjF_Xok548H/edit?usp=sharing&ouid=115140475933854016208&rtpof=true&sd=true",
     },
     {
         id: "QX_WS_27",
@@ -354,7 +354,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1k93jtCBjHiEE2mbCDUTjRd78Sm_NIodTd6chyaJU9Ik/edit?usp=sharing",
     },
     {
         id: "QX_WS_28",
@@ -367,7 +367,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1XNPk2OK7y6PYevHu2uNnOLid0lbAMJo0AsOitRGj-v0/edit?usp=sharing",
     },
     {
         id: "QX_WS_29",
@@ -380,7 +380,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 600,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/1IEonMeHQoQDTBVtP5kioWxhIGFvpU_M6rp5k__AxFOw/edit?usp=sharing",
     },
     {
         id: "QX_WS_30",
@@ -393,7 +393,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 600,
-        location: "",
+        ruleBook: "https://docs.google.com/document/d/12ZVIlIOWS7ZeBVxQlkVqyVE173uVnZ7FtDzTQLNj1ts/edit?usp=sharing",
     }
 ]
 
@@ -409,7 +409,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_02",
@@ -422,7 +422,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_03",
@@ -435,7 +435,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_04",
@@ -448,7 +448,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_05",
@@ -461,7 +461,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_06",
@@ -474,7 +474,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_07",
@@ -487,7 +487,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_08",
@@ -500,7 +500,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_09",
@@ -513,7 +513,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_10",
@@ -526,7 +526,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_11",
@@ -539,7 +539,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_12",
@@ -552,7 +552,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_13",
@@ -565,7 +565,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_14",
@@ -578,7 +578,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_15",
@@ -591,7 +591,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_16",
@@ -604,7 +604,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_17",
@@ -617,7 +617,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_18",
@@ -630,7 +630,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_19",
@@ -643,7 +643,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_20",
@@ -656,7 +656,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_21",
@@ -669,7 +669,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_22",
@@ -682,7 +682,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_23",
@@ -695,7 +695,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_24",
@@ -708,7 +708,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_25",
@@ -721,7 +721,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_26",
@@ -734,7 +734,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_27",
@@ -747,7 +747,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_28",
@@ -760,7 +760,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_29",
@@ -773,7 +773,7 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 600,
-        location: "",
+        ruleBook: "",
     },
     {
         id: "QX_WS_30",
@@ -786,6 +786,6 @@ export const workshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 600,
-        location: "",
+        ruleBook: "",
     }
 ]
