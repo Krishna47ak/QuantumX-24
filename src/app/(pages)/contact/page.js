@@ -3,7 +3,7 @@ import React from 'react'
 
 const Contact = () => {
     return (
-        <div className="bg-black bg-[url('/contact-bg.jpg')] py-16 md:py-20 px-7 -mr-5 text-white md:text-xl text-center min-h-screen overflow-hidden" >
+        <div className="bg-black bg-[url('/contact-bg.jpg')] bg-fixed py-16 md:py-20 px-6 text-white md:text-xl text-center min-h-screen overflow-hidden" >
             <br />
             <br />
             <div className='grid lg:grid-cols-2' >
@@ -78,7 +78,7 @@ const Contact = () => {
                         <div className='absolute z-10 left-[50%] bottom-[21%] min-[575px]:bottom-[20%] sm:bottom-[17.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
                             <p><a href='tel: +91 97018 48618' target='_blank'>+91 97018 48618</a></p>
                             <p><a href='mailto: maheshvejandla5@gmail.com' target='_blank'>maheshvejandla5@gmail.com</a></p>
-                            <p><a href='https://www.instagram.com/_.mahesh.18./' target='_blank'>@_.mahesh.18.</a></p>
+                            <p><a href='https://www.instagram.com/_.mahesh._18._/' target='_blank'>@_.mahesh._18._</a></p>
                         </div>
                         <br />
                     </div>
@@ -105,7 +105,7 @@ const Contact = () => {
                         <div className='absolute z-10 left-[48%] bottom-[22.5%] min-[575px]:bottom-[20%] sm:bottom-[18.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
                             <p><a href='tel: +91 98340 28369' target='_blank'>+91 98340 28369</a></p>
                             <p><a href='mailto: anandakrishna047@gmail.com' target='_blank'>anandakrishna047@gmail.com</a></p>
-                            <p><a href='https://www.instagram.com/_ak_nair__/' target='_blank'>@</a></p>
+                            <p><a href='https://www.instagram.com/_ak_nair__/' target='_blank'>@niharika</a></p>
                         </div>
                         <br />
                     </div>
