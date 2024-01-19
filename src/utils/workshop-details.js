@@ -263,7 +263,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        ruleBook: "https://docs.google.com/document/d/1H79JaJspz7Cq2D-4JOAz5DCQaLuQFU-QP_IQ0t6dbBA/edit?usp=sharing",
+        ruleBook: "https://drive.google.com/drive/folders/14SnxaEM5rCCKz-xcGG1W8xIckEHEQgMq?usp=drive_link",
     },
     {
         id: "QX_WS_21",
@@ -276,7 +276,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        ruleBook: "https://docs.google.com/document/d/1St0JK2eLnVAQBSJ9Vm9OQsOdTDsOsCmP1d-TrTh93rw/edit?usp=sharing",
+        ruleBook: "https://drive.google.com/drive/folders/1Xs-o9KfVwMWkS7x4Ew-4XijEWO73JRMR?usp=drive_link",
     },
     {
         id: "QX_WS_22",
@@ -289,7 +289,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        ruleBook: "https://docs.google.com/document/d/1hJK2god1AgcT5qJ1Rc9_Yvb_M6oRMYvsw5ISFybPqQ8/edit?usp=sharing",
+        ruleBook: "https://drive.google.com/drive/folders/132rnzevoF1NP6B5UL5oxsqLxxiNGUfwz?usp=drive_link",
     },
     {
         id: "QX_WS_23",
@@ -367,7 +367,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        ruleBook: "https://docs.google.com/document/d/1XNPk2OK7y6PYevHu2uNnOLid0lbAMJo0AsOitRGj-v0/edit?usp=sharing",
+        ruleBook: "https://drive.google.com/drive/folders/19vf6V7TNqlFppb0oZ-gFOnHJwZ8i55E_?usp=drive_link",
     },
     {
         id: "QX_WS_29",
@@ -380,7 +380,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 600,
-        ruleBook: "https://docs.google.com/document/d/1IEonMeHQoQDTBVtP5kioWxhIGFvpU_M6rp5k__AxFOw/edit?usp=sharing",
+        ruleBook: "https://drive.google.com/drive/folders/1NWEkYJBzh6eASTufioutk0dRtRPggoDR?usp=drive_link",
     },
     {
         id: "QX_WS_30",
