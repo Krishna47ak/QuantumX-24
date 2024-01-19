@@ -93,7 +93,7 @@ export const eventsData = [
         fee: 0,
         prizePool: null,
         location: "Auditorium",
-        contact: "Keerthana Y - 7975646388",
+        contact: "Aamna Nafiza - 9591554317",
     },
     {
         id: "QX_EV_07",
@@ -212,7 +212,7 @@ export const eventsData = [
         img: circuitPremierLeagueImg,
         imgDesc: circuitPremierLeagueDescImg,
         desc: "Unlock your potential with Cientra! 🚀 Join our sponsored event for a shot at an internship with a cutting-edge semiconductor company. Seize the opportunity - your future in tech starts here!",
-        date: "25/01/24",
+        date: "24/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,

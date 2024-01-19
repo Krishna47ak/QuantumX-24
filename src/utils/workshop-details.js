@@ -1,4 +1,4 @@
-import { androidDevelopmentDescImg, androidDevelopmentImg, artificialIntelligenceDescImg, artificialIntelligenceImg, awsDescImg, awsImg, cvTrackingSystemDescImg, cvTrackingSystemImg, dataScienceDescImg, dataScienceImg, databasesDescImg, databasesImg, deepLearningDescImg, deepLearningImg, designThinkingDescImg, designThinkingImg, devopsDescImg, devopsImg, digitalMarketingDescImg, digitalMarketingImg, dsaImg, ethicalHackingDescImg, ethicalHackingImg, gameDevelopmentDescImg, gameDevelopmentImg, gestureRoboticsDescImg, gestureRoboticsImg, gsmGpsTrackingSystemDescImg, gsmGpsTrackingSystemImg, guidedRoboticsDescImg, guidedRoboticsImg, homeAutomationDescImg, homeAutomationImg, humanoidRoboticsDescImg, humanoidRoboticsImg, machineLearningDescImg, machineLearningImg, nftDescImg, nftImg, nodejsDescImg, nodejsImg, openSourceWorkflowDescImg, openSourceWorkflowImg, opencvControlOfPointerDescImg, opencvControlOfPointerImg, opencvPhotoCaptureDescImg, opencvPhotoCaptureImg, reactjsDescImg, reactjsImg, sixthSenseDescImg, sixthSenseImg, smartBuildingSystemDescImg, smartBuildingSystemImg, swarmRoboticsDescImg, swarmRoboticsImg, web3DescImg, web3Img, wifiRoboticsDescImg, wifiRoboticsImg } from "./workshop-images";
+import { androidDevelopmentDescImg, androidDevelopmentImg, artificialIntelligenceDescImg, artificialIntelligenceImg, awsDescImg, awsImg, cvTrackingSystemDescImg, cvTrackingSystemImg, dataScienceDescImg, dataScienceImg, databasesDescImg, databasesImg, deepLearningDescImg, deepLearningImg, designThinkingDescImg, designThinkingImg, devopsDescImg, devopsImg, digitalMarketingDescImg, digitalMarketingImg, dsaDescImg, dsaImg, ethicalHackingDescImg, ethicalHackingImg, gameDevelopmentDescImg, gameDevelopmentImg, gestureRoboticsDescImg, gestureRoboticsImg, gsmGpsTrackingSystemDescImg, gsmGpsTrackingSystemImg, guidedRoboticsDescImg, guidedRoboticsImg, homeAutomationDescImg, homeAutomationImg, humanoidRoboticsDescImg, humanoidRoboticsImg, machineLearningDescImg, machineLearningImg, nftDescImg, nftImg, nodejsDescImg, nodejsImg, openSourceWorkflowDescImg, openSourceWorkflowImg, opencvControlOfPointerDescImg, opencvControlOfPointerImg, opencvPhotoCaptureDescImg, opencvPhotoCaptureImg, reactjsDescImg, reactjsImg, sixthSenseDescImg, sixthSenseImg, smartBuildingSystemDescImg, smartBuildingSystemImg, swarmRoboticsDescImg, swarmRoboticsImg, web3DescImg, web3Img, wifiRoboticsDescImg, wifiRoboticsImg } from "./workshop-images";
 
 
 export const hardwareWorkshopsData = [
@@ -13,7 +13,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/1kMz56Dz4yzHGb0qqr0mxRZi0HvgY_m8x?usp=drive_link",
     },
     {
         id: "QX_WS_02",
@@ -26,7 +26,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/1Yyuvpfe0zMsVj8Fw_xQuWceetZ0bx066?usp=drive_link",
     },
     {
         id: "QX_WS_03",
@@ -39,7 +39,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/1KLnksNpOgmo_WHxivgrBUBKiyQ8rj8QX?usp=drive_link",
     },
     {
         id: "QX_WS_04",
@@ -52,7 +52,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/1co-wu1jQlHeNKyv51QFjeHXHeRa5x7V7?usp=drive_link",
     },
     {
         id: "QX_WS_05",
@@ -65,7 +65,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/1BGjT-33GwifHXWSgKT5j8tFPFOzLvqiN?usp=drive_link",
     },
     {
         id: "QX_WS_06",
@@ -78,7 +78,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/1CScGc_2daSmfzNXBmcInOBdrov_AJ-4c?usp=drive_link",
     },
     {
         id: "QX_WS_07",
@@ -91,7 +91,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/1VM6JScb8OX9B5zPxYGG2OXWlmoWGVzJU?usp=drive_link",
     },
     {
         id: "QX_WS_08",
@@ -104,7 +104,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/1htHGRB0Nh5eguxkBy_1_KFo1iQ0mKL7B?usp=drive_link",
     },
     {
         id: "QX_WS_09",
@@ -117,7 +117,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/1HkOdBKIrJ1X7HBVWhPNn1m9oPvd2qjj-?usp=drive_link",
     },
     {
         id: "QX_WS_10",
@@ -130,7 +130,7 @@ export const hardwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 1000,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/1An4oeye7jo1sp946rqXhIQo8AucBMIe7?usp=drive_link",
     }
 ]
 
@@ -185,7 +185,7 @@ export const softwareWorkshopsData = [
         maxSize: null,
         fixedSize: 1,
         fee: 500,
-        ruleBook: "",
+        ruleBook: "https://drive.google.com/drive/folders/166gw9mP80szQvKg00_aFKGkTlLmN4gGo?usp=drive_link",
     },
     {
         id: "QX_WS_15",
@@ -217,7 +217,7 @@ export const softwareWorkshopsData = [
         id: "QX_WS_17",
         name: "DSA",
         img: dsaImg,
-        imgDesc: guidedRoboticsDescImg,
+        imgDesc: dsaDescImg,
         desc: "This intensive workshop delves into the core concepts of Data Structures and Algorithms (DSA), equipping you with the knowledge and practical skills to become a proficient and efficient programmer.",
         date: "24/01/24",
         minSize: null,
@@ -651,7 +651,7 @@ export const workshopsData = [
         img: gameDevelopmentImg,
         imgDesc: gameDevelopmentDescImg,
         desc: "Design and prototype an interactive game using game design principles, including elements, mechanics, story, levels, UI/UX, testing, and balancing to create an engaging and enjoyable gaming experience.",
-        date: "25/01/24",
+        date: "23/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,
@@ -729,7 +729,7 @@ export const workshopsData = [
         img: androidDevelopmentImg,
         imgDesc: androidDevelopmentDescImg,
         desc: "Develop a to-do list mobile app using Flutter, covering widget and layout design, state management, networking, testing, and deployment for a cross-platform Android app.",
-        date: "25/01/24",
+        date: "23/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,

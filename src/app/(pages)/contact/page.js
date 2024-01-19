@@ -48,7 +48,7 @@ const Contact = () => {
                         <Image className='mx-auto rounded-xl' src="/chetas-contact.png" width={650} height={50} alt='aknair' />
                         <div className='absolute z-10 left-[48%] bottom-[22.5%] min-[575px]:bottom-[20%] sm:bottom-[18.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
                             <p><a href='tel: +91 88617 76508' target='_blank'>+91 88617 76508</a></p>
-                            <p><a href='mailto: anandakrishna047@gmail.com' target='_blank'>anandakrishna047@gmail.com</a></p>
+                            <p><a href='mailto: chetasachar6602@gmail.com' target='_blank'>chetasachar6602@gmail.com</a></p>
                             <p><a href='https://www.instagram.com/chetas_e_achar/' target='_blank'>@chetas_e_achar</a></p>
                         </div>
                         <br />
@@ -86,7 +86,7 @@ const Contact = () => {
                         <Image className='mx-auto rounded-xl' src="/aamna-contact.png" width={650} height={50} alt='aknair' />
                         <div className='absolute z-10 left-[50%] bottom-[21%] min-[575px]:bottom-[20%] sm:bottom-[17.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
                             <p><a href='tel: +91 95915 54317' target='_blank'>+91 95915 54317</a></p>
-                            <p><a href='mailto: anandakrishna047@gmail.com' target='_blank'>anandakrishna047@gmail.com</a></p>
+                            <p><a href='mailto: aamnanafiza959155@gmail.com' target='_blank'>aamnanafiza959155@gmail.com</a></p>
                             <p><a href='https://www.instagram.com/aamnanafiza7/' target='_blank'>@aamnanafiza7</a></p>
                         </div>
                         <br />
@@ -104,7 +104,7 @@ const Contact = () => {
                         <Image className='mx-auto rounded-xl' src="/niharika-contact.png" width={650} height={50} alt='aknair' />
                         <div className='absolute z-10 left-[48%] bottom-[22.5%] min-[575px]:bottom-[20%] sm:bottom-[18.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
                             <p><a href='tel: +91 98340 28369' target='_blank'>+91 98340 28369</a></p>
-                            <p><a href='mailto: anandakrishna047@gmail.com' target='_blank'>anandakrishna047@gmail.com</a></p>
+                            <p><a href='mailto: niharikaa@gmail.com' target='_blank'>niharikaa@gmail.com</a></p>
                             <p><a href='https://www.instagram.com/_ak_nair__/' target='_blank'>@niharika</a></p>
                         </div>
                         <br />

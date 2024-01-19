@@ -37,7 +37,7 @@ const AdminWorkshops = () => {
             <div className='my-20 text-center md:text-xl' >
                 <p className='text-2xl md:text-3xl' >Recent registrations :</p>
                 <div className='flex flex-wrap mt-10 justify-center gap-5' >
-                    {workshops?.slice(-6).reverse()?.map((event) => {
+                    {workshops?.slice(-10).reverse()?.map((event) => {
                         return (
                             <div key={event?._id} className='bg-blue-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
                                 <p>{event?.name}</p>
