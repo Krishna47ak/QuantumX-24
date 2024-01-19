@@ -67,7 +67,7 @@ const AdminEvents = () => {
                     <div className='flex mb-10 bg-[#ed00e9b3] backdrop-blur-sm border-2 border-gray-400 p-3 w-[22rem] md:w-[40rem] rounded-xl' >
                         <Image src="/search.svg" width={20} height={20} alt='search' />
                         <div className='w-[0.05rem] mx-2 bg-gray-400' />
-                        <input autoComplete='off' value={searchText} onChange={(e) => setSearchText(e.target.value)} className='w-full bg-transparent text-white outline-none' placeholder='Name, Phone, Applicant Id......' />
+                        <input autoComplete='off' value={searchText} onChange={(e) => setSearchText(e.target.value)} className='w-full bg-transparent text-white outline-none' placeholder='Name, Phone, Usn, Applicant Id......' />
                     </div>
                 </div>
                 <div className='flex flex-wrap justify-center gap-5' >

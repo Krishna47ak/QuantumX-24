@@ -12,7 +12,7 @@ export const search = (data, searchText) => {
 
 export const searchUser = (data, searchText) => {
     const filteredData = data?.filter((event) => (
-        (event?.leader?.toLocaleLowerCase()?.includes(searchText?.toLocaleLowerCase()) || event?.name?.toLocaleLowerCase()?.includes(searchText?.toLocaleLowerCase()) || event.phone?.toString()?.includes(searchText) || event?.applicantId?.toLocaleLowerCase()?.includes(searchText))
+        (event?.leader?.toLocaleLowerCase()?.includes(searchText?.toLocaleLowerCase()) || event?.name?.toLocaleLowerCase()?.includes(searchText?.toLocaleLowerCase()) || event.usn?.toString()?.includes(searchText) || event.phone?.toString()?.includes(searchText) || event?.applicantId?.toLocaleLowerCase()?.includes(searchText))
     ))
     return filteredData
 }
