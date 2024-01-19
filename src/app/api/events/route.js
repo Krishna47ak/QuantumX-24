@@ -95,8 +95,7 @@ export async function GET(request) {
             }, { status: 401 })
         }
 
-        const events = await Event.find({})
-
+        const events = await Event.find({}).select("-transacImg")
 
         return NextResponse.json({
             success: true,

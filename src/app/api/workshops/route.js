@@ -80,7 +80,7 @@ export async function GET() {
             }, { status: 401 })
         }
 
-        const workshops = await Workshop.find({})
+        const workshops = await Workshop.find({}).select("-transacImg")
 
         return NextResponse.json({
             success: true,
