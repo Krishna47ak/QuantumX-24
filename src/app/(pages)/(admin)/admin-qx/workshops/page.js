@@ -1,26 +1,26 @@
 "use client"
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import { Context as DataContext } from '@/context/dataContext'
 import { workshopsData } from '@/utils/workshop-details'
 import Image from 'next/image'
 import Link from 'next/link'
 import Spinner from '@/components/Spinner'
-import { searchUser } from '@/utils/contants'
+// import { searchUser } from '@/utils/contants'
 
 const AdminWorkshops = () => {
     const { state: { workshops, loading }, fetchWorkshops } = useContext(DataContext)
 
-    const [searchData, setSearchData] = useState(workshops)
-    const [searchText, setSearchText] = useState('')
+    // const [searchData, setSearchData] = useState(workshops)
+    // const [searchText, setSearchText] = useState('')
 
-    useEffect(() => {
-        if (searchText) {
-            const filteredData = searchUser(workshops, searchText)
-            setSearchData(filteredData)
-        } else {
-            setSearchData(workshops)
-        }
-    }, [searchText, workshops])
+    // useEffect(() => {
+    //     if (searchText) {
+    //         const filteredData = searchUser(workshops, searchText)
+    //         setSearchData(filteredData)
+    //     } else {
+    //         setSearchData(workshops)
+    //     }
+    // }, [searchText, workshops])
 
     useEffect(() => {
         if (workshops?.length === 0 && !loading) {
@@ -60,7 +60,7 @@ const AdminWorkshops = () => {
                     })}
                 </div>
             </div>
-            <div className='mb-20 text-center md:text-xl'>
+            {/* <div className='mb-20 text-center md:text-xl'>
                 <p className='text-2xl md:text-3xl' >Search registrations :</p>
                 <div className='flex justify-center mt-10' >
                     <div className='flex mb-10 bg-[#ed00e9b3] backdrop-blur-sm border-2 border-gray-400 p-3 w-[22rem] md:w-[40rem] rounded-xl' >
@@ -79,7 +79,7 @@ const AdminWorkshops = () => {
                         )
                     })}
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
