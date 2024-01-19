@@ -40,6 +40,15 @@ export async function POST(request) {
             }
         }
 
+        // const registeredUsers = await Workshop.find({ workshopName });
+
+        // if (registeredUsers?.length >= 39) {
+        //     return NextResponse.json({
+        //         message: "Registration full",
+        //         success: false
+        //     }, { status: 504 })
+        // }
+
         const workshop = new Workshop({
             transacImg,
             applicantId,
@@ -80,6 +89,7 @@ export async function GET() {
             }, { status: 401 })
         }
 
+        // const workshops = await Workshop.find({ verified: false })
         const workshops = await Workshop.find({}).select("-transacImg")
 
         return NextResponse.json({

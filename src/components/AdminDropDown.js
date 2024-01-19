@@ -54,7 +54,7 @@ const AdminDropDown = ({ user, verify }) => {
                 ))}
             </div>
           </div>
-          {user?.transacImg && (
+          {user?.applicantId && (
             <div>
               <div className="flex flex-col justify-center items-center mb-2">
                 {user?.transacImg?.split(";")[0] === "data:application/pdf" ? (
