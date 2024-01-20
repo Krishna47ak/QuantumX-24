@@ -664,7 +664,7 @@ export const workshopsData = [
         img: web3Img,
         imgDesc: web3DescImg,
         desc: "Introduce participants to Web3 development by building a decentralised exchange (DEX) from scratch, covering smart contracts, blockchain wallets, web3 APIs, and allowing cryptocurrency trading without central intermediaries.",
-        date: "23/01/24",
+        date: "25/01/24",
         minSize: null,
         maxSize: null,
         fixedSize: 1,
