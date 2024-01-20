@@ -72,10 +72,10 @@ const WorkshopsRegister = ({ params }) => {
         let data;
 
         if (workshop?.fee === 0) {
-            data = { name: name.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim().toUpperCase(), fee, workshopName }
+            data = { name: name.trim(), email: email.trim(), phone: phone.replace(/\s/g, ''), college: college.trim(), usn: usn.trim().toUpperCase(), fee, workshopName }
         }
         else if (transacImg && !imageSizeError && applicantId) {
-            data = { transacImg, applicantId: applicantId.trim(), name: name.trim(), email: email.trim(), phone, college: college.trim(), usn: usn.trim().toUpperCase(), fee, workshopName }
+            data = { transacImg, applicantId: applicantId.trim(), name: name.trim(), email: email.trim(), phone: phone.replace(/\s/g, ''), college: college.trim(), usn: usn.trim().toUpperCase(), fee, workshopName }
         }
 
         if (applicantId?.length < 15 && workshop?.fee != 0) {
