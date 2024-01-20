@@ -610,7 +610,7 @@ export const workshopsData = [
         id: "QX_WS_17",
         name: "DSA",
         img: dsaImg,
-        imgDesc: guidedRoboticsDescImg,
+        imgDesc: dsaDescImg,
         desc: "This intensive workshop delves into the core concepts of Data Structures and Algorithms (DSA), equipping you with the knowledge and practical skills to become a proficient and efficient programmer.",
         date: "24/01/24",
         minSize: null,
