@@ -11,7 +11,7 @@ const AdminEvents = () => {
 
     const { state: { events, loading }, fetchEvents } = useContext(DataContext)
 
-    const [searchData, setSearchData] = useState(events)
+    const [searchData, setSearchData] = useState([])
     const [searchText, setSearchText] = useState('')
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const AdminEvents = () => {
             const filteredData = searchUser(events, searchText)
             setSearchData(filteredData)
         } else {
-            setSearchData(events)
+            setSearchData([])
         }
     }, [searchText, events])
 
@@ -71,7 +71,7 @@ const AdminEvents = () => {
                     </div>
                 </div>
                 <div className='flex flex-wrap justify-center gap-5' >
-                    {searchData?.slice(0, 10)?.map((event) => {
+                    {searchData?.map((event) => {
                         return (
                             <div key={event?._id} className='bg-blue-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
                                 <p>{event?.leader}</p>

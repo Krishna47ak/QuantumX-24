@@ -10,7 +10,7 @@ import { searchUser } from '@/utils/contants'
 const AdminWorkshops = () => {
     const { state: { workshops, loading }, fetchWorkshops } = useContext(DataContext)
 
-    const [searchData, setSearchData] = useState(workshops)
+    const [searchData, setSearchData] = useState([])
     const [searchText, setSearchText] = useState('')
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const AdminWorkshops = () => {
             const filteredData = searchUser(workshops, searchText)
             setSearchData(filteredData)
         } else {
-            setSearchData(workshops)
+            setSearchData([])
         }
     }, [searchText, workshops])
 
@@ -70,7 +70,7 @@ const AdminWorkshops = () => {
                     </div>
                 </div>
                 <div className='flex flex-wrap justify-center gap-5' >
-                    {searchData?.slice(0, 10)?.map((event) => {
+                    {searchData?.map((event) => {
                         return (
                             <div key={event?._id} className='bg-blue-800 flex flex-col justify-center items-center text-center w-[40vw] lg:w-[20vw] p-5 font-semibold rounded-xl hover:scale-105 duration-500 cursor-pointer' >
                                 <p>{event?.name}</p>
