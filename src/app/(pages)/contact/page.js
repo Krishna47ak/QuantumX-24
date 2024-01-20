@@ -27,6 +27,15 @@ const Contact = () => {
                         <br />
                     </div>
                     <div className='relative' >
+                        <Image className='mx-auto rounded-xl' src="/mahesh-contact.png" quality={35} width={650} height={50} alt='aknair' />
+                        <div className='absolute z-10 left-[50%] bottom-[21%] min-[575px]:bottom-[20%] sm:bottom-[17.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
+                            <p><a href='tel: +91 97018 48618' target='_blank'>+91 97018 48618</a></p>
+                            <p><a href='mailto: maheshvejandla5@gmail.com' target='_blank'>maheshvejandla5@gmail.com</a></p>
+                            <p><a href='https://www.instagram.com/_.mahesh._18._/' target='_blank'>@_.mahesh._18._</a></p>
+                        </div>
+                        <br />
+                    </div>
+                    <div className='relative' >
                         <Image className='mx-auto rounded-xl' src="/neha-contact.png" width={650} height={50} alt='aknair' />
                         <div className='absolute z-10 left-[48%] bottom-[22.5%] min-[575px]:bottom-[20%] sm:bottom-[18.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
                             <p><a href='tel: +91 96068 20633' target='_blank'>+91 96068 20633</a></p>
@@ -36,7 +45,7 @@ const Contact = () => {
                         <br />
                     </div>
                     <div className='relative' >
-                        <Image className='mx-auto rounded-xl' src="/adhithya-contact.png" width={650} height={50} alt='aknair' />
+                        <Image className='mx-auto rounded-xl' src="/adhithya-contact.png" quality={40} width={650} height={50} alt='aknair' />
                         <div className='absolute z-10 left-[50%] bottom-[21%] min-[575px]:bottom-[20%] sm:bottom-[17.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
                             <p><a href='tel: +91 79750 63417' target='_blank'>+91 79750 63417</a></p>
                             <p><a href='mailto: adhithyaadhibn@gmail.com' target='_blank'>adhithyaadhibn@gmail.com</a></p>
@@ -53,15 +62,6 @@ const Contact = () => {
                         </div>
                         <br />
                     </div>
-                    <div className='relative' >
-                        <Image className='mx-auto rounded-xl' src="/ankita-contact.png" width={650} height={50} alt='aknair' />
-                        <div className='absolute z-10 left-[48%] bottom-[22.5%] min-[575px]:bottom-[20%] sm:bottom-[18.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
-                            <p><a href='tel: +91 99011 78017' target='_blank'>+91 99011 78017</a></p>
-                            <p><a href='mailto: ankitashetti31@gmail.com' target='_blank'>ankitashetti31@gmail.com</a></p>
-                            <p><a href='https://www.instagram.com/ankita.shetti/' target='_blank'>@ankita.shetti</a></p>
-                        </div>
-                        <br />
-                    </div>
                 </div>
                 <div className='' >
                     <div className='relative hidden lg:block' >
@@ -74,19 +74,10 @@ const Contact = () => {
                         <br />
                     </div>
                     <div className='relative' >
-                        <Image className='mx-auto rounded-xl' src="/mahesh-contact.png" width={650} height={50} alt='aknair' />
-                        <div className='absolute z-10 left-[50%] bottom-[21%] min-[575px]:bottom-[20%] sm:bottom-[17.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
-                            <p><a href='tel: +91 97018 48618' target='_blank'>+91 97018 48618</a></p>
-                            <p><a href='mailto: maheshvejandla5@gmail.com' target='_blank'>maheshvejandla5@gmail.com</a></p>
-                            <p><a href='https://www.instagram.com/_.mahesh._18._/' target='_blank'>@_.mahesh._18._</a></p>
-                        </div>
-                        <br />
-                    </div>
-                    <div className='relative' >
                         <Image className='mx-auto rounded-xl' src="/aamna-contact.png" width={650} height={50} alt='aknair' />
                         <div className='absolute z-10 left-[50%] bottom-[21%] min-[575px]:bottom-[20%] sm:bottom-[17.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
                             <p><a href='tel: +91 95915 54317' target='_blank'>+91 95915 54317</a></p>
-                            <p><a href='mailto: aamnanafiza959155@gmail.com' target='_blank'>aamnanafiza959155@gmail.com</a></p>
+                            <p><a href='mailto: aamnanafiza959155@gmail.com' target='_blank'>aamnanafiza9591@gmail.com</a></p>
                             <p><a href='https://www.instagram.com/aamnanafiza7/' target='_blank'>@aamnanafiza7</a></p>
                         </div>
                         <br />
@@ -97,6 +88,15 @@ const Contact = () => {
                             <p><a href='tel: +91 86601 23179' target='_blank'>+91 86601 23179</a></p>
                             <p><a href='mailto: abhijeethtalari@gmail.com' target='_blank'>abhijeethtalari@gmail.com</a></p>
                             <p><a href='https://www.instagram.com/abhijeettalari/' target='_blank'>@abhijeettalari</a></p>
+                        </div>
+                        <br />
+                    </div>
+                    <div className='relative' >
+                        <Image className='mx-auto rounded-xl' src="/ankita-contact.png" width={650} height={50} alt='aknair' />
+                        <div className='absolute z-10 left-[48%] bottom-[22.5%] min-[575px]:bottom-[20%] sm:bottom-[18.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
+                            <p><a href='tel: +91 99011 78017' target='_blank'>+91 99011 78017</a></p>
+                            <p><a href='mailto: ankitashetti31@gmail.com' target='_blank'>ankitashetti31@gmail.com</a></p>
+                            <p><a href='https://www.instagram.com/ankita.shetti/' target='_blank'>@ankita.shetti</a></p>
                         </div>
                         <br />
                     </div>
