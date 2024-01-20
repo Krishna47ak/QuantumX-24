@@ -43,7 +43,7 @@ export async function POST(request) {
             }
         }
 
-        
+
         const event = new Event({
             teamName,
             discord,

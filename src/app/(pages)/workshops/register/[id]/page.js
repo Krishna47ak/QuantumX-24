@@ -106,7 +106,7 @@ const WorkshopsRegister = ({ params }) => {
         }
     };
 
-    if (((workshop?.id === "QX_WS_26") || (workshop?.id === "QX_WS_01") || (workshop?.id === "QX_WS_09") || (workshop?.id === "QX_WS_21"))) {
+    if (((workshop?.id === "QX_WS_26") || (workshop?.id === "QX_WS_09") || (workshop?.id === "QX_WS_21"))) {
         return <div className="bg-black min-h-screen" />
     }
 
