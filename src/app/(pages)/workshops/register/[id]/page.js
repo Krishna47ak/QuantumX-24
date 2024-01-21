@@ -176,7 +176,7 @@ const WorkshopsRegister = ({ params }) => {
                             <div className="text-white overflow-hidden" >
                                 <FormInput inputName="transacImg" name="Payment reciept image/pdf" setdata={handleImageChange} type="file" />
                                 {imageSizeError && <div className="text-red-600 text-xs ml-2 sm:ml-[16rem] -mt-5 md:-mt-10 mb-7 font-semibold  rounded-xl w-full" >Size should be less than 200KB</div>}
-                                <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="Applicant Id" />
+                                <FormInput inputName="applicantId" name="Applicant Id" data={applicantId} setdata={onChange} placeholder="AY23-24/XXXXXXXXXXXX" />
                                 {applicantIdError && <div className="text-red-600 text-xs ml-2 sm:ml-[12rem] -mt-3 md:-mt-5 mb-7 font-semibold  rounded-xl w-full" >Invalid applicant Id</div>}
                             </div>
                         )}
