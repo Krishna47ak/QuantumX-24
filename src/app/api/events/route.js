@@ -23,6 +23,17 @@ export async function POST(request) {
                     success: false
                 }, { status: 400 })
             }
+
+            const registeredUser = await Event.find({ usn });
+
+            for (let i = 0; i < registeredUser?.length; i++) {
+                if (registeredUser[i]?.eventName === eventName) {
+                    return NextResponse.json({
+                        message: "Invalid details",
+                        success: false
+                    }, { status: 400 })
+                }
+            }
         }
 
         if (process.env.DOMAIN != headers().get('origin')) {
@@ -32,16 +43,6 @@ export async function POST(request) {
             }, { status: 401 })
         }
 
-        const existingUser = await Event.find({ usn });
-
-        for (let i = 0; i < existingUser?.length; i++) {
-            if (existingUser[i]?.eventName === eventName) {
-                return NextResponse.json({
-                    message: "Invalid details",
-                    success: false
-                }, { status: 400 })
-            }
-        }
 
 
         const event = new Event({
