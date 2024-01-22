@@ -76,8 +76,8 @@ const Navbar = () => {
                     {/* <Link href="/sponsors" >
                         <button className="hover:scale-105 outline-none" style={backDropText}>SPONSORS</button>
                     </Link> */}
-                    <Link href="/#faq">
-                        <button className="hover:scale-105 outline-none" style={backDropText}>FAQ</button>
+                    <Link href="https://drive.google.com/file/d/1pf9GB7PsL7BinkBkJlpCZmvQeFY8MRF8/view" target="_blank">
+                        <button className="hover:scale-105 outline-none" style={backDropText}>SCHEDULE</button>
                     </Link>
 
                 </ul>
