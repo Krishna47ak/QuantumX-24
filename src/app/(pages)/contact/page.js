@@ -27,7 +27,7 @@ const Contact = () => {
                         <br />
                     </div>
                     <div className='relative' >
-                        <Image className='mx-auto rounded-xl' src="/mahesh-contact.png" quality={35} width={650} height={50} alt='aknair' />
+                        <Image className='mx-auto rounded-xl' src="/mahesh-contact.png" quality={45} width={650} height={50} alt='aknair' />
                         <div className='absolute z-10 left-[50%] bottom-[21%] min-[575px]:bottom-[20%] sm:bottom-[17.5%] text-[0.65rem] min-[450px]:text-xs min-[575px]:text-sm sm:text-lg md:text-xl lg:text-base xl:text-lg font-semibold space-y-[0.4rem] min-[450px]:space-y-3 md:space-y-4 lg:space-y-3 xl:space-y-4 text-left' >
                             <p><a href='tel: +91 97018 48618' target='_blank'>+91 97018 48618</a></p>
                             <p><a href='mailto: maheshvejandla5@gmail.com' target='_blank'>maheshvejandla5@gmail.com</a></p>
