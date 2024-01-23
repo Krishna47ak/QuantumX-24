@@ -44,22 +44,22 @@ const CountdownTimer = () => {
       <div className="bg-gradient-to-b from-black to-[#831c84] flex justify-center items-center p-10 py-12 md:py-20 md:text-4xl font-bold text-white text-center space-x-6 sm:space-x-8 md:space-x-10 lg:space-x-16">
         <div className="flex flex-col space-y-5" id="daysCol">
           <p className="font-medium">DAYS</p>
-          <span className="text-lg sm:text-2xl md:text-5xl">{isDays}</span>
+          <span className="text-lg sm:text-2xl md:text-5xl">00</span>
         </div>
         <p className="mt-auto">:</p>
         <div className="flex flex-col space-y-5" id="hoursCol">
           <p className="font-medium">HOURS</p>
-          <span className="text-lg sm:text-2xl md:text-5xl">{isHours}</span>
+          <span className="text-lg sm:text-2xl md:text-5xl">00</span>
         </div>
         <p className="mt-auto">:</p>
         <div className="flex flex-col space-y-5" id="minsCol">
           <p className="font-medium">MINS</p>
-          <span className="text-lg sm:text-2xl md:text-5xl">{isMins}</span>
+          <span className="text-lg sm:text-2xl md:text-5xl">00</span>
         </div>
         <p className="mt-auto">:</p>
         <div className="flex flex-col space-y-5" id="secondsCol">
           <p className="font-medium">SECS</p>
-          <span className="text-lg sm:text-2xl md:text-5xl">{isSecs}</span>
+          <span className="text-lg sm:text-2xl md:text-5xl">00</span>
         </div>
       </div>
     </div>
