@@ -107,8 +107,8 @@ const Navbar = () => {
                 <Link href="/#about" >
                     <p className='navBtn cardDropshadow' >ABOUT</p>
                 </Link>
-                <Link href="/#faq" >
-                    <p className='navBtn cardDropshadow' >FAQ</p>
+                <Link href="https://drive.google.com/file/d/1pf9GB7PsL7BinkBkJlpCZmvQeFY8MRF8/view" target="_blank" >
+                    <p className='navBtn cardDropshadow' >SCHEDULE</p>
                 </Link>
             </div>
         </div>
