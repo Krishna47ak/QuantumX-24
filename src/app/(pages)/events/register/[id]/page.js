@@ -197,6 +197,7 @@ const EventsRegister = ({ params }) => {
         event?.id === "QX_EV_12" ||
         event?.id === "QX_EV_13" ||
         event?.id === "QX_EV_14" ||
+        event?.id === "QX_EV_15" ||
         event?.id === "QX_EV_16" ||
         event?.id === "QX_EV_17" ||
         event?.id === "QX_EV_18" ||
