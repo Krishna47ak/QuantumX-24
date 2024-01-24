@@ -115,6 +115,7 @@ const WorkshopsRegister = ({ params }) => {
         workshop?.id === "QX_WS_09" ||
         workshop?.id === "QX_WS_11" ||
         workshop?.id === "QX_WS_13" ||
+        workshop?.id === "QX_WS_14" ||
         workshop?.id === "QX_WS_15" ||
         workshop?.id === "QX_WS_16" ||
         workshop?.id === "QX_WS_17" ||

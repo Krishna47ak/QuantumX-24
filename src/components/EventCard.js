@@ -188,6 +188,7 @@ const EventCard = ({ data, from }) => {
                 data?.id != "QX_WS_09" &&
                 data?.id != "QX_WS_11" &&
                 data?.id != "QX_WS_13" &&
+                data?.id != "QX_WS_14" &&
                 data?.id != "QX_WS_15" &&
                 data?.id != "QX_WS_16" &&
                 data?.id != "QX_WS_17" &&
