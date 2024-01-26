@@ -106,31 +106,30 @@ const WorkshopsRegister = ({ params }) => {
         }
     };
 
-    if (workshop?.id === "QX_WS_01" ||
-        workshop?.id === "QX_WS_02" ||
-        workshop?.id === "QX_WS_03" ||
-        workshop?.id === "QX_WS_04" ||
-        workshop?.id === "QX_WS_06" ||
-        workshop?.id === "QX_WS_08" ||
-        workshop?.id === "QX_WS_09" ||
-        workshop?.id === "QX_WS_11" ||
-        workshop?.id === "QX_WS_13" ||
-        workshop?.id === "QX_WS_14" ||
-        workshop?.id === "QX_WS_15" ||
-        workshop?.id === "QX_WS_16" ||
-        workshop?.id === "QX_WS_17" ||
-        workshop?.id === "QX_WS_18" ||
-        workshop?.id === "QX_WS_19" ||
-        workshop?.id === "QX_WS_20" ||
-        workshop?.id === "QX_WS_21" ||
-        workshop?.id === "QX_WS_23" ||
-        workshop?.id === "QX_WS_25" ||
-        workshop?.id === "QX_WS_26" ||
-        workshop?.id === "QX_WS_28" ||
-        workshop?.id === "QX_WS_29" ||
-        workshop?.id === "QX_WS_30") {
-        return <div className="bg-black min-h-screen" />
-    }
+    // if (workshop?.id === "QX_WS_01" ||
+    //     workshop?.id === "QX_WS_02" ||
+    //     workshop?.id === "QX_WS_03" ||
+    //     workshop?.id === "QX_WS_04" ||
+    //     workshop?.id === "QX_WS_06" ||
+    //     workshop?.id === "QX_WS_08" ||
+    //     workshop?.id === "QX_WS_09" ||
+    //     workshop?.id === "QX_WS_11" ||
+    //     workshop?.id === "QX_WS_13" ||
+    //     workshop?.id === "QX_WS_14" ||
+    //     workshop?.id === "QX_WS_15" ||
+    //     workshop?.id === "QX_WS_16" ||
+    //     workshop?.id === "QX_WS_17" ||
+    //     workshop?.id === "QX_WS_18" ||
+    //     workshop?.id === "QX_WS_19" ||
+    //     workshop?.id === "QX_WS_20" ||
+    //     workshop?.id === "QX_WS_23" ||
+    //     workshop?.id === "QX_WS_25" ||
+    //     workshop?.id === "QX_WS_26" ||
+    //     workshop?.id === "QX_WS_28" ||
+    //     workshop?.id === "QX_WS_29" ||
+    //     workshop?.id === "QX_WS_30") {
+    //     return <div className="bg-black min-h-screen" />
+    // }
 
 
     return loading ? <Spinner /> : (

@@ -158,12 +158,12 @@ const EventCard = ({ data, from }) => {
                     </div>
                   )}
               </div>
-              {/* <Link
+              <Link
                 href={`${pathname}/register/${data?.id}`}
                 className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none"
               >
                 <p className="text-white text-lg font-mono">Register</p>
-              </Link> */}
+              </Link>
             </div>
           </div>
         </div>

@@ -184,27 +184,27 @@ const EventsRegister = ({ params }) => {
         }
     }, [])
 
-    if (event?.id === "QX_EV_02" ||
-        event?.id === "QX_EV_03" ||
-        event?.id === "QX_EV_04" ||
-        event?.id === "QX_EV_05" ||
-        event?.id === "QX_EV_06" ||
-        event?.id === "QX_EV_07" ||
-        event?.id === "QX_EV_08" ||
-        event?.id === "QX_EV_09" ||
-        event?.id === "QX_EV_10" ||
-        event?.id === "QX_EV_11" ||
-        event?.id === "QX_EV_13" ||
-        event?.id === "QX_EV_14" ||
-        event?.id === "QX_EV_15" ||
-        event?.id === "QX_EV_16" ||
-        event?.id === "QX_EV_17" ||
-        event?.id === "QX_EV_18" ||
-        event?.id === "QX_EV_19" ||
-        event?.id === "QX_EV_20" ||
-        event?.id === "QX_EV_21") {
-        return <div className="bg-black min-h-screen" />
-    }
+    // if (event?.id === "QX_EV_02" ||
+    //     event?.id === "QX_EV_03" ||
+    //     event?.id === "QX_EV_04" ||
+    //     event?.id === "QX_EV_05" ||
+    //     event?.id === "QX_EV_06" ||
+    //     event?.id === "QX_EV_07" ||
+    //     event?.id === "QX_EV_08" ||
+    //     event?.id === "QX_EV_09" ||
+    //     event?.id === "QX_EV_10" ||
+    //     event?.id === "QX_EV_11" ||
+    //     event?.id === "QX_EV_13" ||
+    //     event?.id === "QX_EV_14" ||
+    //     event?.id === "QX_EV_15" ||
+    //     event?.id === "QX_EV_16" ||
+    //     event?.id === "QX_EV_17" ||
+    //     event?.id === "QX_EV_18" ||
+    //     event?.id === "QX_EV_19" ||
+    //     event?.id === "QX_EV_20" ||
+    //     event?.id === "QX_EV_21") {
+    //     return <div className="bg-black min-h-screen" />
+    // }
     
 
     return loading ? <Spinner /> : (
