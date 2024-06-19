@@ -189,9 +189,9 @@ const WorkshopsRegister = ({ params }) => {
                                         <br />
                                     </div>
                                 </div>
-                                <a onClick={handleNext2} href="https://forms.eduqfix.com/misce3/add" target="_blank"  >
+                                {/* <a onClick={handleNext2} href="https://forms.eduqfix.com/misce3/add" target="_blank"  >
                                     <p className="bg-blue-600 text-center px-5 p-3 rounded-xl select-none" >Pay now</p>
-                                </a>
+                                </a> */}
                             </div>
                         ) : page === 3 && (
                             <div className="text-white overflow-hidden" >
@@ -202,8 +202,11 @@ const WorkshopsRegister = ({ params }) => {
                             </div>
                         )}
 
-                        <div onClick={page === 1 ? (workshop?.fee === 0 ? onSubmit : handleNext1) : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
+                        {/* <div onClick={page === 1 ? (workshop?.fee === 0 ? onSubmit : handleNext1) : page === 2 ? handleNext2 : onSubmit} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
                             <p className='text-white text-lg font-mono' >{page === 3 ? "Submit" : (workshop?.fee === 0 ? "Submit" : "Next")}</p>
+                        </div> */}
+                        <div onClick={page === 1 ? (workshop?.fee === 0 ? (() => console.error("Fest has ended!!")) : handleNext1) : page === 2 ? handleNext2 : (() => console.error("Fest has ended!!"))} className="bg-[url('/btn-yellow.svg')] active:scale-95 bg-cover min-w-60 w-60 min-h-[3.1rem] mt-5 min-[1293px]:ml-auto bg-no-repeat flex items-center justify-center font-semibold duration-200 z-10 cursor-pointer select-none" >
+                            <p className='text-red-600 text-lg font-mono' >Registeration Closed</p>
                         </div>
                     </div>
                 </div>
