@@ -72,9 +72,9 @@ const VolunteerReg = () => {
                     <div className='mb-20' >
                         <p className='font-bold text-4xl' >Join the Force Behind QuantumX 25!</p>
                         <p className='font-medium text-lg text-justify my-5' >
-                            Are you ready to be part of something epic? QuantumX 25 is back and bigger than ever for its 3rd edition, and we need passionate, creative, and driven minds to help us make history! This national-level techno-management fest is set to push boundaries and bring together innovators from across the country. Whether you're a problem-solver, a tech enthusiast, or someone who thrives on managing large-scale events, there's a place for you on our team
+                            Are you ready to be part of something epic? QuantumX 25 is back and bigger than ever for its 3rd edition, and we need passionate, creative, and driven minds to help us make history! This national-level techno-management fest is set to push boundaries and bring together innovators from across the country. Whether you&apos;re a problem-solver, a tech enthusiast, or someone who thrives on managing large-scale events, there&apos;s a place for you on our team
                         </p>
-                        <p className='font-bold text-2xl' >Don't miss the chance to:</p>
+                        <p className='font-bold text-2xl' >Don&apos;t miss the chance to:</p>
                         <p className='font-medium text-md mt-5' >&#x2022; Build unforgettable experiences</p>
                         <p className='font-medium text-md mt-3' >&#x2022; Network with top professionals and fellow students</p>
                         <p className='font-medium text-md mt-3' >&#x2022; Take your skills to the next level</p>
