@@ -8,11 +8,11 @@ import * as Yup from 'yup';
 const volunteerValidationSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),
     department: Yup.string().required('Department is required'),
-    semester: Yup.string().email().required('Semester is required'),
-    section: Yup.string().email().required('Section is required'),
-    usn: Yup.string().email().required('USN is required'),
+    semester: Yup.string().required('Semester is required'),
+    section: Yup.string().required('Section is required'),
+    usn: Yup.string().required('USN is required'),
     email: Yup.string().email().required('Email is required'),
-    phone: Yup.number().required('Phone number is required')
+    phone: Yup.string().required('Phone number is required').length(10, 'Phone number must be exactly 10 digits').matches(/^\d+$/, 'Phone number must be numeric')
 });
 
 const volunteerInitialValues = {
@@ -25,7 +25,8 @@ const volunteerInitialValues = {
     phone: ''
 }
 
-const depts = ["ce", "cse", "aiml", "ise", "ece", "eee", "me", "applied sciences"]
+const depts = ["CE", "CSE", "AIML", "ISE", "ECE", "EEE", "ME", "CIV", "DS", "APPLIED SCIENCES"]
+const sems = ["I", "III", "V", "VII"]
 
 const VolunteerReg = () => {
 
@@ -39,6 +40,7 @@ const VolunteerReg = () => {
         onSubmit: async (values) => {
 
             const body = JSON.stringify(values)
+
 
             try {
                 setLoading(true)
@@ -70,15 +72,15 @@ const VolunteerReg = () => {
             ) : (
                 <form className='bg-black w-[100%] bg-opacity-80 pt-28 px-5 sm:px-20 md:px-36 lg:px-60 xl:px-80 p-14 pb-16 text-white' onSubmit={volunteerFormik.handleSubmit} >
                     <div className='mb-20' >
-                        <p className='font-bold text-4xl' >Join the Force Behind QuantumX 25!</p>
+                        <p className='font-bold text-4xl' >Join the Force Behind QuantumX-25!</p>
                         <p className='font-medium text-lg text-justify my-5' >
-                            Are you ready to be part of something epic? QuantumX 25 is back and bigger than ever for its 3rd edition, and we need passionate, creative, and driven minds to help us make history! This national-level techno-management fest is set to push boundaries and bring together innovators from across the country. Whether you&apos;re a problem-solver, a tech enthusiast, or someone who thrives on managing large-scale events, there&apos;s a place for you on our team
+                            Are you ready to be part of something epic? QuantumX-25 is back and bigger than ever for its 3rd edition, and we need passionate, creative, and driven minds to help us make history! This national-level techno-management fest is set to push boundaries and bring together innovators from across the country. Whether you&apos;re a problem-solver, a tech enthusiast, or someone who thrives on managing large-scale events, there&apos;s a place for you on our team
                         </p>
                         <p className='font-bold text-2xl' >Don&apos;t miss the chance to:</p>
                         <p className='font-medium text-md mt-5' >&#x2022; Build unforgettable experiences</p>
                         <p className='font-medium text-md mt-3' >&#x2022; Network with top professionals and fellow students</p>
                         <p className='font-medium text-md mt-3' >&#x2022; Take your skills to the next level</p>
-                        <p className='font-semibold text-lg text-justify my-5' >Join the QuantumX 25 crew and make your mark on a fest that’s redefining what’s possible!</p>
+                        <p className='font-semibold text-lg text-justify my-5' >Join the QuantumX-25 crew and make your mark on a fest that’s redefining what’s possible!</p>
                         <p className='font-bold text-3xl text-center mt-20' >Volunteer Now - Be Part of the Revolution</p>
                     </div>
                     <FormInput2 name="Name" value={volunteerFormik.values.name} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.name} error={volunteerFormik.errors.name} type='text' placeholder='Full name*' />
@@ -92,9 +94,15 @@ const VolunteerReg = () => {
                         </select>
                         {volunteerFormik.touched.department && <span className='first-letter:uppercase text-sm text-red-500 pl-1 mt-1' >{volunteerFormik.errors.department}</span>}
                     </div>
-
-                    {/* <FormInput2 name="Department" value={volunteerFormik.values.department} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.department} error={volunteerFormik.errors.department} type='text' placeholder='Department*' /> */}
-                    <FormInput2 name="Semester" value={volunteerFormik.values.semester} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.semester} error={volunteerFormik.errors.semester} type='text' placeholder='Semester*' />
+                    <div className='mb-5 mt-10' >
+                        <select name='semester' className={`text-gray-500 w-full py-3 rounded-xl px-4 ${!!volunteerFormik.values.semester && "uppercase"}`} value={volunteerFormik.values.semester} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} >
+                            <option value="" className={`text-gray-500 capitalize`} >Semester</option>
+                            {sems?.map(sem => (
+                                <option key={sem} value={sem} className='uppercase' >{sem}</option>
+                            ))}
+                        </select>
+                        {volunteerFormik.touched.semester && <span className='first-letter:uppercase text-sm text-red-500 pl-1 mt-1' >{volunteerFormik.errors.semester}</span>}
+                    </div>
                     <FormInput2 name="Section" value={volunteerFormik.values.section} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.section} error={volunteerFormik.errors.section} placeholder='Section*' />
                     <FormInput2 name="Email" value={volunteerFormik.values.email} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.email} error={volunteerFormik.errors.email} type='email' placeholder='Email*' />
                     <FormInput2 name="Phone" value={volunteerFormik.values.phone} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.phone} error={volunteerFormik.errors.phone} type='tel' placeholder='Phone*' />
