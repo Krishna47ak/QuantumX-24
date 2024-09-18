@@ -1,6 +1,7 @@
 "use client"
 
 import FormInput2 from '@/components/FormInput2';
+import Spinner from '@/components/Spinner';
 import { useFormik } from 'formik';
 import { useState } from 'react';
 import * as Yup from 'yup';
@@ -41,7 +42,6 @@ const VolunteerReg = () => {
 
             const body = JSON.stringify(values)
 
-
             try {
                 setLoading(true)
                 const res = await fetch(`${process.env.DOMAIN}/api/volunteer`, {
@@ -66,9 +66,19 @@ const VolunteerReg = () => {
     });
 
     return (
-        <div className="bg-[url('/volunteer-bg.png')] bg-center bg-cover bg-fixed flex items-center justify-center min-h-screen" >
+        <div className="bg-[url('/volunteer-bg.png')] bg-center bg-cover bg-fixed flex items-center justify-center min-h-screen overflow-hidden" >
             {isSubmitted ? (
-                <div></div>
+                <div className='flex justify-center items-center text-white min-h-screen p-5 sm:p-20' >
+                    <div className='bg-green-700 p-5 sm:p-20 text-center bg-opacity-70 rounded-xl' >
+                        <p className='text-2xl sm:text-4xl font-semibold mb-5' >You have registered successfully!!</p>
+                        <a href='https://chat.whatsapp.com/HpioA4Nm58p73kOgBrTZFb' target='_blank'>Join our <span className='text-blue-600 font-medium' >WhatsApp group</span> for further updates</a>
+                    </div>
+
+                </div>
+            ) : loading ? (
+                <div className='flex justify-center w-full bg-black' >
+                    <Spinner />
+                </div>
             ) : (
                 <form className='bg-black w-[100%] bg-opacity-80 pt-28 px-5 sm:px-20 md:px-36 lg:px-60 xl:px-80 p-14 pb-16 text-white' onSubmit={volunteerFormik.handleSubmit} >
                     <div className='mb-20' >
@@ -106,7 +116,7 @@ const VolunteerReg = () => {
                     <FormInput2 name="Section" value={volunteerFormik.values.section} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.section} error={volunteerFormik.errors.section} placeholder='Section*' />
                     <FormInput2 name="Email" value={volunteerFormik.values.email} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.email} error={volunteerFormik.errors.email} type='email' placeholder='Email*' />
                     <FormInput2 name="Phone" value={volunteerFormik.values.phone} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.phone} error={volunteerFormik.errors.phone} type='tel' placeholder='Phone*' />
-                    <button type='submit' className='bg-[#340E62] text-white py-2 px-4 w-full  mt-5 rounded-lg active:scale-95 duration-500' >Submit</button>
+                    <button type='submit' disabled={loading} className='bg-[#340E62] text-white py-2 px-4 w-full  mt-5 rounded-lg active:scale-95 duration-500' >Submit</button>
                 </form>
             )}
         </div >
