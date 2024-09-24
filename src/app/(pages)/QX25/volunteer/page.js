@@ -11,6 +11,7 @@ const volunteerValidationSchema = Yup.object().shape({
     department: Yup.string().required('Department is required'),
     semester: Yup.string().required('Semester is required'),
     section: Yup.string().required('Section is required'),
+    role: Yup.string().required('Role is required'),
     usn: Yup.string().required('USN is required'),
     email: Yup.string().email().required('Email is required'),
     phone: Yup.string().required('Phone number is required').length(10, 'Phone number must be exactly 10 digits').matches(/^\d+$/, 'Phone number must be numeric')
@@ -20,6 +21,7 @@ const volunteerInitialValues = {
     name: '',
     department: '',
     semester: '',
+    role: '',
     section: '',
     usn: '',
     email: '',
@@ -28,6 +30,7 @@ const volunteerInitialValues = {
 
 const depts = ["CE", "CSE", "AIML", "ISE", "ECE", "EEE", "ME", "CIV", "DS", "APPLIED SCIENCES"]
 const sems = ["I", "III", "V", "VII"]
+const roles = ["Team Lead", "Event/Workshop Coordinator", "Technical Team", "Graphical Design/Poster Making", "Video Editing", "Social Media Management", "Content Team", "Volunteers", "Other"]
 
 const VolunteerReg = () => {
 
@@ -116,6 +119,15 @@ const VolunteerReg = () => {
                     <FormInput2 name="Section" value={volunteerFormik.values.section} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.section} error={volunteerFormik.errors.section} placeholder='Section*' />
                     <FormInput2 name="Email" value={volunteerFormik.values.email} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.email} error={volunteerFormik.errors.email} type='email' placeholder='Email*' />
                     <FormInput2 name="Phone" value={volunteerFormik.values.phone} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.phone} error={volunteerFormik.errors.phone} type='tel' placeholder='Phone*' />
+                    <div className='mb-5 mt-10' >
+                        <select name='role' className={`text-gray-500 w-full py-3 rounded-xl px-4 ${!!volunteerFormik.values.role && "uppercase"}`} value={volunteerFormik.values.role} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} >
+                            <option value="" className={`text-gray-500 capitalize`} >What will you bring to the team?</option>
+                            {roles?.map(role => (
+                                <option key={role} value={role} className='uppercase' >{role}</option>
+                            ))}
+                        </select>
+                        {volunteerFormik.touched.role && <span className='first-letter:uppercase text-sm text-red-500 pl-1 mt-1' >{volunteerFormik.errors.role}</span>}
+                    </div>
                     <button type='submit' disabled={loading} className='bg-[#340E62] text-white py-2 px-4 w-full  mt-5 rounded-lg active:scale-95 duration-500' >Submit</button>
                 </form>
             )}

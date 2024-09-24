@@ -9,6 +9,10 @@ const volunteerSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please provide a department"],
     },
+    role: {
+        type: String,
+        required: [true, "Please provide a role"],
+    },
     semester: {
         type: String,
         required: [true, "Please provide a semester"],
@@ -29,6 +33,10 @@ const volunteerSchema = new mongoose.Schema({
     phone: {
         type: Number,
         required: [true, "Please provide a phone number"],
+    },
+    date: {
+        type: Date,
+        default: Date.now
     }
 })
 

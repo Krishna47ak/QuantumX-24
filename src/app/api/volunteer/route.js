@@ -11,7 +11,7 @@ export async function POST(request) {
     try {
         eventConnection = await connectEventDB();
         const reqBody = await request.json()
-        const { name, department, semester, section, usn, email, phone } = reqBody
+        const { name, role, department, semester, section, usn, email, phone } = reqBody
 
         const existingVolunteer = await Volunteer.findOne({ usn });
 
@@ -33,6 +33,7 @@ export async function POST(request) {
 
         const volunteer = new Volunteer({
             name,
+            role,
             department,
             semester,
             section,
@@ -62,16 +63,16 @@ export async function POST(request) {
 export async function GET(request) {
     try {
         eventConnection = await connectEventDB();
-        const userId = await getDataFromToken(request);
+        // const userId = await getDataFromToken(request);
 
-        const user = await Admin.findOne({ _id: userId }).select("-password");
+        // const user = await Admin.findOne({ _id: userId }).select("-password");
 
-        if (!user) {
-            return NextResponse.json({
-                message: "Unauthorized",
-                success: false
-            }, { status: 401 })
-        }
+        // if (!user) {
+        //     return NextResponse.json({
+        //         message: "Unauthorized",
+        //         success: false
+        //     }, { status: 401 })
+        // }
 
         const volunteers = await Volunteer.find({})
 
