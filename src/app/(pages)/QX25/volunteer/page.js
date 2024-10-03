@@ -30,7 +30,7 @@ const volunteerInitialValues = {
 
 const depts = ["CE", "CSE", "AIML", "ISE", "ECE", "EEE", "ME", "CIV", "DS", "APPLIED SCIENCES"]
 const sems = ["I", "III", "V", "VII"]
-const roles = ["Team Lead", "Event/Workshop Coordinator", "Technical Team", "Graphical Design/Poster Making", "Video Editing", "Social Media Management", "Content Team", "Volunteers", "Other"]
+const roles = ["Team Lead", "Event/Workshop Coordinator", "Technical/Web Team", "Graphical Design/Poster Making", "Video Editing", "Social Media Management", "Content Team", "Emcee/Commentator", "Photography/Videography", "Volunteers", "Other"]
 
 const VolunteerReg = () => {
 
