@@ -7,7 +7,7 @@ const Footer = () => {
             <div className='bg-gradient-to-r from-slate-900 to-purple-950 md:grid md:grid-cols-2 md:place-items-center md:divide-x-2 divide-slate-700 p-7 rounded-xl' >
                 <div>
                     <Image src="/logo-white2.png" width={90} height={90} alt='logo' />
-                    <p className='text-white mt-4' >The Second Techno - Management fest of New Horizon College of Engineering.</p>
+                    <p className='text-white mt-4' >The Third Techno - Management fest of New Horizon College of Engineering.</p>
                     <div className='inline-flex mt-3 p-2 px-3 rounded-xl space-x-5 bg-gray-800' >
                         <a href='https://instagram.com/quantumx.nhce?igshid=OGQ5ZDc2ODk2ZA==' target='_blank' >
                             <Image className='hover:scale-105 cursor-pointer' src="/insta-icon.svg" width={24} height={24} alt='instagram' />
