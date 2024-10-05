@@ -13,7 +13,9 @@ export async function POST(request) {
         const reqBody = await request.json()
         const { name, role, department, semester, section, usn, email, phone } = reqBody
 
-        const existingVolunteer = await Volunteer.findOne({ usn });
+        const updatedUSN = usn.toUpperCase();
+
+        const existingVolunteer = await Volunteer.findOne({ usn: updatedUSN });
 
         if (existingVolunteer) {
             return NextResponse.json({
@@ -37,7 +39,7 @@ export async function POST(request) {
             department,
             semester,
             section,
-            usn,
+            usn: updatedUSN,
             email,
             phone
         })

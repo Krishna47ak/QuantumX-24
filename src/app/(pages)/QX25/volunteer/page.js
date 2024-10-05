@@ -12,7 +12,7 @@ const volunteerValidationSchema = Yup.object().shape({
     semester: Yup.string().required('Semester is required'),
     section: Yup.string().required('Section is required'),
     role: Yup.string().required('Role is required'),
-    usn: Yup.string().required('USN is required'),
+    usn: Yup.string().matches(/^1NH(21|22|23|24).*/, 'Enter a valid USN').required('USN is required'),
     email: Yup.string().email().required('Email is required'),
     phone: Yup.string().required('Phone number is required').length(10, 'Phone number must be exactly 10 digits').matches(/^\d+$/, 'Phone number must be numeric')
 });
