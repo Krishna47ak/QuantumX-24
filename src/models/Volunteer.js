@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const volunteerSchema = new mongoose.Schema({
     name: {
         type: String,
+        trim: true,
         required: [true, "Please provide a name"],
     },
     department: {
@@ -19,19 +20,23 @@ const volunteerSchema = new mongoose.Schema({
     },
     section: {
         type: String,
+        trim: true,
         required: [true, "Please provide a section"],
     },
     usn: {
         type: String,
+        trim: true,
         required: [true, "Please provide a usn"],
     },
     email: {
         type: String,
+        trim: true,
         required: [true, "Please provide a email"],
         match: [/.+@.+\..+/, "Please provide a valid email address"]
     },
     phone: {
         type: Number,
+        trim: true,
         required: [true, "Please provide a phone number"],
     },
     date: {

@@ -99,7 +99,7 @@ const VolunteerReg = () => {
                     <FormInput2 name="Name" value={volunteerFormik.values.name} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.name} error={volunteerFormik.errors.name} type='text' placeholder='Full name*' />
                     <FormInput2 name="USN" value={volunteerFormik.values.usn} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.usn} error={volunteerFormik.errors.usn} type='text' placeholder='USN*' />
                     <div className='mb-5 mt-10' >
-                        <select name='department' className={`text-gray-500 w-full py-3 rounded-xl px-4 ${!!volunteerFormik.values.department && "uppercase"}`} value={volunteerFormik.values.department} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} >
+                        <select name='department' className={`text-gray-500 w-full py-3 rounded-xl px-4 h-12 ${!!volunteerFormik.values.department && "uppercase"}`} value={volunteerFormik.values.department} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} >
                             <option value="" className={`text-gray-500 capitalize`} >Department</option>
                             {depts?.map(dept => (
                                 <option key={dept} value={dept} className='uppercase' >{dept}</option>
@@ -108,7 +108,7 @@ const VolunteerReg = () => {
                         {volunteerFormik.touched.department && <span className='first-letter:uppercase text-sm text-red-500 pl-1 mt-1' >{volunteerFormik.errors.department}</span>}
                     </div>
                     <div className='mb-5 mt-10' >
-                        <select name='semester' className={`text-gray-500 w-full py-3 rounded-xl px-4 ${!!volunteerFormik.values.semester && "uppercase"}`} value={volunteerFormik.values.semester} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} >
+                        <select name='semester' className={`text-gray-500 w-full py-3 rounded-xl px-4 h-12 ${!!volunteerFormik.values.semester && "uppercase"}`} value={volunteerFormik.values.semester} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} >
                             <option value="" className={`text-gray-500 capitalize`} >Semester</option>
                             {sems?.map(sem => (
                                 <option key={sem} value={sem} className='uppercase' >{sem}</option>
@@ -120,7 +120,7 @@ const VolunteerReg = () => {
                     <FormInput2 name="Email" value={volunteerFormik.values.email} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.email} error={volunteerFormik.errors.email} type='email' placeholder='Email*' />
                     <FormInput2 name="Phone" value={volunteerFormik.values.phone} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} touched={volunteerFormik.touched.phone} error={volunteerFormik.errors.phone} type='tel' placeholder='Phone*' />
                     <div className='mb-5 mt-10' >
-                        <select name='role' className={`text-gray-500 w-full py-3 rounded-xl px-4 ${!!volunteerFormik.values.role && "uppercase"}`} value={volunteerFormik.values.role} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} >
+                        <select name='role' className={`text-gray-500 w-full py-3 rounded-xl px-4 h-12 ${!!volunteerFormik.values.role && "uppercase"}`} value={volunteerFormik.values.role} onChange={volunteerFormik.handleChange} onBlur={volunteerFormik.handleBlur} >
                             <option value="" className={`text-gray-500 capitalize`} >What will you bring to the team?</option>
                             {roles?.map(role => (
                                 <option key={role} value={role} className='uppercase' >{role}</option>
